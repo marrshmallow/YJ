@@ -22,6 +22,10 @@ public class CameraController : MonoBehaviour
 
     private Vector2 rotation;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     // Update is called once per frame
     void Update()
@@ -86,7 +90,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            yAngle = follow_target.eulerAngles.y;
+            //yAngle = follow_target.eulerAngles.y;
            
         }
         
