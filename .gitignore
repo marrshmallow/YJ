@@ -71,3 +71,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Windows File Explorer Thumbnail Cache
+Thumbs.db
+# Mac Finder Cache
+.DS_Store
+# These should be ignored by default global gitignore, but from time to time we got these from packages or other sources
