@@ -51,7 +51,7 @@ Unity 2022\.3\.9f1
 - [ ] 조경 국가자격검정장에 설치된 테이블과 벤치 모델링  
 
 
-![조경 국가자격검정장에 설치된 둥근 모양의 목재 테이블과 벤치](image-1.png)  
+![조경 국가자격검정장에 설치된 둥근 모양의 목재 테이블과 벤치](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/image-1.png)  
 
 ## 모델링 시 주의사항
 
@@ -77,7 +77,7 @@ Scripts: 스크립트 한데 모아놓는 곳. 복잡해지면 편의상 이 안
 
 **2024\. 3\. 4\. 개발용 씬, 캐릭터 모델, 바닥 타일링 추가**  
 
-![교육 과정은 총 11갈래로 나뉘어집니다. 과정 소개: IT, SW/전기공사/기계설계/디자인/용접/공조냉동/조경/가구, 공예/경영회계/패션봉제/인테리어, 건축](image.png)  
+![교육 과정은 총 11갈래로 나뉘어집니다. 과정 소개: IT, SW/전기공사/기계설계/디자인/용접/공조냉동/조경/가구, 공예/경영회계/패션봉제/인테리어, 건축](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/image.png)  
 
 **2024\. 3\. 5\.**  
 
@@ -128,15 +128,15 @@ NPC에 타임라인 컴포넌트 추가. NPC(태그 있음) 주변을 Box Collid
 >이 상태에서 대화창 텍스트를 다음으로 넘긴다거나 선택지 클릭이 되는지?  
 >> 가능하다!  
 >>  
->> ![alt text](image-3.png)  
+>> [![alt text](image-3.png)](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/image-3.png)  
 >>  
 >> 선택지에 해당하는 게임오브젝트의 버튼 컴포넌트에서 On Click() 목록에 조작을 원하는 디렉터를 추가하고, (이 경우 'NPC' 게임 오브젝트) 해당 선택지를 클릭했을 때 재생될, '다음 컷씬' (별도 Timeline Asset)으로 점프하게 할 수 있다.  
   
   
-![Warp Mode를 Hold로 해주면 마지막 장면에서 고정된 상태로 재생 시간이 끝나게 된다](image-2.png)  
+![Warp Mode를 Hold로 해주면 마지막 장면에서 고정된 상태로 재생 시간이 끝나게 된다](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/image-2.png)  
 
 Warp Mode를 Hold로 해주면 마지막 장면에서 고정된 상태로 재생 시간이 끝나게 된다. 즉, None(기본값)일 경우 마지막 프레임 재생이 끝남과 동시에 원래 화면으로 돌아가게 된다.  
 
-* 샘플 이벤트 컷씬 완성했습니다!  
+* 샘플 이벤트 컷씬 완성했습니다! (클릭하면 동영상 재생)  
 
-![샘플 이벤트 컷씬](20240305.gif)  
+[![샘플 이벤트 컷씬](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/mqdefault.jpg)](https://youtu.be/QG0Gk4Sk6Zw?si=_KTAplaqxIqQWD6X)  
