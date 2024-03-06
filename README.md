@@ -137,6 +137,10 @@ NPC에 타임라인 컴포넌트 추가. NPC(태그 있음) 주변을 Box Collid
 
 Warp Mode를 Hold로 해주면 마지막 장면에서 고정된 상태로 재생 시간이 끝나게 된다. 즉, None(기본값)일 경우 마지막 프레임 재생이 끝남과 동시에 원래 화면으로 돌아가게 된다.  
 
-* 샘플 이벤트 컷씬 완성했습니다! (클릭하면 동영상 재생)  
+* 샘플 이벤트 컷씬 완성했습니다. (클릭하면 동영상 재생)  
 
 [![샘플 이벤트 컷씬](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/mqdefault.jpg)](https://youtu.be/QG0Gk4Sk6Zw?si=_KTAplaqxIqQWD6X)  
+
+* 용연씨의 부스 모델링 영상 추가했습니다.
+
+[![부스 모델링 초안](https://github.com/marrshmallow/YJLounge/blob/8feb48c76ec762dd67df44ae2be25a18415d9765/Documentation/Images/mqdefault1.jpg)](https://youtu.be/rIKlNbn00kM)  
