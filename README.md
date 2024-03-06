@@ -128,7 +128,7 @@ NPC에 타임라인 컴포넌트 추가. NPC(태그 있음) 주변을 Box Collid
 >이 상태에서 대화창 텍스트를 다음으로 넘긴다거나 선택지 클릭이 되는지?  
 >> 가능하다!  
 >>  
->> [![alt text](image-3.png)](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/image-3.png)  
+>> ![이미지](https://github.com/marrshmallow/YJLounge/blob/b65980864ec400c475b1ba64b48fb060ee83495c/Documentation/Images/image-3.png)  
 >>  
 >> 선택지에 해당하는 게임오브젝트의 버튼 컴포넌트에서 On Click() 목록에 조작을 원하는 디렉터를 추가하고, (이 경우 'NPC' 게임 오브젝트) 해당 선택지를 클릭했을 때 재생될, '다음 컷씬' (별도 Timeline Asset)으로 점프하게 할 수 있다.  
   
