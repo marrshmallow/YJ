@@ -87,20 +87,31 @@ public class CameraController : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
             yAngle += Input.GetAxis("Mouse X") * rotation_speed;
+            xAngle -= Input.GetAxis("Mouse Y") * rotation_speed;
+
+            xAngle =  Mathf.Clamp(xAngle, min_v_angle, max_v_angle);
         }
         else
         {
             //yAngle = follow_target.eulerAngles.y;
-           
         }
         
         // 카메라 높이 오프셋 설정
         // 주인공 기준으로 카메라 followOffset을 적용하려면 followOffset 앞에 주인공.rotation을 곱하면 된다.
-        transform.position = follow_target.position + Quaternion.Euler(0, yAngle, 0) * followOffset;
+        transform.position = follow_target.position + Quaternion.Euler(xAngle, yAngle, 0) * followOffset;
 
         //각을 표현하는 방법은 2가지
         //1. 쿼터니언 - 복잡한 계산용, 
         //2. 오일러각(vector3) - 단순한 계산, 표기용
+
+        //쿼터니언 기본 계산 유형
+        //1.쿼터니언(앞) * 벡터(방향)   뒤의 방향벡터를 앞의 쿼터니언 만큼 회전
+        //ex)vector3.forward = Quaternion.Euler(0, 30f, 0) * vector3.forward
+        //(정면을 보던 벡터를 y축으로 30도 만큼 회전)
+
+        //2.쿼터니언(앞) * 쿼터니언(회전상태) 
+        //ex)player.transform.rotation = Quaternion.Euler(0, 30f, 0) * player.transform.rotation
+        //(플레이어를 y축으로 30 회전시킴)
 
         transform.LookAt(follow_target.position + lookOffset);
     }
