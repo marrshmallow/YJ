@@ -1,19 +1,29 @@
 fileFormatVersion: 2
-guid: 5bbe1ecb8feb8814a88222ce34b8ce5e
+guid: 94a13f072722aa74c8fcaea518061cc4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: fe44042e5cfc2e4409730bac439051b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Photo_1
+    second: {fileID: 2100000, guid: 0598a04e88fea7e418c72e733b5dacc2, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Base_Base_color
-    second: {fileID: 2800000, guid: 7d88cd8506c41b14e9072909af83eaf7, type: 3}
+    second: {fileID: 2800000, guid: ced8cc5b872a8494bb9484362dae30ad, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Photo_1_Base_color
-    second: {fileID: 2800000, guid: 5b566e212e81e904f899cf64f78a020c, type: 3}
+    second: {fileID: 2800000, guid: 29eee609bfe33d94b844141aa0520bcd, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
