@@ -47,6 +47,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.vsconfig
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -71,6 +72,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Blender
+*.blend1
+*.blend1.meta
 
 # Windows File Explorer Thumbnail Cache
 Thumbs.db
