@@ -144,3 +144,25 @@ Warp Mode를 Hold로 해주면 마지막 장면에서 고정된 상태로 재생
 * 용연씨의 부스 모델링 영상 추가했습니다.
 
 [![부스 모델링 초안](https://github.com/marrshmallow/YJLounge/blob/8feb48c76ec762dd67df44ae2be25a18415d9765/Documentation/Images/mqdefault1.jpg)](https://youtu.be/rIKlNbn00kM)  
+
+**2024\. 3\. 11\.**  
+
+* ~~Asset Store에서 [FMOD for Unity](https://assetstore.unity.com/publishers/46440) 설치했습니다. (FMOD Studio와 연동)~~ 아직 연동안해서 없는거나 마찬가지  
+
+* ~~Keijiro씨의 플러그인 추가~~  
+
+* 터레인 포함해서 렌더링하면 버벅거리므로 씬을 두 가지로 나눌 예정입니다! : "Spawn" 처음 시작할 때 (외부 터레인 포함) 씬, "Main" 본편 (내부만 구현!)  
+
+* 원점에서 작업할 수 있도록 터레인 축을 정리했습니다.  
+
+* 맵이 무한대로 로딩되지 않게 [LOD](https://docs.unity3d.com/kr/current/Manual/LevelOfDetail.html) Group 컴포넌트로 렌더링 거리 조절하고 안개 기능 추가했습니다.  
+
+* 맵 크기 관련해서 모델링 FBX 파일 스케일 조정했습니다.  ```JinsolTestDev > 3D Modeling > Edit```에서 확인 가능합니다.
+
+* 건물 위에 행성 빙글빙글 돌아가는 애니메이팅 넣었습니다.  
+
+[![간단한 애니메이팅](https://i.ytimg.com/vi/huClxIx4EfM/mqdefault.jpg)](https://youtu.be/huClxIx4EfM?si=VhxR25WzSfDzlODD)
+
+* 타임라인을 위한 카메라 설치.  
+
+* ```FootageCam```이라는 자료 촬영용 카메라를 넣었습니다.  
