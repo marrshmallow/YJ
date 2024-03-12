@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 #region 해 줘야 하는 설정들
 // 1. InputAction이 Asset > Settings > Input에 생성되어 있을 것.
@@ -13,6 +14,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public Vector2 delta;
     public Vector2 moveComposite;
     public Action OnJumpPerformed;
+    public Action OnRunPerformed;
     private Controllers controllers;
 
     private void OnEnable()
@@ -36,11 +38,6 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         // WASD 누를 떄마다 OnMove가 호출되어 매핑대로 Vector2 값을 읽어온다
         moveComposite = context.ReadValue<Vector2>();
     }
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        // WASD 누를 떄마다 OnMove가 호출되어 매핑대로 Vector2 값을 읽어온다
-        moveComposite = context.ReadValue<Vector2>();
-    }
 
     public void OnJump(InputAction.CallbackContext context)
     {
@@ -52,6 +49,16 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public void OnLookAround(InputAction.CallbackContext context)
     {
         delta = context.ReadValue<Vector2>();
+    }
+
+    public void OnLookAround_Gamepad(InputAction.CallbackContext context)
+    {
+        Gamepad.current.leftStick.ReadValue();
+    }
+
+    public void OnRun(InputAction.CallbackContext context)
+    {
+        Debug.Log("RUN!" + context);
     }
 
 }

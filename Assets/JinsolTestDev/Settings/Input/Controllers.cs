@@ -53,6 +53,24 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""5caeedf1-ad03-42bb-9ce2-84ae746e8d7a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""LookAround_Gamepad"",
+                    ""type"": ""Value"",
+                    ""id"": ""a9cddd29-48f4-4288-929a-04935007697b"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -223,12 +241,34 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d551d42a-338b-4430-90c2-753779042c56"",
-                    ""path"": ""*/{Secondary2DMotion}"",
+                    ""id"": ""52c200fb-c49a-4a63-8c6e-fc283872060d"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""SwitchControlScheme"",
-                    ""action"": ""LookAround"",
+                    ""action"": ""LookAround_Gamepad"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3524dfe3-7ca2-4e43-83f6-87d54f3bcf7a"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MainControlScheme"",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b179835-b178-42c1-8b17-fb0635e2a75f"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""SwitchControlScheme"",
+                    ""action"": ""Run"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -270,6 +310,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_LookAround = m_Player.FindAction("LookAround", throwIfNotFound: true);
+        m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
+        m_Player_LookAround_Gamepad = m_Player.FindAction("LookAround_Gamepad", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -334,6 +376,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_LookAround;
+    private readonly InputAction m_Player_Run;
+    private readonly InputAction m_Player_LookAround_Gamepad;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -341,6 +385,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @LookAround => m_Wrapper.m_Player_LookAround;
+        public InputAction @Run => m_Wrapper.m_Player_Run;
+        public InputAction @LookAround_Gamepad => m_Wrapper.m_Player_LookAround_Gamepad;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -359,6 +405,12 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @LookAround.started += instance.OnLookAround;
             @LookAround.performed += instance.OnLookAround;
             @LookAround.canceled += instance.OnLookAround;
+            @Run.started += instance.OnRun;
+            @Run.performed += instance.OnRun;
+            @Run.canceled += instance.OnRun;
+            @LookAround_Gamepad.started += instance.OnLookAround_Gamepad;
+            @LookAround_Gamepad.performed += instance.OnLookAround_Gamepad;
+            @LookAround_Gamepad.canceled += instance.OnLookAround_Gamepad;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -372,6 +424,12 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @LookAround.started -= instance.OnLookAround;
             @LookAround.performed -= instance.OnLookAround;
             @LookAround.canceled -= instance.OnLookAround;
+            @Run.started -= instance.OnRun;
+            @Run.performed -= instance.OnRun;
+            @Run.canceled -= instance.OnRun;
+            @LookAround_Gamepad.started -= instance.OnLookAround_Gamepad;
+            @LookAround_Gamepad.performed -= instance.OnLookAround_Gamepad;
+            @LookAround_Gamepad.canceled -= instance.OnLookAround_Gamepad;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -412,5 +470,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnLookAround(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
+        void OnLookAround_Gamepad(InputAction.CallbackContext context);
     }
 }

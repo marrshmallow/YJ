@@ -55,4 +55,10 @@ public abstract class PlayerBaseState : State
     {
 
     }
+
+    private float getMoveSpeed()
+    {
+        float moveSpeed = stateMachine.moveSpeed * stateMachine.moveSpeedModifier;
+        return moveSpeed;
+    }
 }
