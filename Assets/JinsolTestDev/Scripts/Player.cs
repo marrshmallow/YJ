@@ -23,8 +23,12 @@ public class Player : MonoBehaviour
     #endregion
 
     #region UI 참조용
-    [SerializeField] private GameObject exit;
-    [SerializeField] private GameObject interact;
+    public GameObject exit;
+    public GameObject interact;
+    #endregion
+
+    #region 발걸음 소리용
+    public GameObject footstep;
     #endregion
 
     private void Awake()
@@ -46,14 +50,20 @@ public class Player : MonoBehaviour
             transform.rotation = startRotation * Quaternion.Euler((CurrentDistanceBetweenMousePositions / sceneWidth) * 180 * Vector3.up);
         }
         #endregion
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            footstep.SetActive(true);
+        else footstep.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         #region 이벤트 컷씬 발생
         if (other.gameObject.tag == "Event")
+            director.Play();
+            
+        if (other.gameObject.tag == "Event_Dialogue")
         {
-            Debug.Log("OnTriggerEnter");
             interact.SetActive(true);
             //director.Play();
         }
@@ -69,9 +79,8 @@ public class Player : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Event")
+        if (other.gameObject.tag == "Event_Dialogue")
         {
-            Debug.Log("OnTriggerExit");
             interact.SetActive(false);
         }
     }

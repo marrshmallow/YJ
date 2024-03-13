@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 // StateMachine을 그냥 쓰지 않는 이유: 혹시 다른 데 쓸 수도 있으니까!
@@ -11,9 +8,9 @@ using UnityEngine;
 public class PlayerStateMachine : StateMachine
 {
     public Vector3 velocity;
-    public float moveSpeed = 5f;
-    public float jumpForce = 5f;
-    public float moveSpeedModifier = 1f;
+    public float moveSpeed = 15f;
+    public float jumpForce = 3f;
+    public float moveSpeedModifier = 1.5f;
     public Transform mainCamera;
     
     public InputReader inputReader;

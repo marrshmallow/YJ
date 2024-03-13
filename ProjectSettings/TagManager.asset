@@ -7,6 +7,7 @@ TagManager:
   - NPC
   - Event
   - Exit
+  - Event_Dialogue
   layers:
   - Default
   - TransparentFX
@@ -14,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Concrete
+  - Grass
+  - Patio
   - 
   - 
   - 
