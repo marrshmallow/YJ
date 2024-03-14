@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: "G:/\uB0B4 \uB4DC\uB77C\uC774\uBE0C/0 K-H/Team_FMOD/YJFair/Build/Desktop/Master.strings.bank"
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638459762803260000
+  lastModified: 638460667554820000
   FileSizes:
   - Name: 
-    Value: 1186
+    Value: 1456
   Exists: 1
 --- !u!114 &-5947964267460232492
 MonoBehaviour:
@@ -62,11 +62,38 @@ MonoBehaviour:
   Path: "G:/\uB0B4 \uB4DC\uB77C\uC774\uBE0C/0 K-H/Team_FMOD/YJFair/Build/Desktop/Master.bank"
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638459762802680000
+  lastModified: 638460667554320000
   FileSizes:
   - Name: 
-    Value: 22731488
+    Value: 22749952
   Exists: 1
+--- !u!114 &-4457145824161040678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIKnobClick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIKnobClick
+  Guid:
+    Data1: 548825965
+    Data2: 1317636567
+    Data3: -996816720
+    Data4: -1043643666
+  Banks:
+  - {fileID: -5947964267460232492}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4360396408020616161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,12 +168,15 @@ MonoBehaviour:
   - {fileID: 3926061154692713209}
   - {fileID: -8608528843754592397}
   - {fileID: -843356171683598741}
+  - {fileID: -4457145824161040678}
+  - {fileID: 7295482335877135663}
+  - {fileID: 7903905386960116385}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5947964267460232492}
   StringsBanks:
   - {fileID: -7382976097067551903}
-  cacheTime: 638459762803260000
+  cacheTime: 638460667554820000
   cacheVersion: 131616
 --- !u!114 &627080950405235663
 MonoBehaviour:
@@ -304,6 +334,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 15118
+--- !u!114 &7295482335877135663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIOpen
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIOpen
+  Guid:
+    Data1: -174971748
+    Data2: 1172664751
+    Data3: -13545325
+    Data4: -1553990057
+  Banks:
+  - {fileID: -5947964267460232492}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7903905386960116385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIClick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIClick
+  Guid:
+    Data1: 759068850
+    Data2: 1100542271
+    Data3: 1394908324
+    Data4: 1468390415
+  Banks:
+  - {fileID: -5947964267460232492}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7988957073531622081
 MonoBehaviour:
   m_ObjectHideFlags: 0
