@@ -829,8 +829,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201945523}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.028008, y: -17.080297, z: -24.97998}
+  m_LocalRotation: {x: -0.009780056, y: 0.99994797, z: -0.0018009156, w: -0.0022995858}
+  m_LocalPosition: {x: 4.770008, y: -17.9103, z: -14.199981}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2136,10 +2136,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_ShowDebugText: 0
   m_Loop: 0
-  m_ChildCameras:
-  - {fileID: 2132101628}
-  - {fileID: 1062054020}
-  - {fileID: 1735479943}
+  m_ChildCameras: []
   m_Instructions: []
 --- !u!4 &553562501
 Transform:
@@ -7580,6 +7577,7 @@ MonoBehaviour:
   defaultCam: {fileID: 179232}
   playerLookCam: {fileID: 54646629}
   toggleCam: 0
+  rotationSpeed: 5
 --- !u!4 &2023201329123577176
 Transform:
   m_ObjectHideFlags: 0
