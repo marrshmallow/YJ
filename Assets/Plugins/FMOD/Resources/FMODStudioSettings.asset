@@ -609,7 +609,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: "G:/\uB0B4 \uB4DC\uB77C\uC774\uBE0C/0 K-H/Team_FMOD/YJFair/Build/Desktop"
+  sourceBankPath: Assets/StreamingAssets/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

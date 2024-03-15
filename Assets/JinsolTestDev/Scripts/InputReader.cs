@@ -61,4 +61,14 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         Debug.Log("RUN!" + context);
     }
 
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        Debug.Log("Interacting..." + context);
+    }
+
+    public void OnPlayerLookCam(InputAction.CallbackContext context)
+    {
+        Debug.Log("Looking At Myself" + context);
+    }
+
 }
