@@ -71,6 +71,24 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""5b5fc8f0-40bf-44e8-a24d-54783e31e0a1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PlayerLookCam"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ad989c8-73d0-40b3-8497-635fee5335c7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -220,7 +238,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""modifier"",
                     ""id"": ""aec75229-bfee-47c7-af0d-bd1a62476090"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MainControlScheme"",
@@ -271,6 +289,28 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""action"": ""Run"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""92d9af6c-f0bf-469d-9a5a-f06203c861c1"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MainControlScheme"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad197a01-b42c-4859-8bb6-3edd9db0d8cc"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MainControlScheme"",
+                    ""action"": ""PlayerLookCam"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -312,6 +352,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         m_Player_LookAround = m_Player.FindAction("LookAround", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_LookAround_Gamepad = m_Player.FindAction("LookAround_Gamepad", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_PlayerLookCam = m_Player.FindAction("PlayerLookCam", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -378,6 +420,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_LookAround;
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_LookAround_Gamepad;
+    private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_PlayerLookCam;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -387,6 +431,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         public InputAction @LookAround => m_Wrapper.m_Player_LookAround;
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @LookAround_Gamepad => m_Wrapper.m_Player_LookAround_Gamepad;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @PlayerLookCam => m_Wrapper.m_Player_PlayerLookCam;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -411,6 +457,12 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @LookAround_Gamepad.started += instance.OnLookAround_Gamepad;
             @LookAround_Gamepad.performed += instance.OnLookAround_Gamepad;
             @LookAround_Gamepad.canceled += instance.OnLookAround_Gamepad;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @PlayerLookCam.started += instance.OnPlayerLookCam;
+            @PlayerLookCam.performed += instance.OnPlayerLookCam;
+            @PlayerLookCam.canceled += instance.OnPlayerLookCam;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -430,6 +482,12 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @LookAround_Gamepad.started -= instance.OnLookAround_Gamepad;
             @LookAround_Gamepad.performed -= instance.OnLookAround_Gamepad;
             @LookAround_Gamepad.canceled -= instance.OnLookAround_Gamepad;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @PlayerLookCam.started -= instance.OnPlayerLookCam;
+            @PlayerLookCam.performed -= instance.OnPlayerLookCam;
+            @PlayerLookCam.canceled -= instance.OnPlayerLookCam;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -472,5 +530,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         void OnLookAround(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnLookAround_Gamepad(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnPlayerLookCam(InputAction.CallbackContext context);
     }
 }

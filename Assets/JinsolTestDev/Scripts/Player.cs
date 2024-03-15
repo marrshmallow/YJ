@@ -1,6 +1,9 @@
 using System.Net.Sockets;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Rendering.Universal.Internal;
+using UnityEngine.UI;
 
 public enum PlayerState
 {
@@ -13,6 +16,7 @@ public class Player : MonoBehaviour
     #region 지우지말기 - 마우스 lookat 관련
     private Vector3 pressPoint;
     private float sceneWidth;
+    private float sceneHeight;
     private Quaternion startRotation;
     //public float lookRotationDamper = 10f; 조금만 더 부드럽게 돌려주는 방법 찾으려다 포기한 부분
     #endregion
@@ -31,30 +35,62 @@ public class Player : MonoBehaviour
     public GameObject footstep;
     #endregion
 
+    public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
+    public CinemachineVirtualCamera defaultCam; // 원래카메라
+    public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
+    public bool toggleCam = false; // 껐다켰다 스위치
+    public float rotationSpeed = 5f; // 카메라 회전 속도
+
     private void Awake()
     {
         sceneWidth = Screen.width;
         playerState = PlayerState.Passerby;
+        //Cursor.lockState = CursorLockMode.Locked; // 잠금 걸어놓고 돌리면 카메라 움직임이 이상해짐
     }    
+
+    private void Start()
+    {
+        mainCam = defaultCam;
+        mainCam.MoveToTopOfPrioritySubqueue();
+    }
+
     void Update()
     {
-        #region 확실하게 작동하는, LookAt 기능: 마우스 우클릭으로 둘러보기
-        if (Input.GetMouseButtonDown(1))
+        #region 마우스 드래그해서 둘러보기
+        if (Input.GetMouseButtonDown(0))
         {
             pressPoint = Input.mousePosition;
-            startRotation = transform.rotation;
+            startRotation = mainCam.transform.rotation;
         }
-        else if (Input.GetMouseButton(1))
+        else if (Input.GetMouseButton(0))
         {
             float CurrentDistanceBetweenMousePositions = (Input.mousePosition - pressPoint).x;
+            //float CurrentYDistanceBetweenMousePositions = (Input.mousePosition - pressPoint).y;
             transform.rotation = startRotation * Quaternion.Euler((CurrentDistanceBetweenMousePositions / sceneWidth) * 180 * Vector3.up);
+            //mainCam.transform.rotation = Quaternion.Euler(new Vector3(CurrentXDistanceBetweenMousePositions, 0f, 0f));
         }
         #endregion
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             footstep.SetActive(true);
         else footstep.SetActive(false);
-    }
+
+        if (Input.GetMouseButtonDown(1)) // 마우스 우클릭으로 플레이어 보는 카메라로 전환
+        {
+            toggleCam = !toggleCam;
+            Debug.Log(toggleCam);
+
+            if (toggleCam)
+            {
+                mainCam = playerLookCam;
+                mainCam.MoveToTopOfPrioritySubqueue();
+            }
+            else
+            
+                mainCam = defaultCam;
+                mainCam.MoveToTopOfPrioritySubqueue();
+            }
+        }
 
     private void OnTriggerEnter(Collider other)
     {
