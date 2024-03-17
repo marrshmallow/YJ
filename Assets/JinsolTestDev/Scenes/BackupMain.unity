@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11614481, g: 0.4237638, b: 0.72999835, a: 1}
+  m_IndirectSpecularColor: {r: 0.11613609, g: 0.42406118, b: 0.73004735, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2708,7 +2708,7 @@ PlayableDirector:
   m_GameObject: {fileID: 766084429}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 1dfcc132ab690f740a15709ce5c9d2c7, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2737,24 +2737,6 @@ PlayableDirector:
   - key: {fileID: 5167011748939418859, guid: 1dfcc132ab690f740a15709ce5c9d2c7, type: 2}
     value: {fileID: 525609228}
   - key: {fileID: -3523830825197591728, guid: 1dfcc132ab690f740a15709ce5c9d2c7, type: 2}
-    value: {fileID: 289354166}
-  - key: {fileID: 28153793004271812, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 1686999925754357120, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 8209813699324342412, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 6297399295559453702, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 4531290419048057672, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 8017404982380021237, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 5167011748939418859, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -898822543962005353, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: -3523830825197591728, guid: 7e03d1ca903a91744814dcebc71e3dd5, type: 2}
     value: {fileID: 289354166}
   m_ExposedReferences:
     m_References:
