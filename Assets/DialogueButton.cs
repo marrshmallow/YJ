@@ -19,7 +19,7 @@ public class DialogueButton : MonoBehaviour
     public void EndDialogue(SignalAsset signal, SignalReceiver receiver)
     {
         Debug.Log("End of conversation.");
-        UnityEvent nextTimeline = receiver.GetReaction(cueSign); //.Timeline 관련 시그널은 EventSystem 담당
-        nextTimeline?.Invoke();
+        //UnityEvent nextTimeline = receiver.GetReaction(cueSign); //.Timeline 관련 시그널은 EventSystem 담당
+        //nextTimeline?.Invoke();
     }
 }
