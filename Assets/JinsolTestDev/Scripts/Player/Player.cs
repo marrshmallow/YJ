@@ -35,11 +35,13 @@ public class Player : MonoBehaviour
     public GameObject footstep;
     #endregion
 
+    #region 카메라 시점 변환용
     public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
     public CinemachineVirtualCamera defaultCam; // 원래카메라
     public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
     public bool toggleCam = false; // 껐다켰다 스위치
     public float rotationSpeed = 5f; // 카메라 회전 속도
+    #endregion
 
     private void Awake()
     {

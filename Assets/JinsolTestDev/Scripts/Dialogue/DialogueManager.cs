@@ -13,6 +13,11 @@ public class DialogueManager : MonoBehaviour
     public DialogueButton dButton; // 대화창 계속 버튼
 
 
+    private void Awake()
+    {
+        director = (PlayableDirector)FindObjectOfType(typeof(PlayableDirector   ));
+    }
+
     private void Start()
     {
         sentences = new Queue<string>();

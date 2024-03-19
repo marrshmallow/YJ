@@ -1,16 +1,17 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class LookAtPlayer : MonoBehaviour
+public class NpcGazeDirection : MonoBehaviour
 {
     public Transform npc;
     public Transform player;
     private Quaternion forward; // 원래 보고 있던 방향
     [SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
     public bool isLooking = false;
-
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        director = (PlayableDirector)FindObjectOfType(typeof(PlayableDirector   ));
         forward = npc.transform.rotation;
     }
 
@@ -28,7 +29,7 @@ public class LookAtPlayer : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
-            isLooking = true;
+        isLooking = true;
     }
 
     private void OnTriggerExit(Collider other)

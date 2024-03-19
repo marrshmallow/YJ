@@ -4,7 +4,7 @@ using FMODUnity;
 using FMOD.Studio;
 using TMPro;
 
-public class SliderManager : MonoBehaviour
+public class VolumeSlider : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI field = null;
     [SerializeField] private Slider slider = null;
