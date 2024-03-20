@@ -1,9 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Unity.VisualScripting.Antlr3.Runtime;
-using UnityEngine;
-
 // 토큰마다 그게 존재하고 토큰마다 Token.cs 붙여주기.
 
 public class CollectTokensQuestStep : QuestStep

@@ -11,8 +11,12 @@ public class QuestInfoSO : ScriptableObject
 
     [Header("기본정보")]
     public string displayName;
-    [Header("달성포인트")]
+    [Header("달성단계")]
     public GameObject[] questStepPrefabs;
+    [Header("퀘스트 발생 조건")]
+    public int levelRequired; // 플레이어 레벨이 맞지 않은 퀘스트는 수주 불가
+    public QuestInfoSO[] questPrerequisites;
+
     [Header("보상")]
     public int tokenReward; // 임시: 토큰을 받을 때마다 숫자가 올라간다. 이거 근데 수정ㅁㄴ이ㅏㅓㅁㄹ
 

@@ -389,10 +389,10 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 5000
-  field of view: 40
+  far clip plane: 1000
+  field of view: 32
   orthographic: 0
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -417,7 +417,7 @@ Transform:
   m_GameObject: {fileID: 201945523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.0280075, y: -18.094255, z: -47.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23178,6 +23178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c09a7b6fa0e6594f8d1852b5095031c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingLevel: 2
   director: {fileID: 766084431}
   exit: {fileID: 703246001}
   interact: {fileID: 1817065157898025585}
@@ -25195,6 +25196,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPCEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729214942311030863, guid: a7dd9254d8d7e0d44a45f65f83edd864,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729214942311030863, guid: a7dd9254d8d7e0d44a45f65f83edd864,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729214942311030863, guid: a7dd9254d8d7e0d44a45f65f83edd864,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526534924287354331, guid: a7dd9254d8d7e0d44a45f65f83edd864,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27984,11 +28005,11 @@ SceneRoots:
   - {fileID: 766084430}
   - {fileID: 201945528}
   - {fileID: 553562501}
+  - {fileID: 1464548050658232453}
   - {fileID: 396633976}
   - {fileID: 8138251538705095070}
   - {fileID: 6315724809448005458}
   - {fileID: 1206582780}
   - {fileID: 923858488}
   - {fileID: 501899870691017876}
-  - {fileID: 1464548050658232453}
   - {fileID: 2108826472}

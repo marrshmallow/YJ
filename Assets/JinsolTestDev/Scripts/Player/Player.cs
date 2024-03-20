@@ -1,16 +1,14 @@
-using System.Net.Sockets;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.Rendering.Universal.Internal;
-using UnityEngine.UI;
 
-public enum PlayerState
+/* public enum EPlayerState // 혹-시라도 변수와 enum의 이름이 겹치면 안되므로 E 추가
 {
-    Passerby, // 지나가던 사람
-    Visitor, // 일시적으로 머무를 사람
-    Attendee // 참관객: 관심 있게 내부를 둘러볼 사람
-    }
+    Passerby, // 지나가던 사람 (레벨0)
+    Visitor, // 일시적으로 머무를 사람 (레벨1)
+    Attendee // 참관객: 관심 있게 내부를 둘러볼 사람 (레벨2)
+    } */
+
 public class Player : MonoBehaviour
 {
     #region 지우지말기 - 마우스 lookat 관련
@@ -21,8 +19,13 @@ public class Player : MonoBehaviour
     //public float lookRotationDamper = 10f; 조금만 더 부드럽게 돌려주는 방법 찾으려다 포기한 부분
     #endregion
 
+    #region 퀘스트 관련
+    [SerializeField] private int startingLevel = 0; // 기본값: 레벨0 (지나가던 사람)
+    private int currentLevel; // 현재레벨. 메모: 이걸 지금 수정한다고 다른 데 반영이 안되는데...?
+    #endregion
+
     #region 이벤트 컷씬 연출용 참조 영역
-    private PlayerState playerState; // 플레이어의 게임플레이 상태 확인
+    //public EPlayerState currentPlayerState; // 플레이어의 게임플레이 상태 확인
     [SerializeField] private PlayableDirector director; // 상호작용으로 컷씬 불러오기 위해 인스펙터창에서 디렉터 참조
     #endregion
 
@@ -46,14 +49,16 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         sceneWidth = Screen.width;
-        playerState = PlayerState.Passerby;
+        //currentPlayerState = EPlayerState.Passerby;
         //Cursor.lockState = CursorLockMode.Locked; // 잠금 걸어놓고 돌리면 카메라 움직임이 이상해짐
+        currentLevel = startingLevel;
     }    
 
     private void Start()
     {
         mainCam = defaultCam;
         mainCam.MoveToTopOfPrioritySubqueue();
+        GameEventsManager.instance.playerEvents.PlayerLevelChange(currentLevel);
     }
 
     void Update()

@@ -26,7 +26,10 @@ public class Quest
     {
         GameObject questStepPrefab = GetCurrentQuestStepPrefab();
         if (questStepPrefab !=null)
-            Object.Instantiate<GameObject>(questStepPrefab, parentTransform);
+        {
+            QuestStep questStep = Object.Instantiate<GameObject>(questStepPrefab, parentTransform).GetComponent<QuestStep>(); // 현재 프로젝트에서는 문제없지만 분량 늘어나면 Object pooling으로 처리해야
+            questStep.InitializeQuestStep(info.id);
+        }
     }
 
     private GameObject GetCurrentQuestStepPrefab()

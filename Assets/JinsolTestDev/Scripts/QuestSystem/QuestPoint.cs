@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
+// 20240320 메모 : 현재 문제점: 클릭해도 퀘스트 수락이 될 때가 있고 안 될 때가 있음
+// >> 20240320 해결 완료 : NPC 이벤트 박스 컬라이더가 방해가 되어서 안 눌러진 것. 박스 컬라이더를 내리거나 레이어 등으로 처리
+
 // 여기에서 퀘스트 수락(시작)과 완료를 담당
 // 즉, 이곳이 '퀘스트 수락/완료 장소'
 
@@ -52,29 +55,6 @@ public class QuestPoint : MonoBehaviour
         } 
     }
 
-    public void SubmitPressed()
-    {
-        if (!playerNearby)
-        {
-            return;
-        }
-
-        #region 퀘스트를 시작하거나 완료
-        // 지금 상태가 퀘스트를 시작할 수 있는 상태이고 이 지점이 퀘스트 수주 장소라면
-        if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
-        {
-            GameEventsManager.instance.questEvents.StartQuest(questId); // 퀘스트 시작
-            Debug.Log("따-다-다-다-");
-        }
-        else if (currentQuestState.Equals(QuestState.CAN_COMPLETE) && finishPoint)
-        {
-            // 지금 상태가 퀘스트를 끝낼 수 있는 상태이고 이 지점이 퀘스트 완료 장소라면
-            GameEventsManager.instance.questEvents.CompleteQuest(questId); // 퀘스트 완료
-            Debug.Log("따다다다- 따-다 따! 따다~");
-        }
-        #endregion
-    }
-
     private void Update()
     {
         if (playerNearby)
@@ -115,15 +95,19 @@ public class QuestPoint : MonoBehaviour
             return;
         }
         
+        #region 퀘스트를 시작하거나 완료
+        // 지금 상태가 퀘스트를 시작할 수 있는 상태이고 이 지점이 퀘스트 수주 장소라면
         if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
         {
-            GameEventsManager.instance.questEvents.StartQuest(questId);
-            Debug.Log("클릭: startPoint");
+            GameEventsManager.instance.questEvents.StartQuest(questId); // 퀘스트 시작
+            Debug.Log("따-다-다-다-");
         }
         else if (currentQuestState.Equals(QuestState.CAN_COMPLETE) && finishPoint)
         {
-            GameEventsManager.instance.questEvents.CompleteQuest(questId);
-            Debug.Log("클릭: finishPoint");
+            // 지금 상태가 퀘스트를 끝낼 수 있는 상태이고 이 지점이 퀘스트 완료 장소라면
+            GameEventsManager.instance.questEvents.CompleteQuest(questId); // 퀘스트 완료
+            Debug.Log("따다다다- 따-다 따! 따다~");
         }
+        #endregion
     }
 }

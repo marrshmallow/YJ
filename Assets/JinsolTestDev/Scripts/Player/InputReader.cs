@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Controls;
 
 #region 해 줘야 하는 설정들
 // 1. InputAction이 Asset > Settings > Input에 생성되어 있을 것.

@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6111414316429159519}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9440104, y: -18.029999, z: -34.945984}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
   startPoint: 1
-  finishPoint: 0
+  finishPoint: 1
   npc: {fileID: 0}
   director: {fileID: 0}
   playerNearby: 0
@@ -229,14 +229,84 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuestIcon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5770252771365552765, guid: 28c9cd93d8d1a264aaebfc147612e448, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3282777192849562960, guid: 28c9cd93d8d1a264aaebfc147612e448,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1159790712658525681}
+    - targetCorrespondingSourceObject: {fileID: 4170757240742829371, guid: 28c9cd93d8d1a264aaebfc147612e448,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5365762479944617316}
+    - targetCorrespondingSourceObject: {fileID: 568526257038315931, guid: 28c9cd93d8d1a264aaebfc147612e448,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3873238991385383019}
   m_SourcePrefab: {fileID: 100100000, guid: 28c9cd93d8d1a264aaebfc147612e448, type: 3}
+--- !u!1 &729938423043805646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 568526257038315931, guid: 28c9cd93d8d1a264aaebfc147612e448,
+    type: 3}
+  m_PrefabInstance: {fileID: 991509617813946453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3873238991385383019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729938423043805646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f926b20190c564cb50eb861aa99aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onQuestAccepted: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
+--- !u!1 &2327315132509740293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3282777192849562960, guid: 28c9cd93d8d1a264aaebfc147612e448,
+    type: 3}
+  m_PrefabInstance: {fileID: 991509617813946453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1159790712658525681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2327315132509740293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f926b20190c564cb50eb861aa99aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onQuestAccepted: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
 --- !u!4 &3322957112661066879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2584801607017972778, guid: 28c9cd93d8d1a264aaebfc147612e448,
     type: 3}
   m_PrefabInstance: {fileID: 991509617813946453}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3756860955514002798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4170757240742829371, guid: 28c9cd93d8d1a264aaebfc147612e448,
+    type: 3}
+  m_PrefabInstance: {fileID: 991509617813946453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5365762479944617316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3756860955514002798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f926b20190c564cb50eb861aa99aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onQuestAccepted: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}

@@ -9,7 +9,7 @@ public class PlayerStateMachine : StateMachine
 {
     public Vector3 velocity;
     public float moveSpeed = 15f;
-    public float jumpForce = 3f;
+    public float jumpForce = 5f;
     public float moveSpeedModifier = 3f;
     public Transform mainCamera;
     
