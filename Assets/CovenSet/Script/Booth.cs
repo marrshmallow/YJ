@@ -25,6 +25,6 @@ public class Booth : MonoBehaviour
 
     public void SetBoardImage(Texture img)
     {      
-        boardMaterial.SetTexture("_BaseMap", img);
+        boardMaterial.SetTexture("_EmissionMap", img);
     }
 }
