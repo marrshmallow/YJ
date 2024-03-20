@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerRunState : PlayerBaseState
 {
@@ -8,13 +10,11 @@ public class PlayerRunState : PlayerBaseState
 
     public override void Enter()
     {
-        //stateMachine.moveSpeedModifier =  
         stateMachine.animator.CrossFadeInFixedTime(RunHash, CrossFadeDuration);
     }
 
     public override void Tick()
     {
-        base.Tick();
     }
 
     public override void Exit()

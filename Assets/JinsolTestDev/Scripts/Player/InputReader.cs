@@ -9,6 +9,9 @@ using UnityEngine.InputSystem.Controls;
 // 주의사항: 이름! 정말! 중요하다! 코드 쓸 때 헷갈리지 않게 조심.
 #endregion
 
+// 이 코드를 플레이어에게 붙여서 입력 신호를 감지합니다.
+// Controllers.IPlayerActions는 다른 컨트롤러가 연결되었을 때를 위한 인터페이스입니다.
+
 public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 {
     public Vector2 delta;
@@ -16,6 +19,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public Action OnJumpPerformed;
     public Action OnRunPerformed;
     private Controllers controllers;
+    private Player player;
 
     private void OnEnable()
     {
@@ -25,6 +29,8 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         controllers = new Controllers(); // 새 인스턴스 생성
         controllers.Player.SetCallbacks(this); // 콜백 호출 설정
         controllers.Player.Enable(); // 입력 활성화
+
+        player = (Player)GetComponent("Player");
     }
 
     private void OnDisable()
@@ -63,12 +69,13 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 
     public void OnInteract(InputAction.CallbackContext context)
     {
+        //player.PlayerInteract(); // 이건 좀 뒤에
         Debug.Log("Interacting..." + context);
+        
     }
 
     public void OnPlayerLookCam(InputAction.CallbackContext context)
     {
         Debug.Log("Looking At Myself" + context);
     }
-
 }
