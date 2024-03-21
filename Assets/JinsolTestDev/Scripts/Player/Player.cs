@@ -126,6 +126,11 @@ public class Player : MonoBehaviour
         {
             interact.SetActive(false);
         }
+
+        if (other.gameObject.tag == "Exit")
+        {
+            exit.SetActive(false);
+        }
     }
 
 /*     #region 상호작용 이벤트용

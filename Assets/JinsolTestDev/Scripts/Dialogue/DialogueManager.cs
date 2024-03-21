@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections;
+//using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.Playables;
@@ -8,9 +8,12 @@ public class DialogueManager : MonoBehaviour
 {
     private Queue<string> sentences;
     public TextMeshProUGUI showName;
-    public TextMeshProUGUI showDialogue;
+    //public TextMeshProUGUI showDialogue;
     public DialogueButton dButton; // 대화창 계속 버튼
     [SerializeField] private PlayableDirector director;
+    #region 테스트
+    [SerializeField] private Typewriter typewriter;
+    #endregion
 
     private void Start()
     {
@@ -39,12 +42,11 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue(); // 대기열에서 제거
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        typewriter.PrepareText(gameObject);
+        //StartCoroutine(TypeSentence(sentence));
     }
 
-
-
-    private IEnumerator TypeSentence(string sentence)
+/*     private IEnumerator TypeSentence(string sentence)
     {
         showDialogue.text = "";
         foreach (char letter in sentence.ToCharArray())
@@ -52,5 +54,5 @@ public class DialogueManager : MonoBehaviour
             showDialogue.text += letter;
             yield return null;
         }
-    }
+    } */
 }
