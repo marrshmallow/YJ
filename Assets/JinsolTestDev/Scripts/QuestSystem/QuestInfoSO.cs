@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "QuestInfoSO", menuName = "ScriptableObjects/QuestInfoSO", order = 1)]
+[CreateAssetMenu(fileName = "QuestInfoSO", menuName = "ScriptableObjects/QuestInfoSO")]
 public class QuestInfoSO : ScriptableObject
 {
     // 퀘스트 아이디 만들 때에는 해당하는 Scriptable Object와 동일한 이름으로 만들기

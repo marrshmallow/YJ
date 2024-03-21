@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class InteractItem : MonoBehaviour
 {
@@ -21,13 +18,6 @@ public class InteractItem : MonoBehaviour
 
     public GameObject equalhandVR_L;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (onPlayer && Input.GetKeyDown(KeyCode.F))

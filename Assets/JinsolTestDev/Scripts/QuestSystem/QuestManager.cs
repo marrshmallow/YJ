@@ -77,7 +77,7 @@ public class QuestManager : MonoBehaviour
         GameEventsManager.instance.tokenEvents.TokenCollected(quest.info.tokenReward);
     }
 
-    private void PlayerLevelChange(int level)
+    public void PlayerLevelChange(int level)
     {
         currentPlayerLevel = level;
     }

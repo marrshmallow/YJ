@@ -9,14 +9,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public TextMeshProUGUI showName;
     public TextMeshProUGUI showDialogue;
-    public PlayableDirector director;
     public DialogueButton dButton; // 대화창 계속 버튼
-
-
-    private void Awake()
-    {
-        director = (PlayableDirector)FindObjectOfType(typeof(PlayableDirector   ));
-    }
+    [SerializeField] private PlayableDirector director;
 
     private void Start()
     {
@@ -26,10 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with + " + dialogue.name);
         sentences.Clear();
-        director.extrapolationMode = DirectorWrapMode.Hold; // 대화가 시작할 때만 디렉터 재생 모드를 Hold로 변경.
-
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence); // 첫번째 문장을 큐에 추가
