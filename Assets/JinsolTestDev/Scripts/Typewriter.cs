@@ -36,8 +36,6 @@ public class Typewriter : MonoBehaviour
     
     private void Awake()
     {
-        dialogue = gameObject;
-        textBox = (TextMeshProUGUI)GetComponent("TextMeshProUGUI");
         _delay = new WaitForSeconds(1/charPerSecond);
         _punctDelay = new WaitForSeconds(punctDelay);
 

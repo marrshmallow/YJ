@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ea974da2229eb439c5bc354913d23b, type: 3}
-  m_Name: Intro1-1
+  m_Script: {fileID: 11500000, guid: 8c0b2629b061d8244996331b7574ec48, type: 3}
+  m_Name: Intro1
   m_EditorClassIdentifier: 
-  speaker: "\uC548\uB0B4\uC790 NPC"
-  sentences:
+  dialogueLines:
   - "\uC548\uB155\uD558\uC138\uC694."
-  - "\uBB34\uC2A8 \uC77C\uB85C \uC624\uC168\uB098\uC694?"
+  - "\uC624\uB298\uC740 \uC5B4\uB5A4 \uC77C\uB85C \uC624\uC168\uB098\uC694?"
+  endDialogue: {fileID: 0}

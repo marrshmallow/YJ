@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11613609, g: 0.42406118, b: 0.73004735, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,7 +921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &289354164
 Transform:
   m_ObjectHideFlags: 0
@@ -1316,6 +1316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 436300358}
   - component: {fileID: 436300359}
+  - component: {fileID: 436300360}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -1347,13 +1348,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 436300356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7488cf0e596ca154089933416b762fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: f94f0571e8e5cc14088d7b6052a5cc27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showName: {fileID: 0}
-  dButton: {fileID: 0}
-  director: {fileID: 0}
-  typewriter: {fileID: 0}
+  dialogueSO: {fileID: 11400000, guid: a3cf65806336d0245a3e3f8cd0f26cb3, type: 2}
+--- !u!114 &436300360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436300356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: abd0a66ac621f9746b754626673e5887, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 436300359}
+          m_TargetAssemblyTypeName: DialogueInteract, Assembly-CSharp
+          m_MethodName: StartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &458302974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2197,7 @@ PlayableDirector:
   - key: {fileID: 5167011748939418859, guid: cfb8481d8d2f49241aa7e40824b69343, type: 2}
     value: {fileID: 525609228}
   - key: {fileID: -1615487955632040675, guid: cfb8481d8d2f49241aa7e40824b69343, type: 2}
-    value: {fileID: 289354166}
+    value: {fileID: 436300360}
   - key: {fileID: 28153793004271812, guid: 3acb932095cf9d34ba22ba04b8a64941, type: 2}
     value: {fileID: 201945524}
   - key: {fileID: 1686999925754357120, guid: 3acb932095cf9d34ba22ba04b8a64941, type: 2}
@@ -25621,8 +25649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c112df6a7790ae946aae999a440d4c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 0}
-  textBox: {fileID: 0}
+  dialogue: {fileID: 7740011089830851881}
+  textBox: {fileID: 5563007480344310704}
   skipSpeedup: 5
   sendFinishedDelay: 0.25
   charPerSecond: 20
