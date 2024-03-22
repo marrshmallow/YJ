@@ -1,6 +1,7 @@
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Video;
 
 /* public enum EPlayerState // 혹-시라도 변수와 enum의 이름이 겹치면 안되므로 E 추가
 {

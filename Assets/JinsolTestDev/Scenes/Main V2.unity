@@ -1613,6 +1613,8 @@ GameObject:
   - component: {fileID: 525609229}
   - component: {fileID: 525609230}
   - component: {fileID: 525609231}
+  - component: {fileID: 525609232}
+  - component: {fileID: 525609233}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -1647,7 +1649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
+  CollisionTag: Player
   EventReference:
     Guid:
       Data1: -1814692073
@@ -1656,8 +1658,8 @@ MonoBehaviour:
       Data4: -374198256
     Path: event:/Music/MainBGM
   Event: 
-  PlayEvent: 11
-  StopEvent: 12
+  PlayEvent: 3
+  StopEvent: 4
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -1697,6 +1699,41 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 3200
+--- !u!65 &525609232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525609228}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 83.51207, y: 39.115017, z: 70.951775}
+  m_Center: {x: -12.547356, y: -1.2274342, z: 18.516918}
+--- !u!114 &525609233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525609228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45ef0ac940f31846ae9e4406f91cf8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entrance: {fileID: 8582445852347676742}
+  videoSound: {fileID: 4128607665495929970}
 --- !u!1 &553562499
 GameObject:
   m_ObjectHideFlags: 0
@@ -23178,7 +23215,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.35
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -43885,13 +43922,26 @@ GameObject:
   - component: {fileID: 576796300907836176}
   - component: {fileID: 6830612944977149324}
   - component: {fileID: 4128607665495929970}
+  - component: {fileID: 8582445852347676742}
   m_Layer: 0
-  m_Name: Screen
+  m_Name: EntranceScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8582445852347676742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8582445852347676741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3e3118f54e297d4f84a1a54e5030787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &8585339305923164429
 MeshFilter:
   m_ObjectHideFlags: 0
