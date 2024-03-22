@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/JinsolTestDev/Scenes/StartScreen.unity
     guid: 7ed4bff62bf906c4bb506ed62147ba04
-  - enabled: 0
+  - enabled: 1
     path: Assets/JinsolTestDev/Scenes/Spawn.unity
     guid: f7a77fd8dee40be49adf28aa1b62c48e
-  - enabled: 0
+  - enabled: 1
     path: Assets/JinsolTestDev/Scenes/Main V2 2.unity
     guid: bac2948e67212aa48a2d43a03c8ad5b0
   m_configObjects:
