@@ -6,7 +6,6 @@ using TMPro;
 
 public class Typewriter : MonoBehaviour
 {
-    [SerializeField] private GameObject dialogue;
     [SerializeField] private TextMeshProUGUI textBox;
 
     #region 기본 기능
@@ -72,7 +71,7 @@ public class Typewriter : MonoBehaviour
 
         textBox.maxVisibleCharacters = 0; // 최적화용
         currentVisibleCharIndex = 0;
-
+        Debug.Log("???");
         typewriterCoroutine = StartCoroutine(TypewriterStart()); // 언제든지 멈출 수 있게 하기 위함
     }
 

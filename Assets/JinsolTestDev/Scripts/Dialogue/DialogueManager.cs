@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
         dButton.standby = false;
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    /* public void StartDialogue(Dialogue dialogue)
     {
         sentences.Clear();
         foreach (string sentence in dialogue.sentences)
@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         DisplayNextSentence();
-    }
+    } */
         
     public void DisplayNextSentence() // Continue 버튼
     {
