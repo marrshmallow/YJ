@@ -16814,8 +16814,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee7b78683992b343a7dede6c4dbdb78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentInput: {fileID: 0}
   delta: {x: 0, y: 0}
   moveComposite: {x: 0, y: 0}
+  footstep: {fileID: 1206582779}
+  mainCam: {fileID: 0}
+  defaultCam: {fileID: 3431050726051783462}
+  playerLookCam: {fileID: 2329045409755742311}
+  toggleCam: 0
+  rotationSpeed: 5
+  director: {fileID: 766084431}
 --- !u!114 &4752214538505588404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23370,7 +23378,6 @@ MonoBehaviour:
   director: {fileID: 766084431}
   exit: {fileID: 703246001}
   interact: {fileID: 1817065157898025585}
-  footstep: {fileID: 1206582779}
   mainCam: {fileID: 3431050726051783462}
   defaultCam: {fileID: 3431050726051783462}
   playerLookCam: {fileID: 2329045409755742311}
@@ -24600,6 +24607,7 @@ GameObject:
   - component: {fileID: 988909957999898092}
   - component: {fileID: 5563007480344310704}
   - component: {fileID: 7740011089830851882}
+  - component: {fileID: 7740011089830851883}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -24624,6 +24632,18 @@ MonoBehaviour:
   sendFinishedDelay: 0.25
   charPerSecond: 1
   punctDelay: 0.5
+--- !u!114 &7740011089830851883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740011089830851881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8baedba13d5364489dc62bed70cd61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7750786616858850110
 GameObject:
   m_ObjectHideFlags: 0

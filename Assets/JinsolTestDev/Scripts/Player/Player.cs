@@ -35,10 +35,6 @@ public class Player : MonoBehaviour
     public GameObject interact;
     #endregion
 
-    #region 발걸음 소리용
-    public GameObject footstep;
-    #endregion
-
     #region 카메라 시점 변환용
     public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
     public CinemachineVirtualCamera defaultCam; // 원래카메라
@@ -78,12 +74,8 @@ public class Player : MonoBehaviour
             //mainCam.transform.rotation = Quaternion.Euler(new Vector3(CurrentXDistanceBetweenMousePositions, 0f, 0f));
         }
         #endregion
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-            footstep.SetActive(true);
-        else footstep.SetActive(false);
-
-        if (Input.GetMouseButtonDown(1)) // 마우스 우클릭으로 플레이어 보는 카메라로 전환
+    }
+/*         if (Input.GetMouseButtonDown(1)) // 마우스 우클릭으로 플레이어 보는 카메라로 전환
         {
             toggleCam = !toggleCam;
             Debug.Log(toggleCam);
@@ -98,7 +90,7 @@ public class Player : MonoBehaviour
                 mainCam = defaultCam;
                 mainCam.MoveToTopOfPrioritySubqueue();
             }
-        }
+        } */
 
     private void OnTriggerEnter(Collider other)
     {
@@ -147,8 +139,9 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 15, finalmask))
         {
             Interact interactScript = hit.transform.GetComponent<Interact>();
-            if (interactScript) interactScript.CallInteract(this)
+            if (interactScript) interactScript.CallInteract(this);
         }            
     }
     #endregion */
+    
 }

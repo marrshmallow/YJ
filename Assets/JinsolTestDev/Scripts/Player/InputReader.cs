@@ -1,6 +1,8 @@
 using System;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 #region 해 줘야 하는 설정들
 // 1. InputAction이 Asset > Settings > Input에 생성되어 있을 것.
@@ -19,6 +21,17 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public Action OnRunPerformed;
     private Controllers controllers;
     private Player player;
+    #region 발걸음 소리용
+    [SerializeField] private GameObject footstep;
+    #endregion
+    #region 카메라 시점 변환용
+    public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
+    public CinemachineVirtualCamera defaultCam; // 원래카메라
+    public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
+    public bool toggleCam = false; // 껐다켰다 스위치
+    public float rotationSpeed = 5f; // 카메라 회전 속도
+    #endregion
+    [SerializeField] private PlayableDirector director;
 
     private void OnEnable()
     {
@@ -28,13 +41,15 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         controllers = new Controllers(); // 새 인스턴스 생성
         controllers.Player.SetCallbacks(this); // 콜백 호출 설정
         controllers.Player.Enable(); // 입력 활성화
-
+        controllers.Player.Movement.canceled += context => { footstep.SetActive(false); };
+        director.played += OnPlayableDirectorPlayed;
         player = (Player)GetComponent("Player");
     }
 
     private void OnDisable()
     {
         controllers.Player.Disable(); // 컴포넌트 꺼지면 입력도 비활성화
+        director.played -= OnPlayableDirectorPlayed;
     }
 
     // 이것도 전에 OnMove였는데 OnMovement로 바뀌었다ㅏㅏㅏ
@@ -42,6 +57,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     {
         // WASD 누를 떄마다 OnMove가 호출되어 매핑대로 Vector2 값을 읽어온다
         moveComposite = context.ReadValue<Vector2>();
+        footstep.SetActive(true);
     }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -75,6 +91,29 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 
     public void OnPlayerLookCam(InputAction.CallbackContext context)
     {
-        Debug.Log("Looking At Myself" + context);
+        toggleCam = !toggleCam;
+        Debug.Log(toggleCam);
+
+        if (toggleCam)
+        {
+            mainCam = playerLookCam;
+            mainCam.MoveToTopOfPrioritySubqueue();
+        }
+        else
+        
+            mainCam = defaultCam;
+            mainCam.MoveToTopOfPrioritySubqueue();
+    }
+
+    public void OnPlayableDirectorPlayed(PlayableDirector director)
+    {
+        if (director.state == PlayState.Playing) // 타임라인 재생 중에는 인풋 시스템을 비활성화
+        {
+            controllers.Player.Disable();
+        }
+        else
+        {
+            controllers.Player.Enable();
+        }
     }
 }
