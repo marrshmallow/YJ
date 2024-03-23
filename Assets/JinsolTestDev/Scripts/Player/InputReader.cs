@@ -15,7 +15,6 @@ using UnityEngine.Playables;
 
 public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 {
-    [SerializeField] private PlayerInput currentInput;
     public Vector2 delta;
     public Vector2 moveComposite;
     public Action OnJumpPerformed;
@@ -45,11 +44,6 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         controllers.Player.Movement.canceled += context => { footstep.SetActive(false); };
         director.played += OnPlayableDirectorPlayed;
         player = (Player)GetComponent("Player");
-    }
-
-    private void Awake()
-    {
-        currentInput = (PlayerInput)GetComponent("PlayerInput");
     }
 
     private void OnDisable()
@@ -113,15 +107,13 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 
     public void OnPlayableDirectorPlayed(PlayableDirector director)
     {
-        if (director.state == PlayState.Playing)
+        if (director.state == PlayState.Playing) // 타임라인 재생 중에는 인풋 시스템을 비활성화
         {
-            //currentInput.
-            Debug.Log("Input disabled");
+            controllers.Player.Disable();
         }
         else
         {
-            //currentInput.Enable();
-            Debug.Log("Input enabled");
+            controllers.Player.Enable();
         }
     }
 }
