@@ -57,7 +57,7 @@ public class Typewriter : MonoBehaviour
         TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(PrepareText);
     }
 
-    public void PrepareText(Object obj)
+    private void PrepareText(Object obj)
     {
         if (obj != textBox || !standbyNewText || textBox.maxVisibleCharacters >= textBox.textInfo.characterCount) // 기존에 텍스트가 표시되는 중에는 실행되지 않게 함
             return;
