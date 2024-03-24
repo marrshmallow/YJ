@@ -1,52 +1,66 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.Playables;
 
 public class AudioXFade : MonoBehaviour
 {
     [SerializeField] private AudioSource videoSound;
-    [SerializeField] private float fadeTime = 0.5f;
+    [SerializeField] private float fadeInTime = 0.5f;
+    [SerializeField] private float fadeOutTime = 3f;
+    [SerializeField] private PlayableDirector director;
+    private bool inLobby = true;
 
     private void Awake()
     {
-        fadeTime = 0.5f;
+        fadeInTime = 0.5f;
     }
 
-    private void OnTriggerEnter (Collider other)
+    private void Update()
     {
-        if (other.gameObject.tag == "Player")
+        if (inLobby)
         {
-            StartCoroutine(FadeOut(videoSound, fadeTime));
-        }
-    }
-    
-    private void OnTriggerExit (Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            StartCoroutine(FadeIn(videoSound, fadeTime));
-            Debug.Log("???");
+            if (director.state == PlayState.Playing)
+                StartCoroutine(FadeOut(videoSound, fadeInTime));
+            else
+                StartCoroutine(FadeIn(videoSound, fadeInTime));
         }
     }
 
-    public IEnumerator FadeOut(AudioSource videoSound, float fadeTime)
-    {   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inLobby = false;
+            StartCoroutine(FadeOut(videoSound, fadeInTime));
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            inLobby = true;
+            StartCoroutine(FadeIn(videoSound, fadeInTime));
+        }
+    }
+
+    public IEnumerator FadeOut(AudioSource videoSound, float fadeInTime)
+    {
         float startVolume = videoSound.volume;
         while (videoSound.volume > 0)
         {
-            videoSound.volume -= startVolume * Time.deltaTime / fadeTime;
+            videoSound.volume -= startVolume * Time.deltaTime / fadeInTime;
             yield return null;
         }
         videoSound.Stop();
     }
 
-        public IEnumerator FadeIn(AudioSource videoSound, float fadeTime)
-    {   
+    public IEnumerator FadeIn(AudioSource videoSound, float fadeInTime)
+    {
         float startVolume = videoSound.volume;
         while (videoSound.volume < 1)
         {
-            videoSound.volume += Time.deltaTime / fadeTime;
+            videoSound.volume += Time.deltaTime / fadeInTime;
             yield return null;
         }
         videoSound.Play();

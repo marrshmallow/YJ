@@ -67,6 +67,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "FirstPersonToggle",
+                    "type": "Button",
+                    "id": "a6eaf367-d856-458b-aaf5-63e2ec0277fc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -287,6 +296,17 @@
                     "processors": "",
                     "groups": "MainControlScheme",
                     "action": "PlayerLookCam",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c65dffd-d7b6-4660-bd8f-dd0ed6e9a519",
+                    "path": "<Keyboard>/home",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MainControlScheme",
+                    "action": "FirstPersonToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -64,7 +64,7 @@ public class DialogueInteract : MonoBehaviour
             }
             else
             {
-                director.playableGraph.GetRootPlayable(0).SetSpeed(0); // 선택지 표시 중에 타임라인 중지 (그러나 카메라는 계속 돌아감)
+                director.playableGraph.GetRootPlayable(0).SetSpeed(1); // 선택지 표시 중에 타임라인 중지 (그러나 카메라는 계속 돌아감)
                 yield return new WaitForSeconds(dialogue.displayTime);
                 dialogueOptionsContainer.SetActive(true); // 선택지가 표시될 게임오브젝트 부모 활성화
 
@@ -76,6 +76,7 @@ public class DialogueInteract : MonoBehaviour
                     newButton.GetComponent<UIDialogueOption>().Setup(this, option.followupDialogue, option.dialogueChoice);
                     textBubble.SetActive(false);
                 }
+                director.playableGraph.GetRootPlayable(0).SetSpeed(0);
 
                 while (!optionSelected)
                 {

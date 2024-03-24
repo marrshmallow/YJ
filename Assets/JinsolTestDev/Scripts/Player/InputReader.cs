@@ -28,8 +28,12 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
     public CinemachineVirtualCamera defaultCam; // 원래카메라
     public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
+    public CinemachineVirtualCamera firstPersonCam; // 플레이어 시점 카메라
     public bool toggleCam = false; // 껐다켰다 스위치
     public float rotationSpeed = 5f; // 카메라 회전 속도
+    [SerializeField] private CinemachineBrain brain; // 1인칭 전환을 위한 시네머신 브레인 참조
+    public bool togglePOV = false; // 1인칭 시점 스위치
+    private float defaultBlendTime = 0f; // 1인칭 전환 속도 (기본값)
     #endregion
     [SerializeField] private PlayableDirector director;
 
@@ -43,6 +47,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         controllers.Player.Enable(); // 입력 활성화
         controllers.Player.Movement.canceled += context => { footstep.SetActive(false); };
         director.played += OnPlayableDirectorPlayed;
+        director.stopped += OnPlayableDirectorStopped;
         player = (Player)GetComponent("Player");
     }
 
@@ -50,6 +55,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     {
         controllers.Player.Disable(); // 컴포넌트 꺼지면 입력도 비활성화
         director.played -= OnPlayableDirectorPlayed;
+        director.stopped -= OnPlayableDirectorStopped;
     }
 
     // 이것도 전에 OnMove였는데 OnMovement로 바뀌었다ㅏㅏㅏ
@@ -92,28 +98,43 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public void OnPlayerLookCam(InputAction.CallbackContext context)
     {
         toggleCam = !toggleCam;
-        Debug.Log(toggleCam);
-
         if (toggleCam)
         {
             mainCam = playerLookCam;
             mainCam.MoveToTopOfPrioritySubqueue();
         }
         else
-        
+        {
             mainCam = defaultCam;
             mainCam.MoveToTopOfPrioritySubqueue();
+        }
+    }
+
+    public void OnFirstPersonToggle(InputAction.CallbackContext context)
+    {
+        togglePOV = !togglePOV;
+        if (togglePOV)
+        {
+            brain.m_DefaultBlend.m_Time = 1f;
+            mainCam = firstPersonCam;
+            mainCam.MoveToTopOfPrioritySubqueue();
+        }
+        else
+        {
+            brain.m_DefaultBlend.m_Time = defaultBlendTime;
+            mainCam = defaultCam;
+            mainCam.MoveToTopOfPrioritySubqueue();
+        }
     }
 
     public void OnPlayableDirectorPlayed(PlayableDirector director)
     {
         if (director.state == PlayState.Playing) // 타임라인 재생 중에는 인풋 시스템을 비활성화
-        {
             controllers.Player.Disable();
-        }
-        else
-        {
-            controllers.Player.Enable();
-        }
+    }
+
+    public void OnPlayableDirectorStopped(PlayableDirector director)
+    {
+        controllers.Player.Enable();
     }
 }

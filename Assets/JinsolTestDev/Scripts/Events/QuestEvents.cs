@@ -29,8 +29,7 @@ public class QuestEvents
     public event Action<Quest> onQuestStateChange; // 퀘스트 상태변화 있으면
     public void QuestStateChange(Quest quest)
     {
-        if (onQuestStateChange !=null)
-            onQuestStateChange(quest);
+        onQuestStateChange?.Invoke(quest);
     }
 
     public event Action<string, int, QuestStepState> onQuestStepStateChange; // 퀘스트 속의 단계의 상태변화 있으면

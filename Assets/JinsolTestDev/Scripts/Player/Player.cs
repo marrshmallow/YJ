@@ -37,10 +37,6 @@ public class Player : MonoBehaviour
 
     #region 카메라 시점 변환용
     public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
-    public CinemachineVirtualCamera defaultCam; // 원래카메라
-    public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
-    public bool toggleCam = false; // 껐다켰다 스위치
-    public float rotationSpeed = 5f; // 카메라 회전 속도
     #endregion
 
     private void Awake()
@@ -53,7 +49,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        mainCam = defaultCam;
         mainCam.MoveToTopOfPrioritySubqueue();
         GameEventsManager.instance.playerEvents.PlayerLevelChange(currentLevel);
     }
@@ -75,22 +70,6 @@ public class Player : MonoBehaviour
         }
         #endregion
     }
-/*         if (Input.GetMouseButtonDown(1)) // 마우스 우클릭으로 플레이어 보는 카메라로 전환
-        {
-            toggleCam = !toggleCam;
-            Debug.Log(toggleCam);
-
-            if (toggleCam)
-            {
-                mainCam = playerLookCam;
-                mainCam.MoveToTopOfPrioritySubqueue();
-            }
-            else
-            
-                mainCam = defaultCam;
-                mainCam.MoveToTopOfPrioritySubqueue();
-            }
-        } */
 
     private void OnTriggerEnter(Collider other)
     {

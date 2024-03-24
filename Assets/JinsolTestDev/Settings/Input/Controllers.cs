@@ -89,6 +89,15 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FirstPersonToggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""a6eaf367-d856-458b-aaf5-63e2ec0277fc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -311,6 +320,17 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""action"": ""PlayerLookCam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c65dffd-d7b6-4660-bd8f-dd0ed6e9a519"",
+                    ""path"": ""<Keyboard>/home"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MainControlScheme"",
+                    ""action"": ""FirstPersonToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -382,6 +402,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         m_Player_LookAround_Gamepad = m_Player.FindAction("LookAround_Gamepad", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_PlayerLookCam = m_Player.FindAction("PlayerLookCam", throwIfNotFound: true);
+        m_Player_FirstPersonToggle = m_Player.FindAction("FirstPersonToggle", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
@@ -453,6 +474,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_LookAround_Gamepad;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_PlayerLookCam;
+    private readonly InputAction m_Player_FirstPersonToggle;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -464,6 +486,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         public InputAction @LookAround_Gamepad => m_Wrapper.m_Player_LookAround_Gamepad;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @PlayerLookCam => m_Wrapper.m_Player_PlayerLookCam;
+        public InputAction @FirstPersonToggle => m_Wrapper.m_Player_FirstPersonToggle;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -494,6 +517,9 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @PlayerLookCam.started += instance.OnPlayerLookCam;
             @PlayerLookCam.performed += instance.OnPlayerLookCam;
             @PlayerLookCam.canceled += instance.OnPlayerLookCam;
+            @FirstPersonToggle.started += instance.OnFirstPersonToggle;
+            @FirstPersonToggle.performed += instance.OnFirstPersonToggle;
+            @FirstPersonToggle.canceled += instance.OnFirstPersonToggle;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -519,6 +545,9 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @PlayerLookCam.started -= instance.OnPlayerLookCam;
             @PlayerLookCam.performed -= instance.OnPlayerLookCam;
             @PlayerLookCam.canceled -= instance.OnPlayerLookCam;
+            @FirstPersonToggle.started -= instance.OnFirstPersonToggle;
+            @FirstPersonToggle.performed -= instance.OnFirstPersonToggle;
+            @FirstPersonToggle.canceled -= instance.OnFirstPersonToggle;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -609,6 +638,7 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         void OnLookAround_Gamepad(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnPlayerLookCam(InputAction.CallbackContext context);
+        void OnFirstPersonToggle(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
