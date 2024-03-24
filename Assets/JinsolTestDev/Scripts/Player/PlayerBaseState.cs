@@ -41,6 +41,11 @@ public abstract class PlayerBaseState : State
         stateMachine.charController.Move(stateMachine.velocity * Time.deltaTime);
     }
 
+    protected void Run()
+    {
+        stateMachine.charController.Move(stateMachine.velocity * stateMachine.sprintMultiplier * Time.deltaTime);
+    }
+
     public override void Enter()
     {
 
@@ -58,7 +63,7 @@ public abstract class PlayerBaseState : State
 
     private float getMoveSpeed()
     {
-        float moveSpeed = stateMachine.moveSpeed * stateMachine.moveSpeedModifier;
+        float moveSpeed = stateMachine.moveSpeed * stateMachine.sprintMultiplier;
         return moveSpeed;
     }
 }

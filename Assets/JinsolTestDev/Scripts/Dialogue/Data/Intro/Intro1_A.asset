@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0b2629b061d8244996331b7574ec48, type: 3}
+  m_Name: Intro1_A
+  m_EditorClassIdentifier: 
+  dialogueSegments:
+  - dialogueText: "\uB9C8\uCE68 \uC798 \uC624\uC168\uC2B5\uB2C8\uB2E4!"
+    nextCutscene: {fileID: 11400000, guid: 3acb932095cf9d34ba22ba04b8a64941, type: 2}
+    displayTime: 1
+    dialogueChoices: []
+  - dialogueText: "\uD604\uC7AC \uC601\uC9C4\uC9C1\uC5C5\uC804\uBB38\uD559\uAD50\uC758
+      \uC9C1\uC5C5 \uD6C8\uB828 \uD504\uB85C\uADF8\uB7A8\uC744 \uD64D\uBCF4\uD558\uB294
+      \uBC15\uB78C\uD68C\uAC00 \uC5F4\uB9AC\uACE0 \uC788\uAC70\uB4E0\uC694. \uD55C
+      \uBC88 \uB458\uB7EC\uBCF4\uC2DC\uB294 \uAC74 \uC5B4\uB5A0\uC138\uC694?"
+    nextCutscene: {fileID: 0}
+    displayTime: 5
+    dialogueChoices:
+    - dialogueChoice: "\uBB3C\uB860\uC774\uC8E0!"
+      followupDialogue: {fileID: 11400000, guid: 95a2403983295c44ab6d94fc5a3d08b4,
+        type: 2}
+    - dialogueChoice: "\uC5BC\uB978 \uB458\uB7EC\uBCF4\uACE0 \uC2F6\uC5B4\uC694!"
+      followupDialogue: {fileID: 11400000, guid: 95a2403983295c44ab6d94fc5a3d08b4,
+        type: 2}
+    - dialogueChoice: "\uBB50... \uD55C \uBC88 \uCBE4\uC740 \uB458\uB7EC\uBD10\uB3C4
+        \uAD1C\uCC2E\uACA0\uB124\uC694."
+      followupDialogue: {fileID: 11400000, guid: 95a2403983295c44ab6d94fc5a3d08b4,
+        type: 2}
+  endDialogue: {fileID: 0}

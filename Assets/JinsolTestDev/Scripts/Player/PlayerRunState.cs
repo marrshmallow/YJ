@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerRunState : PlayerBaseState
@@ -17,6 +18,5 @@ public class PlayerRunState : PlayerBaseState
 
     public override void Exit()
     {
-        base.Exit();
     }
 }

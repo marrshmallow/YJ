@@ -12,13 +12,13 @@ using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
-    #region 지우지말기 - 마우스 lookat 관련
+/*    #region 지우지말기 - 마우스 lookat 관련
     private Vector3 pressPoint;
     private float sceneWidth;
     private float sceneHeight;
     private Quaternion startRotation;
     //public float lookRotationDamper = 10f; 조금만 더 부드럽게 돌려주는 방법 찾으려다 포기한 부분
-    #endregion
+    #endregion*/
 
     #region 퀘스트 관련
     [SerializeField] private int startingLevel = 0; // 기본값: 레벨0 (지나가던 사람)
@@ -35,21 +35,13 @@ public class Player : MonoBehaviour
     public GameObject interact;
     #endregion
 
-    #region 발걸음 소리용
-    public GameObject footstep;
-    #endregion
-
     #region 카메라 시점 변환용
     public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
-    public CinemachineVirtualCamera defaultCam; // 원래카메라
-    public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
-    public bool toggleCam = false; // 껐다켰다 스위치
-    public float rotationSpeed = 5f; // 카메라 회전 속도
     #endregion
 
     private void Awake()
     {
-        sceneWidth = Screen.width;
+        //sceneWidth = Screen.width;
         //currentPlayerState = EPlayerState.Passerby;
         //Cursor.lockState = CursorLockMode.Locked; // 잠금 걸어놓고 돌리면 카메라 움직임이 이상해짐
         currentLevel = startingLevel;
@@ -57,14 +49,13 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        mainCam = defaultCam;
         mainCam.MoveToTopOfPrioritySubqueue();
         GameEventsManager.instance.playerEvents.PlayerLevelChange(currentLevel);
     }
 
     void Update()
     {
-        #region 마우스 드래그해서 둘러보기
+/*        #region 마우스 드래그해서 둘러보기
         if (Input.GetMouseButtonDown(0))
         {
             pressPoint = Input.mousePosition;
@@ -77,28 +68,8 @@ public class Player : MonoBehaviour
             transform.rotation = startRotation * Quaternion.Euler((CurrentDistanceBetweenMousePositions / sceneWidth) * 180 * Vector3.up);
             //mainCam.transform.rotation = Quaternion.Euler(new Vector3(CurrentXDistanceBetweenMousePositions, 0f, 0f));
         }
-        #endregion
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-            footstep.SetActive(true);
-        else footstep.SetActive(false);
-
-        if (Input.GetMouseButtonDown(1)) // 마우스 우클릭으로 플레이어 보는 카메라로 전환
-        {
-            toggleCam = !toggleCam;
-            Debug.Log(toggleCam);
-
-            if (toggleCam)
-            {
-                mainCam = playerLookCam;
-                mainCam.MoveToTopOfPrioritySubqueue();
-            }
-            else
-            
-                mainCam = defaultCam;
-                mainCam.MoveToTopOfPrioritySubqueue();
-            }
-        }
+        #endregion*/
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -147,8 +118,9 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 15, finalmask))
         {
             Interact interactScript = hit.transform.GetComponent<Interact>();
-            if (interactScript) interactScript.CallInteract(this)
+            if (interactScript) interactScript.CallInteract(this);
         }            
     }
     #endregion */
+    
 }

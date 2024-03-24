@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 [CreateAssetMenu(fileName = "DialogueSO", menuName = "ScriptableObjects/NPC_Dialogue")]
 public class DialogueSO : ScriptableObject
@@ -16,6 +17,7 @@ public class DialogueSO : ScriptableObject
 public struct DialogueSegment
 {
     public string dialogueText;
+    public PlayableAsset nextCutscene;
     public float displayTime; // 대화 표시 시간 << 버튼으로 바꿀 것
     public List<DialogueChoice> dialogueChoices;
 }

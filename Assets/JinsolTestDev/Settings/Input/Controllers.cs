@@ -89,6 +89,24 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FirstPersonToggle"",
+                    ""type"": ""Button"",
+                    ""id"": ""a6eaf367-d856-458b-aaf5-63e2ec0277fc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CameraZoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""827cd625-6d35-4445-8a69-a981dd8959d2"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -225,39 +243,6 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""One Modifier"",
-                    ""id"": ""3c4e704f-42b1-4526-8cc5-498660c8395a"",
-                    ""path"": ""OneModifier"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LookAround"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""modifier"",
-                    ""id"": ""aec75229-bfee-47c7-af0d-bd1a62476090"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""MainControlScheme"",
-                    ""action"": ""LookAround"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""binding"",
-                    ""id"": ""1e774b49-3be5-4ee5-b496-5d38508646c6"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""MainControlScheme"",
-                    ""action"": ""LookAround"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""52c200fb-c49a-4a63-8c6e-fc283872060d"",
                     ""path"": ""<Gamepad>/rightStick"",
@@ -311,6 +296,89 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
                     ""action"": ""PlayerLookCam"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0c65dffd-d7b6-4660-bd8f-dd0ed6e9a519"",
+                    ""path"": ""<Keyboard>/home"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MainControlScheme"",
+                    ""action"": ""FirstPersonToggle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9fda1f51-385d-4e5d-91c8-cbf7da044f38"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MainControlScheme"",
+                    ""action"": ""CameraZoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""0145abc9-2456-4fcc-b95a-fc31a00bb94a"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LookAround"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""44309ec4-f664-4869-aba7-a8ffe883483e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LookAround"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""dac06772-d906-4f76-88cc-6c35e18e6337"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LookAround"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""ac8dd43b-f507-40d6-9918-55f25ceab41e"",
+            ""actions"": [
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""08adfe9f-14cc-44b6-ac90-b913b1b48526"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a23274c9-d09c-4807-8e3f-233603992387"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -354,6 +422,11 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         m_Player_LookAround_Gamepad = m_Player.FindAction("LookAround_Gamepad", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_PlayerLookCam = m_Player.FindAction("PlayerLookCam", throwIfNotFound: true);
+        m_Player_FirstPersonToggle = m_Player.FindAction("FirstPersonToggle", throwIfNotFound: true);
+        m_Player_CameraZoom = m_Player.FindAction("CameraZoom", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Newaction = m_UI.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -422,6 +495,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_LookAround_Gamepad;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_PlayerLookCam;
+    private readonly InputAction m_Player_FirstPersonToggle;
+    private readonly InputAction m_Player_CameraZoom;
     public struct PlayerActions
     {
         private @Controllers m_Wrapper;
@@ -433,6 +508,8 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         public InputAction @LookAround_Gamepad => m_Wrapper.m_Player_LookAround_Gamepad;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @PlayerLookCam => m_Wrapper.m_Player_PlayerLookCam;
+        public InputAction @FirstPersonToggle => m_Wrapper.m_Player_FirstPersonToggle;
+        public InputAction @CameraZoom => m_Wrapper.m_Player_CameraZoom;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -463,6 +540,12 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @PlayerLookCam.started += instance.OnPlayerLookCam;
             @PlayerLookCam.performed += instance.OnPlayerLookCam;
             @PlayerLookCam.canceled += instance.OnPlayerLookCam;
+            @FirstPersonToggle.started += instance.OnFirstPersonToggle;
+            @FirstPersonToggle.performed += instance.OnFirstPersonToggle;
+            @FirstPersonToggle.canceled += instance.OnFirstPersonToggle;
+            @CameraZoom.started += instance.OnCameraZoom;
+            @CameraZoom.performed += instance.OnCameraZoom;
+            @CameraZoom.canceled += instance.OnCameraZoom;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -488,6 +571,12 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
             @PlayerLookCam.started -= instance.OnPlayerLookCam;
             @PlayerLookCam.performed -= instance.OnPlayerLookCam;
             @PlayerLookCam.canceled -= instance.OnPlayerLookCam;
+            @FirstPersonToggle.started -= instance.OnFirstPersonToggle;
+            @FirstPersonToggle.performed -= instance.OnFirstPersonToggle;
+            @FirstPersonToggle.canceled -= instance.OnFirstPersonToggle;
+            @CameraZoom.started -= instance.OnCameraZoom;
+            @CameraZoom.performed -= instance.OnCameraZoom;
+            @CameraZoom.canceled -= instance.OnCameraZoom;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -505,6 +594,52 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private List<IUIActions> m_UIActionsCallbackInterfaces = new List<IUIActions>();
+    private readonly InputAction m_UI_Newaction;
+    public struct UIActions
+    {
+        private @Controllers m_Wrapper;
+        public UIActions(@Controllers wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_UI_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void AddCallbacks(IUIActions instance)
+        {
+            if (instance == null || m_Wrapper.m_UIActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_UIActionsCallbackInterfaces.Add(instance);
+            @Newaction.started += instance.OnNewaction;
+            @Newaction.performed += instance.OnNewaction;
+            @Newaction.canceled += instance.OnNewaction;
+        }
+
+        private void UnregisterCallbacks(IUIActions instance)
+        {
+            @Newaction.started -= instance.OnNewaction;
+            @Newaction.performed -= instance.OnNewaction;
+            @Newaction.canceled -= instance.OnNewaction;
+        }
+
+        public void RemoveCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IUIActions instance)
+        {
+            foreach (var item in m_Wrapper.m_UIActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_UIActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     private int m_MainControlSchemeSchemeIndex = -1;
     public InputControlScheme MainControlSchemeScheme
     {
@@ -532,5 +667,11 @@ public partial class @Controllers: IInputActionCollection2, IDisposable
         void OnLookAround_Gamepad(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnPlayerLookCam(InputAction.CallbackContext context);
+        void OnFirstPersonToggle(InputAction.CallbackContext context);
+        void OnCameraZoom(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }
