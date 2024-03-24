@@ -89,8 +89,6 @@ public class QuestManager : MonoBehaviour
         if (currentPlayerLevel < quest.info.levelRequired)
         {
             meetsRequirements = false;
-            Debug.Log("퀘스트를 받을 수 있는 조건이 아닙니다.");
-            Debug.Log("현재 플레이어 레벨: " + currentPlayerLevel + ", 요구 플레이어 레벨: " + quest.info.levelRequired);
         }
 
         // 다른 전제 조건이 있는지 스캔

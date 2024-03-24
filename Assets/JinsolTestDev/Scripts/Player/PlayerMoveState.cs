@@ -16,17 +16,11 @@ public class PlayerMoveState : PlayerBaseState
     {
         stateMachine.velocity.y = Physics.gravity.y;
         stateMachine.animator.CrossFadeInFixedTime(MoveBlendTreeHash, crossFadeDuration);
-        stateMachine.inputReader.OnJumpPerformed += SwitchToJumpState;
         stateMachine.inputReader.OnRunPerformed += SwitchToRunState;
     }
     
     public override void Tick()
     {
-        if(!stateMachine.charController.isGrounded)
-        {
-            stateMachine.SwitchState(new PlayerFallState(stateMachine));
-        }
-
         CalculateMoveDirection();
         //FaceMoveDirection();
         Move();
@@ -37,13 +31,8 @@ public class PlayerMoveState : PlayerBaseState
 
     public override void Exit()
     {
-        stateMachine.inputReader.OnJumpPerformed -= SwitchToJumpState;
+        //stateMachine.inputReader.OnJumpPerformed -= SwitchToJumpState;
         stateMachine.inputReader.OnRunPerformed -= SwitchToRunState;
-    }
-
-    private void SwitchToJumpState()
-    {
-        stateMachine.SwitchState(new PlayerJumpState(stateMachine));
     }
 
     private void SwitchToRunState()

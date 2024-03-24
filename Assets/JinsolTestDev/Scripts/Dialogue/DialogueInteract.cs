@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
 
 public class DialogueInteract : MonoBehaviour
 {
@@ -20,6 +22,8 @@ public class DialogueInteract : MonoBehaviour
     [SerializeField] GameObject dialogueOptionsButtonPrefab;
     #endregion
 
+    [SerializeField] private PlayableDirector director;
+
     public void StartDialogue()
     {
         StartCoroutine(DisplayDialogue(startDialogueObject));
@@ -29,24 +33,30 @@ public class DialogueInteract : MonoBehaviour
     {
         StartCoroutine(DisplayDialogue(dialogueObject));
     }
-
     public void OptionSelected(DialogueSO selectedOption)
     {
+        director.playableGraph.GetRootPlayable(0).SetSpeed(1);
+        Debug.Log(director.playableGraph.GetRootPlayable(0).GetSpeed());
         optionSelected = true;
+        Debug.Log("Selected Option: " + selectedOption);
+        startDialogueObject = selectedOption;
         StartDialogue (selectedOption);
+        Debug.Log("Follow-up dialogue: " + startDialogueObject);
     }
 
     private IEnumerator DisplayDialogue(DialogueSO dialogueObject)
     {
         yield return null;
-        Debug.Log("Starting Dialogue Chain");
         List<GameObject> instantiatedButtons = new List<GameObject>();
 
         interactUI.SetActive(true);
-        Debug.Log("Dialogue Active");
+
         foreach (var dialogue in startDialogueObject.dialogueSegments)
         {
+            textBubble.SetActive(true);
             dialogueText.text = dialogue.dialogueText;
+            if (dialogue.nextCutscene != null)
+                director.Play(dialogue.nextCutscene); // 지정된 타임라인 에셋이 있다면 재생
             
             if (dialogue.dialogueChoices.Count == 0)
             {
@@ -54,13 +64,19 @@ public class DialogueInteract : MonoBehaviour
             }
             else
             {
-                dialogueOptionsContainer.SetActive(true);
+                director.playableGraph.GetRootPlayable(0).SetSpeed(1); // 선택지 표시 중에 타임라인 중지 (그러나 카메라는 계속 돌아감)
+                yield return new WaitForSeconds(dialogue.displayTime);
+                dialogueOptionsContainer.SetActive(true); // 선택지가 표시될 게임오브젝트 부모 활성화
+
+                // 선택지 표시
                 foreach (var option in dialogue.dialogueChoices)
                 {
                     GameObject newButton = Instantiate(dialogueOptionsButtonPrefab, dialogueOptionsParent);
                     instantiatedButtons.Add(newButton);
                     newButton.GetComponent<UIDialogueOption>().Setup(this, option.followupDialogue, option.dialogueChoice);
+                    textBubble.SetActive(false);
                 }
+                director.playableGraph.GetRootPlayable(0).SetSpeed(0);
 
                 while (!optionSelected)
                 {
