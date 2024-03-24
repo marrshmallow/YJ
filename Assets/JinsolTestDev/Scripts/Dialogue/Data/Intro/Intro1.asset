@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSegments:
   - dialogueText: "\uC548\uB155\uD558\uC138\uC694!"
-    displayTime: 2
+    displayTime: 1
     dialogueChoices: []
   - dialogueText: "\uC5B4\uB5A4 \uC77C\uB85C \uC624\uC168\uB098\uC694?"
     displayTime: 2
     dialogueChoices:
     - dialogueChoice: "\uC9C1\uC5C5\uAD50\uC721\uC5D0 \uAD00\uC2EC\uC774 \uC788\uC5B4\uC11C
-        \uC654\uC5B4\uC694!"
+        \uC654\uC5B4\uC694."
       followupDialogue: {fileID: 11400000, guid: 98d8851e109edd847b0ff78f6a0c544f,
         type: 2}
     - dialogueChoice: "\uD760... \uC870\uAE08\uB9CC \uB354 \uC0DD\uAC01\uD574 \uBCFC\uAC8C\uC694."

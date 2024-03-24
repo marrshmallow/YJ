@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueSegments:
   - dialogueText: "\uB124. \uC88B\uC740 \uD558\uB8E8 \uB418\uC2DC\uAE38 \uBC14\uB78D\uB2C8\uB2E4!"
+    nextCutscene: {fileID: 11400000, guid: 41f21b1ca9130a74ba67c2f0a363859b, type: 2}
+    displayTime: 3
     dialogueChoices: []
   endDialogue: {fileID: 0}

@@ -10,9 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c0b2629b061d8244996331b7574ec48, type: 3}
-  m_Name: Intro1_A
+  m_Name: Intro1_B
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: "\uB9C8\uCE68 \uC798 \uC624\uC168\uC2B5\uB2C8\uB2E4!"
+  - dialogueText: "\uB3C4\uC6C0\uC774 \uD544\uC694\uD558\uC2DC\uBA74 \uC5B8\uC81C\uB4E0
+      \uB9D0\uC500\uD574 \uC8FC\uC138\uC694."
+    nextCutscene: {fileID: 11400000, guid: 41f21b1ca9130a74ba67c2f0a363859b, type: 2}
+    displayTime: 3
     dialogueChoices: []
   endDialogue: {fileID: 0}
