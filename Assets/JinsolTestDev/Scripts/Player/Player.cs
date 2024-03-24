@@ -12,13 +12,13 @@ using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
-    #region 지우지말기 - 마우스 lookat 관련
+/*    #region 지우지말기 - 마우스 lookat 관련
     private Vector3 pressPoint;
     private float sceneWidth;
     private float sceneHeight;
     private Quaternion startRotation;
     //public float lookRotationDamper = 10f; 조금만 더 부드럽게 돌려주는 방법 찾으려다 포기한 부분
-    #endregion
+    #endregion*/
 
     #region 퀘스트 관련
     [SerializeField] private int startingLevel = 0; // 기본값: 레벨0 (지나가던 사람)
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        sceneWidth = Screen.width;
+        //sceneWidth = Screen.width;
         //currentPlayerState = EPlayerState.Passerby;
         //Cursor.lockState = CursorLockMode.Locked; // 잠금 걸어놓고 돌리면 카메라 움직임이 이상해짐
         currentLevel = startingLevel;
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        #region 마우스 드래그해서 둘러보기
+/*        #region 마우스 드래그해서 둘러보기
         if (Input.GetMouseButtonDown(0))
         {
             pressPoint = Input.mousePosition;
@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
             transform.rotation = startRotation * Quaternion.Euler((CurrentDistanceBetweenMousePositions / sceneWidth) * 180 * Vector3.up);
             //mainCam.transform.rotation = Quaternion.Euler(new Vector3(CurrentXDistanceBetweenMousePositions, 0f, 0f));
         }
-        #endregion
+        #endregion*/
     }
 
     private void OnTriggerEnter(Collider other)

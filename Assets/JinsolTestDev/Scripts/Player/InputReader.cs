@@ -1,5 +1,6 @@
 using System;
 using Cinemachine;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
@@ -17,25 +18,47 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 {
     public Vector2 delta;
     public Vector2 moveComposite;
+    [SerializeField] private float sprintMultiplier = 3f;
+    [SerializeField] private float camMoveSpeed;
+    [SerializeField] private float camSpeed = 1f;
     public Action OnJumpPerformed;
     public Action OnRunPerformed;
     private Controllers controllers;
     private Player player;
+    private CharacterController charController;
+    private float jumpPower = 3f;
+
     #region 발걸음 소리용
     [SerializeField] private GameObject footstep;
     #endregion
+
     #region 카메라 시점 변환용
     public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
     public CinemachineVirtualCamera defaultCam; // 원래카메라
     public CinemachineVirtualCamera playerLookCam; // 플레이어의 모습을 관찰하기 위한 카메라
     public CinemachineVirtualCamera firstPersonCam; // 플레이어 시점 카메라
     public bool toggleCam = false; // 껐다켰다 스위치
-    public float rotationSpeed = 5f; // 카메라 회전 속도
     [SerializeField] private CinemachineBrain brain; // 1인칭 전환을 위한 시네머신 브레인 참조
     public bool togglePOV = false; // 1인칭 시점 스위치
     private float defaultBlendTime = 0f; // 1인칭 전환 속도 (기본값)
+    public float scrollY; // 마우스 스크롤 값 저장
+    private Quaternion nextRotation;
+    private Vector3 nextPosition;
     #endregion
+
+    #region 카메라 회전용
+    [SerializeField] private GameObject followTransform;
+    [SerializeField] private float rotationPower = 0.1f;
+    [SerializeField] private float rotationLerp = 10f;
+    [SerializeField] private float aimValue;
+    #endregion
+
     [SerializeField] private PlayableDirector director;
+
+    private void Awake()
+    {
+        charController = (CharacterController)GetComponent("CharacterController");
+    }
 
     private void OnEnable()
     {
@@ -46,6 +69,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         controllers.Player.SetCallbacks(this); // 콜백 호출 설정
         controllers.Player.Enable(); // 입력 활성화
         controllers.Player.Movement.canceled += context => { footstep.SetActive(false); };
+        controllers.Player.CameraZoom.performed += context => { scrollY = context.ReadValue<float>() * 0.02f * -1; };
         director.played += OnPlayableDirectorPlayed;
         director.stopped += OnPlayableDirectorStopped;
         player = (Player)GetComponent("Player");
@@ -54,6 +78,8 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     private void OnDisable()
     {
         controllers.Player.Disable(); // 컴포넌트 꺼지면 입력도 비활성화
+        controllers.Player.Movement.canceled -= context => { footstep.SetActive(false); };
+        controllers.Player.CameraZoom.performed -= context => { scrollY = context.ReadValue<float>() * 0.02f * -1; };
         director.played -= OnPlayableDirectorPlayed;
         director.stopped -= OnPlayableDirectorStopped;
     }
@@ -70,8 +96,10 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     {
         if(!context.performed) // 이중 점프 방지용
             return;
-        
-        OnJumpPerformed?.Invoke();
+        if (!charController.isGrounded)
+            return;
+
+        float jumpVelocity = Mathf.Sqrt(jumpPower * -2 * Physics.gravity.y);
     }
     public void OnLookAround(InputAction.CallbackContext context)
     {
@@ -85,7 +113,7 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 
     public void OnRun(InputAction.CallbackContext context)
     {
-        Debug.Log("RUN!" + context);
+        //moveComposite = context.ReadValue<Vector2>() * sprintMultiplier;
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -136,5 +164,64 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
     public void OnPlayableDirectorStopped(PlayableDirector director)
     {
         controllers.Player.Enable();
+    }
+
+    public void OnCameraZoom(InputAction.CallbackContext context)
+    {
+        if (scrollY < 0 && mainCam.m_Lens.FieldOfView <= 15)
+            mainCam.m_Lens.FieldOfView = 15;
+        else if (scrollY > 0 && mainCam.m_Lens.FieldOfView >= 60)
+            mainCam.m_Lens.FieldOfView = 60;
+        else
+        mainCam.m_Lens.FieldOfView += scrollY;
+    }
+
+    private void Update()
+    {
+        #region Follow Transform Rotation
+        followTransform.transform.rotation *= Quaternion.AngleAxis(delta.x * rotationPower, Vector3.up);
+        #endregion
+
+        #region Vertical Rotation
+        followTransform.transform.rotation *= Quaternion.AngleAxis(delta.y * rotationPower, Vector3.right);
+
+        var angles = followTransform.transform.localEulerAngles;
+        angles.z = 0;
+
+        var angle = followTransform.transform.localEulerAngles.x;
+
+        // Clamp the Up/Down Rotation
+        if (angle > 180 && angle < 340)
+            angles.x = 340;
+        else if (angle < 180 && angle > 40)
+            angles.x = 40;
+
+        followTransform.transform.localEulerAngles = angles;
+        #endregion
+
+        nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationLerp);
+
+        if (moveComposite.x == 0 && moveComposite.y == 0)
+        {
+            nextPosition = transform.position;
+
+            if (aimValue == 1)
+            {
+                // Set the player rotation based on the look transform
+                transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
+                // Reset the y rotaton of the look transform
+                followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
+            }
+
+            return;
+        }
+        float camMoveSpeed = camSpeed * 0.01f;
+        Vector3 position = (transform.forward * moveComposite.y * camMoveSpeed) + (transform.right * moveComposite.x * camMoveSpeed);
+        nextPosition = transform.position + position;
+
+        // Set the player rotation based on the look transform
+        transform.rotation = Quaternion.Euler(0, followTransform.transform.rotation.eulerAngles.y, 0);
+        // Reset the y rotaton of the look transform
+        followTransform.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
     }
 }
