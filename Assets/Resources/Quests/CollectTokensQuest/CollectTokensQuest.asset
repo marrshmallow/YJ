@@ -16,6 +16,6 @@ MonoBehaviour:
   displayName: "\uBC15\uB78C\uD68C \uB458\uB7EC\uBCF4\uAE30"
   questStepPrefabs:
   - {fileID: 2957903536185257881, guid: 85ec0ce803b1ffd47b8833b9f14747af, type: 3}
-  levelRequired: 2
+  levelRequired: 0
   questPrerequisites: []
   tokenReward: 0
