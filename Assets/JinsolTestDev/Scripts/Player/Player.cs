@@ -79,8 +79,7 @@ public class Player : MonoBehaviour
             
         if (other.gameObject.tag == "Event_Dialogue")
         {
-            interact.SetActive(true);
-            //director.Play();
+            // 3D 오브젝트 버튼 만든 뒤로 일단 필요없어진 부분
         }
         #endregion
 
@@ -96,7 +95,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Event_Dialogue")
         {
-            interact.SetActive(false);
+            // 3D 오브젝트 버튼 만든 뒤로 일단 필요없어진 부분
         }
 
         if (other.gameObject.tag == "Exit")

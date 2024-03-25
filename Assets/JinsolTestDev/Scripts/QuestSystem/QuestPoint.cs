@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using TMPro;
@@ -24,21 +25,26 @@ public class QuestPoint : MonoBehaviour
 
     [SerializeField] private Transform npc;
     private Transform player; // 포톤 하게 되면 이부분 Awake에서 저렇게 부르면 안될 것 같다
-    private Quaternion forward; // 원래 보고 있던 방향
-    [SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
+    //private Quaternion forward; // 원래 보고 있던 방향
+    //[SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
     [SerializeField] private bool playerNearby; // 플레이어가 근처에 있는지
 
     [Header("퀘스트 목록 갱신용")]
     [SerializeField] private Transform questList; // Instantiate 할 곳
     [SerializeField] private GameObject questTitlePrefab; // 퀘스트 제목 프리팹 (button)
     [SerializeField] private GameObject questStepPrefab; // 퀘스트 단계 프리팹 (button)
+    
+    // 사실 이것도 한 번에 받을 수 있는 퀘스트의 수에 제한을 두는 게 맞다고 본다. 그러나 이번 건은 퀘스트가 없기... 때문에...
+    // 그렇지만 Array 대신 List를 쓰는 게 이 경우에는 좋다! 지우고 더하는 작업이 자주 이루어지기 때문.
+    [SerializeField] private List<GameObject> questTitleList = new(); // 퀘스트 제목 프리팹을 구분해줄 목록
+    [SerializeField] private List<GameObject> questStepList = new(); // 퀘스트 단계 프리팹을 구분해줄 목록
 
     private void Awake()
     {
         questId = questInfoForPoint.id;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        director = (PlayableDirector)FindObjectOfType(typeof(PlayableDirector   ));
-        forward = npc.transform.rotation;
+        //director = (PlayableDirector)FindObjectOfType(typeof(PlayableDirector   ));
+        //forward = npc.transform.rotation;
         questIcon = GetComponentInChildren<QuestIcon>();
     }
 
@@ -64,13 +70,13 @@ public class QuestPoint : MonoBehaviour
 
     private void Update()
     {
-        if (playerNearby)
+        /*if (playerNearby)
             //npc.transform.LookAt(player); // NPC가 반대방향이라서 안됨
             npc.rotation = Quaternion.LookRotation(transform.position - player.position);
         else npc.rotation = forward;
 
         if (director.state == PlayState.Playing)
-            LookForward();
+            LookForward();*/
     }
 
     private void OnTriggerEnter(Collider other)
@@ -86,11 +92,11 @@ public class QuestPoint : MonoBehaviour
 
     }
 
-    public void LookForward()
+/*    public void LookForward()
     {
         playerNearby = false;
         npc.rotation = forward;
-    }
+    }*/
 
     public void AcceptQuest()
     {
@@ -102,7 +108,9 @@ public class QuestPoint : MonoBehaviour
         {
             GameEventsManager.instance.questEvents.StartQuest(questId); // 퀘스트 시작
             GameObject newQuestTitle = Instantiate(questTitlePrefab, questList); // 리스트를 만들어서 관리해야 할 것 같다
+            questTitleList.Add(newQuestTitle);
             GameObject newQuestStep = Instantiate(questStepPrefab, questList); // 생성된 프리팹의 인덱스를 특정해서 지워야
+            questStepList.Add(newQuestStep);
         }
         else if (currentQuestState.Equals(QuestState.CAN_COMPLETE) && finishPoint)
         {

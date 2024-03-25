@@ -90,4 +90,9 @@ public class QuestIcon : MonoBehaviour
         }
         #endregion
     }
+
+/*    public void OnMouseUpAsButton()
+    {
+        Debug.Log("Clicked!");
+    }*/
 }
