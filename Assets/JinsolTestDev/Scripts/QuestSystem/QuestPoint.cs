@@ -87,14 +87,8 @@ public class QuestPoint : MonoBehaviour
 
     public void AcceptQuest()
     {
-        if (!playerNearby)
-        {
-            Debug.Log("PlayerNearby: " + playerNearby);
-            Debug.Log("NPC에게 좀 더 다가가세요!"); // 왜인지 모르겠는데 시작 지점과 종료 지점을 다르게 설정했을 때 이 오류 생김
-            // https://www.youtube.com/watch?v=UyTJLDGcT64&t=1958s 다시 차근차근 봐야
-            return;
-        }
-        
+        // https://www.youtube.com/watch?v=UyTJLDGcT64&t=1958s 다시 차근차근 봐야
+
         #region 퀘스트를 시작하거나 완료
         // 지금 상태가 퀘스트를 시작할 수 있는 상태이고 이 지점이 퀘스트 수주 장소라면
         if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)

@@ -22,7 +22,7 @@ MonoBehaviour:
     dialogueChoices: []
   - dialogueText: "\uADF8 \uBC16\uC5D0 \uAD81\uAE08\uD55C \uC0AC\uD56D\uC774 \uC788\uC73C\uC2DC\uBA74
       \uB9D0\uC500\uD574 \uC8FC\uC138\uC694."
-    nextCutscene: {fileID: 11400000, guid: 41f21b1ca9130a74ba67c2f0a363859b, type: 2}
+    nextCutscene: {fileID: 11400000, guid: 8b71ea5643f6a4140935e0737b96824e, type: 2}
     displayTime: 2
     dialogueChoices: []
   endDialogue: {fileID: 0}

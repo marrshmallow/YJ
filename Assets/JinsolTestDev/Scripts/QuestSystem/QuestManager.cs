@@ -5,7 +5,8 @@ public class QuestManager : MonoBehaviour
 {
     private Dictionary<string, Quest> questMap; // 전체 퀘스트 상황을 지도처럼 정리
     //private EPlayerState currentPlayerStatus; // 플레이어의 상태 체크
-    private int currentPlayerLevel; // Enum 상태 안돼서 레벨로 가정.
+    //private int currentPlayerLevel; // Enum 상태 안돼서 레벨로 가정.
+    [SerializeField] private Player player;
     // 레벨0 = 지나가던 행인
     // 레벨1 = 방문객
     // 레벨2 = 관람객
@@ -79,14 +80,14 @@ public class QuestManager : MonoBehaviour
 
     public void PlayerLevelChange(int level)
     {
-        currentPlayerLevel = level;
+        player.currentLevel = level;
     }
 
     private bool CheckRequirements(Quest quest)
     {
         bool meetsRequirements = true;
 
-        if (currentPlayerLevel < quest.info.levelRequired)
+        if (player.currentLevel < quest.info.levelRequired)
         {
             meetsRequirements = false;
         }

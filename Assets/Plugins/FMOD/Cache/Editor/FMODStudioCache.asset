@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638467283351984484
+  lastModified: 638469642203603493
   FileSizes: []
   Exists: 1
 --- !u!114 &-4125578482435881573
@@ -150,6 +150,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2126334155730294275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/QuestAccepted
+  m_EditorClassIdentifier: 
+  Path: event:/UI/QuestAccepted
+  Guid:
+    Data1: 1347104617
+    Data2: 1276718900
+    Data3: -983342942
+    Data4: -1799000334
+  Banks:
+  - {fileID: -5071897807749419122}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1747515817849903851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,10 +192,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638466472718420187
+  lastModified: 638469642203613153
   FileSizes:
   - Name: 
-    Value: 1456
+    Value: 1512
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -196,12 +223,13 @@ MonoBehaviour:
   - {fileID: 6481778635661639368}
   - {fileID: 2528763192027521222}
   - {fileID: 6677544985928014731}
+  - {fileID: -2126334155730294275}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5071897807749419122}
   StringsBanks:
   - {fileID: -1747515817849903851}
-  cacheTime: 638467283351984484
+  cacheTime: 638469642203613153
   cacheVersion: 131617
 --- !u!114 &2528763192027521222
 MonoBehaviour:
