@@ -81,6 +81,34 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 10000
   Length: 335454
+--- !u!114 &-5584487374824933420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM
+  Guid:
+    Data1: -1145424038
+    Data2: 1338354701
+    Data3: -432230483
+    Data4: 1392245233
+  Banks:
+  - {fileID: -5071897807749419122}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 2307299996743540257}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 66427
 --- !u!114 &-5071897807749419122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +124,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638469642203603493
+  lastModified: 638469806420732477
   FileSizes: []
   Exists: 1
 --- !u!114 &-4125578482435881573
@@ -192,10 +220,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638469642203613153
+  lastModified: 638469806420742447
   FileSizes:
   - Name: 
-    Value: 1512
+    Value: 1610
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -224,13 +252,42 @@ MonoBehaviour:
   - {fileID: 2528763192027521222}
   - {fileID: 6677544985928014731}
   - {fileID: -2126334155730294275}
+  - {fileID: -5584487374824933420}
   EditorParameters: []
   MasterBanks:
   - {fileID: -5071897807749419122}
   StringsBanks:
   - {fileID: -1747515817849903851}
-  cacheTime: 638469642203613153
+  cacheTime: 638469806420742447
   cacheVersion: 131617
+--- !u!114 &2307299996743540257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/Event
+  m_EditorClassIdentifier: 
+  Name: Event
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 1996765704
+    data2: 2757906194
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Lobby
+  - Main
+  - MainNPC
+  - NPC
+  Exists: 1
 --- !u!114 &2528763192027521222
 MonoBehaviour:
   m_ObjectHideFlags: 0
