@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     #region 퀘스트 관련
     [SerializeField] private int startingLevel = 0; // 기본값: 레벨0 (지나가던 사람)
-    private int currentLevel; // 현재레벨. 메모: 이걸 지금 수정한다고 다른 데 반영이 안되는데...?
+    public int currentLevel; // 현재레벨. 메모: 이걸 지금 수정한다고 다른 데 반영이 안되는데...?
     #endregion
 
     #region 이벤트 컷씬 연출용 참조 영역

@@ -166,6 +166,11 @@ public class InputReader : MonoBehaviour, Controllers.IPlayerActions
         controllers.Player.Enable();
     }
 
+    public void ForceEnableInput()
+    {
+        controllers.Player.Enable();
+    }
+
     public void OnCameraZoom(InputAction.CallbackContext context)
     {
         if (scrollY < 0 && mainCam.m_Lens.FieldOfView <= 15)

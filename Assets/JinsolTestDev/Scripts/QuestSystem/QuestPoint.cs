@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Playables;
+using TMPro;
 
 // 20240320 메모 : 현재 문제점: 클릭해도 퀘스트 수락이 될 때가 있고 안 될 때가 있음
 // >> 20240320 해결 완료 : NPC 이벤트 박스 컬라이더가 방해가 되어서 안 눌러진 것. 박스 컬라이더를 내리거나 레이어 등으로 처리
@@ -26,6 +27,12 @@ public class QuestPoint : MonoBehaviour
     private Quaternion forward; // 원래 보고 있던 방향
     [SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
     [SerializeField] private bool playerNearby; // 플레이어가 근처에 있는지
+
+    [Header("퀘스트 목록 갱신용")]
+    [SerializeField] private Transform questList; // Instantiate 할 곳
+    [SerializeField] private GameObject questTitlePrefab; // 퀘스트 제목 프리팹 (button)
+    [SerializeField] private GameObject questStepPrefab; // 퀘스트 단계 프리팹 (button)
+
     private void Awake()
     {
         questId = questInfoForPoint.id;
@@ -87,26 +94,20 @@ public class QuestPoint : MonoBehaviour
 
     public void AcceptQuest()
     {
-        if (!playerNearby)
-        {
-            Debug.Log("PlayerNearby: " + playerNearby);
-            Debug.Log("NPC에게 좀 더 다가가세요!"); // 왜인지 모르겠는데 시작 지점과 종료 지점을 다르게 설정했을 때 이 오류 생김
-            // https://www.youtube.com/watch?v=UyTJLDGcT64&t=1958s 다시 차근차근 봐야
-            return;
-        }
-        
+        // https://www.youtube.com/watch?v=UyTJLDGcT64&t=1958s 다시 차근차근 봐야
+
         #region 퀘스트를 시작하거나 완료
         // 지금 상태가 퀘스트를 시작할 수 있는 상태이고 이 지점이 퀘스트 수주 장소라면
         if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
         {
             GameEventsManager.instance.questEvents.StartQuest(questId); // 퀘스트 시작
-            Debug.Log("따-다-다-다-");
+            GameObject newQuestTitle = Instantiate(questTitlePrefab, questList); // 리스트를 만들어서 관리해야 할 것 같다
+            GameObject newQuestStep = Instantiate(questStepPrefab, questList); // 생성된 프리팹의 인덱스를 특정해서 지워야
         }
         else if (currentQuestState.Equals(QuestState.CAN_COMPLETE) && finishPoint)
         {
             // 지금 상태가 퀘스트를 끝낼 수 있는 상태이고 이 지점이 퀘스트 완료 장소라면
             GameEventsManager.instance.questEvents.CompleteQuest(questId); // 퀘스트 완료
-            Debug.Log("따다다다- 따-다 따! 따다~");
         }
         #endregion
     }
