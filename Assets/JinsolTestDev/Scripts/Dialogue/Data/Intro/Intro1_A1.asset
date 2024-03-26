@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Intro1_A1
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: "\uC790\uC720\uB86D\uAC8C \uBD80\uC2A4\uB97C \uB3CC\uC544\uBCF4\uC2DC\uBA74\uC11C
+  - speakerName: "\uC548\uB0B4\uD558\uB294 NPC"
+    dialogueText: "\uC790\uC720\uB86D\uAC8C \uBD80\uC2A4\uB97C \uB3CC\uC544\uBCF4\uC2DC\uBA74\uC11C
       \uB2F4\uB2F9 \uC9C1\uC6D0\uACFC \uC0C1\uB2F4\uD574 \uBCF4\uC138\uC694. \uAD00\uB78C\uC774
       \uB05D\uB09C \uB4A4\uC5D0 \uC774\uACF3\uC73C\uB85C \uB3CC\uC544\uC624\uC2DC\uBA74
       \uC81C\uAC00 \uD2B9\uBCC4\uD55C \uC120\uBB3C\uC744 \uB4DC\uB9BD\uB2C8\uB2E4."
     nextCutscene: {fileID: 11400000, guid: 3acb932095cf9d34ba22ba04b8a64941, type: 2}
     displayTime: 5
     dialogueChoices: []
-  - dialogueText: "\uADF8 \uBC16\uC5D0 \uAD81\uAE08\uD55C \uC0AC\uD56D\uC774 \uC788\uC73C\uC2DC\uBA74
+  - speakerName: "\uC548\uB0B4\uD558\uB294 NPC"
+    dialogueText: "\uADF8 \uBC16\uC5D0 \uAD81\uAE08\uD55C \uC0AC\uD56D\uC774 \uC788\uC73C\uC2DC\uBA74
       \uB9D0\uC500\uD574 \uC8FC\uC138\uC694."
     nextCutscene: {fileID: 11400000, guid: 8b71ea5643f6a4140935e0737b96824e, type: 2}
     displayTime: 2

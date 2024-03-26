@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Intro1
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: "\uC548\uB155\uD558\uC138\uC694!"
+  - speakerName: "\uC548\uB0B4\uD558\uB294 NPC"
+    dialogueText: "\uC548\uB155\uD558\uC138\uC694!"
     nextCutscene: {fileID: 0}
     displayTime: 1
     dialogueChoices: []
-  - dialogueText: "\uC5B4\uB5A4 \uC77C\uB85C \uC624\uC168\uB098\uC694?"
+  - speakerName: "\uC548\uB0B4\uD558\uB294 NPC"
+    dialogueText: "\uC5B4\uB5A4 \uC77C\uB85C \uC624\uC168\uB098\uC694?"
     nextCutscene: {fileID: 0}
     displayTime: 2.5
     dialogueChoices:

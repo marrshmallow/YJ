@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Intro1_B
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: "\uB3C4\uC6C0\uC774 \uD544\uC694\uD558\uC2DC\uBA74 \uC5B8\uC81C\uB4E0
+  - speakerName: "\uC548\uB0B4\uD558\uB294 NPC"
+    dialogueText: "\uB3C4\uC6C0\uC774 \uD544\uC694\uD558\uC2DC\uBA74 \uC5B8\uC81C\uB4E0
       \uB9D0\uC500\uD574 \uC8FC\uC138\uC694."
     nextCutscene: {fileID: 11400000, guid: 41f21b1ca9130a74ba67c2f0a363859b, type: 2}
     displayTime: 3

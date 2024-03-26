@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15900815, g: 0.51751715, b: 1.0386043, a: 1}
+  m_IndirectSpecularColor: {r: 0.15896621, g: 0.51753515, b: 1.0392404, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -446,7 +446,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 60
+  field of view: 26.46
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -473,7 +473,7 @@ Transform:
   m_GameObject: {fileID: 201945523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.770008, y: -16.771261, z: -46}
+  m_LocalPosition: {x: 4.770008, y: -18.51426, z: -39.545}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39063,6 +39063,7 @@ MonoBehaviour:
   startDialogueObject: {fileID: 11400000, guid: a3cf65806336d0245a3e3f8cd0f26cb3,
     type: 2}
   dialogueText: {fileID: 6562253610368818426}
+  speakerNameText: {fileID: 6453509145465613787}
   interactUI: {fileID: 3005525647005125855}
   textBubble: {fileID: 4275022885395896103}
   dialogueOptionsContainer: {fileID: 5531885974420920251}
