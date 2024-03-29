@@ -11,6 +11,7 @@ public class DialogueInteract : MonoBehaviour
     #region 대화 표시 기능
     [SerializeField] DialogueSO startDialogueObject;
     [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI speakerNameText;
     private bool optionSelected = false; // 선택을 아직 안했으면 true
     #endregion
 
@@ -33,6 +34,7 @@ public class DialogueInteract : MonoBehaviour
     {
         StartCoroutine(DisplayDialogue(dialogueObject));
     }
+
     public void OptionSelected(DialogueSO selectedOption)
     {
         director.playableGraph.GetRootPlayable(0).SetSpeed(1);
@@ -54,6 +56,7 @@ public class DialogueInteract : MonoBehaviour
         foreach (var dialogue in startDialogueObject.dialogueSegments)
         {
             textBubble.SetActive(true);
+            speakerNameText.text = dialogue.speakerName;
             dialogueText.text = dialogue.dialogueText;
             if (dialogue.nextCutscene != null)
                 director.Play(dialogue.nextCutscene); // 지정된 타임라인 에셋이 있다면 재생

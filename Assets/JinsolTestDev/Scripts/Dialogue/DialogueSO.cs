@@ -16,6 +16,7 @@ public class DialogueSO : ScriptableObject
 [System.Serializable]
 public struct DialogueSegment
 {
+    public string speakerName;
     public string dialogueText;
     public PlayableAsset nextCutscene;
     public float displayTime; // 대화 표시 시간 << 버튼으로 바꿀 것
