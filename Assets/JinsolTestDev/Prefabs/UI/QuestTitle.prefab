@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 7897719880093409155}
   - component: {fileID: 8168238087336036066}
   - component: {fileID: 5864212774556138360}
+  - component: {fileID: -890235494971143095}
   m_Layer: 5
   m_Name: QuestTitle
   m_TagString: Untagged
@@ -504,7 +505,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<sprite=0> \uD018\uC2A4\uD2B8 \uC81C\uBAA9"
+  m_text: "<sprite=0> \uBC15\uB78C\uD68C \uB458\uB7EC\uBCF4\uAE30"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 127413dd7597ef0429d13347ec74973e, type: 2}
   m_sharedMaterial: {fileID: -7048037517553666192, guid: 127413dd7597ef0429d13347ec74973e,
@@ -651,6 +652,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-890235494971143095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553841826872949360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9647e73d7afdf42b0e54f31a37d750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5012081466723719880
 GameObject:
   m_ObjectHideFlags: 0
