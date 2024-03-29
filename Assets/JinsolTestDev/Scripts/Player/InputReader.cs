@@ -1,6 +1,5 @@
 using System;
 using Cinemachine;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
