@@ -16,7 +16,7 @@ namespace Jinsol
 {
     public class MySceneManager : MonoBehaviour
     {
-        [SerializeField] private PlayableDirector director;
+        [SerializeField] private PlayableDirector director; // 2번 기능을 위한 선택사항
 
         public void LoadNextScene(int sceneAssetNumber)
         {
