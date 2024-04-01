@@ -1,45 +1,46 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Object = UnityEngine.Object;
 
-public class LinkEventInvoker : MonoBehaviour
+namespace Jinsol
 {
-    private TextMeshProUGUI _textbox;
-    public static event Action<string> LinkFound;
-    
-    private void OnEnable()
+    public class LinkEventInvoker : MonoBehaviour
     {
-        TMPro_EventManager.TEXT_CHANGED_EVENT.Add(CheckForLinkEvent);
-    }
+        private TextMeshProUGUI _textbox;
+        public static event Action<string> LinkFound;
 
-    private void OnDisable()
-    {
-        TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(CheckForLinkEvent);
-    }
-
-    private void Awake()
-    {
-        _textbox = (TextMeshProUGUI)GetComponent("TextMeshProUGUI");
-    }
-
-    private void CheckForLinkEvent(Object obj)
-    {
-        int amountOfLinksInCurrentText = _textbox.textInfo.linkCount;
-
-        if (amountOfLinksInCurrentText == 0)
-            return;
-
-        for (int linkIndex = 0; linkIndex < amountOfLinksInCurrentText; linkIndex++)
+        private void OnEnable()
         {
-            var linkInfo = _textbox.textInfo.linkInfo[linkIndex];
+            TMPro_EventManager.TEXT_CHANGED_EVENT.Add(CheckForLinkEvent);
+        }
 
-            if (_textbox.maxVisibleCharacters == linkInfo.linkTextfirstCharacterIndex)
+        private void OnDisable()
+        {
+            TMPro_EventManager.TEXT_CHANGED_EVENT.Remove(CheckForLinkEvent);
+        }
+
+        private void Awake()
+        {
+            _textbox = (TextMeshProUGUI)GetComponent("TextMeshProUGUI");
+        }
+
+        private void CheckForLinkEvent(Object obj)
+        {
+            int amountOfLinksInCurrentText = _textbox.textInfo.linkCount;
+
+            if (amountOfLinksInCurrentText == 0)
+                return;
+
+            for (int linkIndex = 0; linkIndex < amountOfLinksInCurrentText; linkIndex++)
             {
-                LinkFound?.Invoke(linkInfo.GetLinkID());
-                break;
+                var linkInfo = _textbox.textInfo.linkInfo[linkIndex];
+
+                if (_textbox.maxVisibleCharacters == linkInfo.linkTextfirstCharacterIndex)
+                {
+                    LinkFound?.Invoke(linkInfo.GetLinkID());
+                    break;
+                }
             }
         }
     }

@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class ObjectAsButton : MonoBehaviour
+namespace Jinsol
 {
-    [Header("Events")]
-    public GameEvent onQuestAccepted;
-    
-    private void OnMouseUpAsButton()
+    public class ObjectAsButton : MonoBehaviour
     {
-        onQuestAccepted.Raise();
+        [Header("Events")]
+        public GameEvent onQuestAccepted;
+
+        private void OnMouseUpAsButton()
+        {
+            onQuestAccepted.Raise();
+        }
     }
 }
