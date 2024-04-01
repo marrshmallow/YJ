@@ -1,15 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Playables;
-using TMPro;
 
-// 20240320 메모 : 현재 문제점: 클릭해도 퀘스트 수락이 될 때가 있고 안 될 때가 있음
-// >> 20240320 해결 완료 : NPC 이벤트 박스 컬라이더가 방해가 되어서 안 눌러진 것. 박스 컬라이더를 내리거나 레이어 등으로 처리
+/// <summary>
+/// 여기에서 퀘스트 수락(시작)과 완료를 담당
+/// '퀘스트 수락/완료 장소'에 이 스크립트 삽입
+/// by 정진솔
+/// </summary>
 
-// 여기에서 퀘스트 수락(시작)과 완료를 담당
-// 즉, 이곳이 '퀘스트 수락/완료 장소'
+// 20240320 현재 문제점 (해결 완료) 클릭해도 퀘스트 수락이 될 때가 있고 안 될 때가 있음
+// >> 20240320 : NPC 이벤트 박스 컬라이더가 방해가 되어서 안 눌러진 것. 박스 컬라이더를 내리거나 레이어 등으로 처리
 
-// NPC의 컬라이더 범위 안에 들어오게 되면
+// NPC의 컬라이더 범위 안에 들어오게 되면 퀘스트를 받을 수 있는 조건 중 하나를 충족
+
 [RequireComponent(typeof(BoxCollider))]
 public class QuestPoint : MonoBehaviour
 {
@@ -24,8 +26,8 @@ public class QuestPoint : MonoBehaviour
     [SerializeField] private bool finishPoint = true;
 
     [SerializeField] private Transform npc;
-    private Transform player; // 포톤 하게 되면 이부분 Awake에서 저렇게 부르면 안될 것 같다
-    //private Quaternion forward; // 원래 보고 있던 방향
+    private Transform player;
+    //private Quaternion forward; // NPC가 원래 보고 있던 방향
     //[SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
     [SerializeField] private bool playerNearby; // 플레이어가 근처에 있는지
 
@@ -34,8 +36,7 @@ public class QuestPoint : MonoBehaviour
     [SerializeField] private GameObject questTitlePrefab; // 퀘스트 제목 프리팹 (button)
     [SerializeField] private GameObject questStepPrefab; // 퀘스트 단계 프리팹 (button)
     
-    // 사실 이것도 한 번에 받을 수 있는 퀘스트의 수에 제한을 두는 게 맞다고 본다. 그러나 이번 건은 퀘스트가 없기... 때문에...
-    // 그렇지만 Array 대신 List를 쓰는 게 이 경우에는 좋다! 지우고 더하는 작업이 자주 이루어지기 때문.
+    // 프리팹을 생성하고 지우는 작업이 자주 이루어지기 때문에 Array 대신 List 사용
     [SerializeField] private List<GameObject> questTitleList = new(); // 퀘스트 제목 프리팹을 구분해줄 목록
     [SerializeField] private List<GameObject> questStepList = new(); // 퀘스트 단계 프리팹을 구분해줄 목록
 
@@ -43,8 +44,6 @@ public class QuestPoint : MonoBehaviour
     {
         questId = questInfoForPoint.id;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        //director = (PlayableDirector)FindObjectOfType(typeof(PlayableDirector   ));
-        //forward = npc.transform.rotation;
         questIcon = GetComponentInChildren<QuestIcon>();
     }
 
@@ -70,7 +69,7 @@ public class QuestPoint : MonoBehaviour
 
     private void Update()
     {
-        /*if (playerNearby)
+        /*if (playerNearby) // 플레이어가 주변에 있을 때 NPC가 바라보게 하는 효과 (prototype)
             //npc.transform.LookAt(player); // NPC가 반대방향이라서 안됨
             npc.rotation = Quaternion.LookRotation(transform.position - player.position);
         else npc.rotation = forward;
@@ -92,16 +91,14 @@ public class QuestPoint : MonoBehaviour
 
     }
 
-/*    public void LookForward()
+/*    public void LookForward() // 플레이어가 근처에 없을 때 NPC가 다시 정면을 보게 만들어 주려던 함수 (prototype)
     {
         playerNearby = false;
         npc.rotation = forward;
     }*/
 
-    public void AcceptQuest()
+    public void AcceptQuest() // 퀘스트 수락 기능
     {
-        // https://www.youtube.com/watch?v=UyTJLDGcT64&t=1958s 다시 차근차근 봐야
-
         #region 퀘스트를 시작하거나 완료
         // 지금 상태가 퀘스트를 시작할 수 있는 상태이고 이 지점이 퀘스트 수주 장소라면
         if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)

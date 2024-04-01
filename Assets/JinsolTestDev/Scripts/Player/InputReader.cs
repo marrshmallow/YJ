@@ -4,14 +4,16 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 
-#region 해 줘야 하는 설정들
-// 1. InputAction이 Asset > Settings > Input에 생성되어 있을 것.
-// 2. 이동은 Value > 2D WASD. 둘러보는 건 Value > Delta.
-// 주의사항: 이름! 정말! 중요하다! 코드 쓸 때 헷갈리지 않게 조심.
-#endregion
+/// <summary>
+/// 이 코드를 플레이어에게 붙여서 입력 신호를 감지합니다.
+/// Controllers.IPlayerActions는 다른 컨트롤러가 연결되었을 때를 위한 인터페이스입니다.
+/// by 정진솔
+/// </summary>
 
-// 이 코드를 플레이어에게 붙여서 입력 신호를 감지합니다.
-// Controllers.IPlayerActions는 다른 컨트롤러가 연결되었을 때를 위한 인터페이스입니다.
+/*해 줘야 하는 설정들
+1. InputAction이 Asset > Settings > Input에 생성되어 있을 것.
+2. 이동은 Value > 2D WASD. 둘러보는 건 Value > Delta.
+주의사항: 이름! 정말! 중요! 코드 쓸 때 헷갈리지 않게 조심.*/
 
 public class InputReader : MonoBehaviour, Controllers.IPlayerActions
 {

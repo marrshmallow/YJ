@@ -1,6 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 퀘스트 시스템 전반을 관리하는 매니저 스크립트
+/// by 정진솔
+/// </summary>
+
 public class QuestManager : MonoBehaviour
 {
     private Dictionary<string, Quest> questMap; // 전체 퀘스트 상황을 지도처럼 정리
