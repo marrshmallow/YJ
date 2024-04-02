@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class PlayerMoveState : PlayerBaseState
+namespace Jinsol
 {
+    public class PlayerMoveState : PlayerBaseState
+    {
         // moveSpeedHash와 moveBlendTreeHash는 애니메이터의 MoveSpeed 파라미터와 MoveBlendTree(블렌드트리)를 나타내는 정수 식별자
         // 유니티의 애니메이터 클래스에 있는 정적 함수 StringToHash를 사용해서 특별한 숫자로 변환해 준다.
         // 변환하지 않으면 해시는 이론적으로 서로 충돌 가능하기 때문. "hash collision"
@@ -10,33 +12,35 @@ public class PlayerMoveState : PlayerBaseState
         private readonly int MoveBlendTreeHash = Animator.StringToHash("MoveBlendTree");
         private const float animationDampTime = 0.1f; // 기기의 프레임과 상관없이 부드러운 표현
         private const float crossFadeDuration = 0.1f;
-        public PlayerMoveState(PlayerStateMachine stateMachine): base(stateMachine){}
-    
-    public override void Enter()
-    {
-        stateMachine.velocity.y = Physics.gravity.y;
-        stateMachine.animator.CrossFadeInFixedTime(MoveBlendTreeHash, crossFadeDuration);
-        stateMachine.inputReader.OnRunPerformed += SwitchToRunState;
-    }
-    
-    public override void Tick()
-    {
-        CalculateMoveDirection();
-        //FaceMoveDirection();
-        Move();
 
-        //실제 값보다도 0인가 1인가에만 관심있으므로 sqr.magnitude 사용
-        stateMachine.animator.SetFloat(MoveSpeedHash, stateMachine.inputReader.moveComposite.sqrMagnitude > 0f ? 1f : 0f, animationDampTime, Time.deltaTime);
-    }
+        public PlayerMoveState(PlayerStateMachine stateMachine) : base(stateMachine) { }
 
-    public override void Exit()
-    {
-        //stateMachine.inputReader.OnJumpPerformed -= SwitchToJumpState;
-        stateMachine.inputReader.OnRunPerformed -= SwitchToRunState;
-    }
+        public override void Enter()
+        {
+            stateMachine.velocity.y = Physics.gravity.y;
+            stateMachine.animator.CrossFadeInFixedTime(MoveBlendTreeHash, crossFadeDuration);
+            stateMachine.inputReader.OnRunPerformed += SwitchToRunState;
+        }
 
-    private void SwitchToRunState()
-    {
-        stateMachine.SwitchState(new PlayerRunState(stateMachine));
+        public override void Tick()
+        {
+            CalculateMoveDirection();
+            //FaceMoveDirection();
+            Move();
+
+            //실제 값보다도 0인가 1인가에만 관심있으므로 sqr.magnitude 사용
+            stateMachine.animator.SetFloat(MoveSpeedHash, stateMachine.inputReader.moveComposite.sqrMagnitude > 0f ? 1f : 0f, animationDampTime, Time.deltaTime);
+        }
+
+        public override void Exit()
+        {
+            //stateMachine.inputReader.OnJumpPerformed -= SwitchToJumpState;
+            stateMachine.inputReader.OnRunPerformed -= SwitchToRunState;
+        }
+
+        private void SwitchToRunState()
+        {
+            stateMachine.SwitchState(new PlayerRunState(stateMachine));
+        }
     }
 }

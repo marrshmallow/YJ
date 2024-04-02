@@ -1,20 +1,30 @@
 using UnityEngine;
 using TMPro;
 
-public class DisableTMPOutline : MonoBehaviour
+/// <summary>
+/// 
+/// TMP 사용 시 텍스트를 기본형으로 되돌려 놓는 기능
+/// 
+/// - 정진솔
+/// </summary>
+
+namespace Jinsol
 {
-    private TextMeshProUGUI m_TextMeshProUGUI;
-
-    private void Awake()
+    public class DisableTMPOutline : MonoBehaviour
     {
-        m_TextMeshProUGUI = (TextMeshProUGUI)GetComponent("TextMeshProUGUI");
-        DisableOutline();
-    }
+        private TextMeshProUGUI m_TextMeshProUGUI;
 
-    private void DisableOutline()
-    {
-        m_TextMeshProUGUI.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, 0.04f);
-        m_TextMeshProUGUI.fontMaterial.SetFloat(ShaderUtilities.ID_OutlineSoftness, 0f);
-        m_TextMeshProUGUI.fontMaterial.SetFloat(ShaderUtilities.ID_OutlineWidth, 0.01f);
+        private void Awake()
+        {
+            m_TextMeshProUGUI = (TextMeshProUGUI)GetComponent("TextMeshProUGUI");
+            DisableOutline();
+        }
+
+        private void DisableOutline()
+        {
+            m_TextMeshProUGUI.fontMaterial.SetFloat(ShaderUtilities.ID_FaceDilate, 0.04f);
+            m_TextMeshProUGUI.fontMaterial.SetFloat(ShaderUtilities.ID_OutlineSoftness, 0f);
+            m_TextMeshProUGUI.fontMaterial.SetFloat(ShaderUtilities.ID_OutlineWidth, 0.01f);
+        }
     }
 }
