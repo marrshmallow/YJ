@@ -21,22 +21,10 @@ namespace Jinsol
         [SerializeField] private PlayableDirector director;
         private bool inLobby = true;
 
-        private void Update()
-        {
-            if (inLobby)
-            {
-                if (director.state == PlayState.Playing)
-                    StartCoroutine(FadeOut(videoSound, cutsceneFadeTime));
-                else
-                    StartCoroutine(FadeIn(videoSound, fadeTime));
-            }
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Player")
             {
-                inLobby = false;
                 StartCoroutine(FadeOut(videoSound, fadeTime));
             }
         }
@@ -45,8 +33,10 @@ namespace Jinsol
         {
             if (other.gameObject.tag == "Player")
             {
-                inLobby = true;
-                StartCoroutine(FadeIn(videoSound, fadeTime));
+                if (director.state == PlayState.Playing)
+                    StartCoroutine(FadeOut(videoSound, cutsceneFadeTime));
+                else
+                    StartCoroutine(FadeIn(videoSound, fadeTime));
             }
         }
 
