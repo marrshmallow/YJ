@@ -1,7 +1,10 @@
-public abstract class State
+namespace Jinsol
 {
-    public abstract void Enter();
-    public abstract void Tick();
-    public abstract void Exit();
+    public abstract class State
+    {
+        public abstract void Enter();
+        public abstract void Tick();
+        public abstract void Exit();
 
+    }
 }

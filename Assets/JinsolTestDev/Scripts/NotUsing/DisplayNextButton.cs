@@ -1,26 +1,29 @@
 using UnityEngine;
 
-public class DisplayNextButton : MonoBehaviour
+namespace Jinsol
 {
-    [SerializeField] private GameObject nextButton;
-
-    private void OnEnable()
+    public class DisplayNextButton : MonoBehaviour
     {
-        Typewriter.FullTextRevealed += ShowNextButton;
-    }
+        [SerializeField] private GameObject nextButton;
 
-    private void OnDisable()
-    {
-        Typewriter.FullTextRevealed -= ShowNextButton;
-    }
+        private void OnEnable()
+        {
+            Typewriter.FullTextRevealed += ShowNextButton;
+        }
 
-    private void ShowNextButton()
-    {
-        nextButton.SetActive(true);
-    }
+        private void OnDisable()
+        {
+            Typewriter.FullTextRevealed -= ShowNextButton;
+        }
 
-    private void HideNextButton()
-    {
-        nextButton.SetActive(false);
+        private void ShowNextButton()
+        {
+            nextButton.SetActive(true);
+        }
+
+        private void HideNextButton()
+        {
+            nextButton.SetActive(false);
+        }
     }
 }
