@@ -5,7 +5,8 @@ using UnityEngine.Playables;
 /// <summary>
 /// 
 /// 플레이어가 내부로 들어갈 때, 다시 로비로 나올 때
-/// 로비 스크린에서 재생되는 비디오의 소리와 메인 BGM 소리 사이의 균형 조절
+/// 로비 스크린에서 재생되는 비디오의 소리 조절
+/// 나아가서 컷씬 재생 시 로비의 비디오 소리를 꺼주는 기능
 /// 
 /// - 정진솔
 /// </summary>
@@ -65,7 +66,7 @@ namespace Jinsol
             float startVolume = videoSound.volume;
             while (videoSound.volume < 1)
             {
-                videoSound.volume += Time.deltaTime / fadeTime;
+                videoSound.volume += Time.deltaTime / fadeTime * 0.1f;
                 yield return null;
             }
             videoSound.Play();
