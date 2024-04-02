@@ -40,6 +40,9 @@ namespace Jinsol
         public CinemachineVirtualCamera mainCam; // 현재 주도권을 가진 카메라
         #endregion
 
+        // 비디오 플레이어 볼륨 조절용
+        [HideInInspector] public bool inLobby = true;
+
         private void Awake()
         {
             //sceneWidth = Screen.width;
