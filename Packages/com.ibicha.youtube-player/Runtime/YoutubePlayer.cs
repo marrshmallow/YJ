@@ -13,6 +13,8 @@ namespace YoutubePlayer
     [RequireComponent(typeof(VideoPlayer))]
     public class YoutubePlayer : MonoBehaviour
     {
+        private BoxCollider soundArea; // 컬라이더가 인접했을 때 Trigger 이벤트 충돌 방지용
+
         public enum Cli
         {
             YoutubeDl,
@@ -47,7 +49,8 @@ namespace YoutubePlayer
 
         void Awake()
         {
-            VideoPlayer = GetComponent<VideoPlayer>();
+            soundArea = (BoxCollider)GetComponent("BoxCollider");
+            VideoPlayer = (VideoPlayer)GetComponent("VideoPlayer");
         }
 
         async void OnEnable()

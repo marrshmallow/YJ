@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 /// 플레이어가 내부로 들어갈 때, 다시 로비로 나올 때
 /// 로비 스크린에서 재생되는 비디오의 소리 조절
 /// 나아가서 컷씬 재생 시 로비의 비디오 소리를 꺼주는 기능
+/// 비디오는 백그라운드에서 항시 재생됩니다.
 /// 
 /// - 정진솔
 /// </summary>
@@ -21,10 +22,22 @@ namespace Jinsol
         [SerializeField] private PlayableDirector director;
         private bool inLobby = true;
 
+        private void Update()
+        {
+            if (inLobby)
+            {
+                if (director.state == PlayState.Playing)
+                    StartCoroutine(FadeOut(videoSound, cutsceneFadeTime));
+                else
+                    StartCoroutine(FadeIn(videoSound, fadeTime));
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Player")
             {
+                inLobby = false;
                 StartCoroutine(FadeOut(videoSound, fadeTime));
             }
         }
@@ -33,10 +46,8 @@ namespace Jinsol
         {
             if (other.gameObject.tag == "Player")
             {
-                if (director.state == PlayState.Playing)
-                    StartCoroutine(FadeOut(videoSound, cutsceneFadeTime));
-                else
-                    StartCoroutine(FadeIn(videoSound, fadeTime));
+                inLobby = true;
+                StartCoroutine(FadeIn(videoSound, fadeTime));
             }
         }
 
