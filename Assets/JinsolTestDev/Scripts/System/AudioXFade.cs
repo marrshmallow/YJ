@@ -65,7 +65,7 @@ namespace Jinsol
             float startVolume = videoSound.volume;
             while (videoSound.volume < 1)
             {
-                videoSound.volume += Time.deltaTime / fadeTime;
+                videoSound.volume += Time.deltaTime / fadeTime * 0.1f;
                 yield return null;
             }
             videoSound.Play();
