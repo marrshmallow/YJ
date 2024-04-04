@@ -30,7 +30,7 @@ namespace Jinsol
             sphereCollider.enabled = false;
             GameEventsManager.instance.tokenEvents.TokenCollected(tokensCollected);
             GameEventsManager.instance.miscEvents.TokenCollected();
-            GameEventsManager.print(tokensCollected);
+            Debug.Log("Tokens Collected: " + tokensCollected);
         }
     }
 }

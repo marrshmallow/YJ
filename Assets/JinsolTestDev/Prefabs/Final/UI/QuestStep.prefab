@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 2254526851989062167}
   - component: {fileID: 9146707220117653013}
   - component: {fileID: 5573293629096474137}
+  - component: {fileID: 6062710051723629906}
   m_Layer: 5
   m_Name: QuestStep
   m_TagString: Untagged
@@ -486,7 +487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<sprite=1> \uBAA8\uB4E0 \uBD80\uC2A4\uC758 NPC\uC640 \uB300\uD654 0/10"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 127413dd7597ef0429d13347ec74973e, type: 2}
   m_sharedMaterial: {fileID: -7048037517553666192, guid: 127413dd7597ef0429d13347ec74973e,
@@ -645,6 +646,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9647e73d7afdf42b0e54f31a37d750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6062710051723629906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842006090726279728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e041f16edf5cdf4fa88c91bf80e1366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questStep: {fileID: 0}
 --- !u!1 &6826135280844114419
 GameObject:
   m_ObjectHideFlags: 0

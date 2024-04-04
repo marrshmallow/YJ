@@ -1,3 +1,4 @@
+using Unity.Properties;
 using UnityEngine;
 
 /// <summary>
@@ -27,7 +28,7 @@ namespace Jinsol
             {
                 isCompleted = true;
                 GameEventsManager.instance.questEvents.ProceedQuest(questId);
-                Destroy(this.gameObject); // 씬에 남아있으면 안되니까 없애주기
+                //Destroy(this.gameObject); // 씬에 남아있으면 안되니까 없애주기
             }
         }
     }
