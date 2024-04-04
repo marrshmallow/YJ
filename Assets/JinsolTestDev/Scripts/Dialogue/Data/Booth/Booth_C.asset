@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Booth_C
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - speakerName: 
+  - speakerName: "\uBC15\uD559\uB2E4\uC2DD NPC"
     dialogueText: "\uC88B\uC2B5\uB2C8\uB2E4. \uAD81\uAE08\uD55C \uAC8C \uC788\uC73C\uC2DC\uBA74
       \uB610 \uB9D0\uC500\uD574 \uC8FC\uC138\uC694!"
     displayTime: 2

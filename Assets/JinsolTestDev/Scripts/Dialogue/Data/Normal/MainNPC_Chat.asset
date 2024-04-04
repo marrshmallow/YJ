@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: MainNPC_Chat
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - dialogueText: 
-    nextCutscene: {fileID: 0}
+  - speakerName: 
+    dialogueText: 
     displayTime: 0
+    nextCutscene: {fileID: 0}
     dialogueChoices: []
   endDialogue: {fileID: 0}

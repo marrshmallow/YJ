@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BoothNPC_Quest
   m_EditorClassIdentifier: 
   dialogueSegments:
-  - speakerName: 
+  - speakerName: "\uBC15\uD559\uB2E4\uC2DD NPC"
     dialogueText: "\uC548\uB155\uD558\uC138\uC694! \uBB34\uC5C7\uC744 \uB3C4\uC640\uB4DC\uB9B4\uAE4C\uC694?"
     displayTime: 1
     nextCutscene: {fileID: 0}

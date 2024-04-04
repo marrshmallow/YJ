@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c0b2629b061d8244996331b7574ec48, type: 3}
+  m_Name: End_A
+  m_EditorClassIdentifier: 
+  dialogueSegments:
+  - speakerName: "\uC548\uB0B4\uD558\uB294 NPC"
+    dialogueText: "\uADF8\uB798\uC694. \uC55E\uC73C\uB85C\uC758 \uB2F9\uC2E0\uC758
+      \uBAA8\uD5D8\uC5D0 \uC624\uB298 \uD558\uB8E8\uAC00 \uB098\uCE68\uBC18\uC774
+      \uB418\uC5C8\uC73C\uBA74 \uC88B\uACA0\uB124\uC694. \uC5B8\uC81C\uB4E0\uC9C0
+      \uB610 \uC624\uC138\uC694!"
+    displayTime: 2
+    nextCutscene: {fileID: 0}
+    dialogueChoices: []
+  endDialogue: {fileID: 0}

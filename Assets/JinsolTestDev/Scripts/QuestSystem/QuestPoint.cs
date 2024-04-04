@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 
 /// <summary>
 /// 
@@ -37,7 +38,7 @@ namespace Jinsol
         private Transform player;
         //private Quaternion forward; // NPC가 원래 보고 있던 방향
         //[SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
-        [SerializeField] private bool playerNearby; // 플레이어가 근처에 있는지
+        [SerializeField] protected bool playerNearby; // 플레이어가 근처에 있는지
         [SerializeField] private EventTrigger myEventTrigger; // 플레이어가 근처에 없으면 클릭할 수 없게
 
         [Header("퀘스트 목록 갱신용")]
@@ -48,6 +49,11 @@ namespace Jinsol
         // 프리팹을 생성하고 지우는 작업이 자주 이루어지기 때문에 Array 대신 List 사용
         [SerializeField] private List<GameObject> questTitleList = new(); // 퀘스트 제목 프리팹을 구분해줄 목록
         [SerializeField] private List<GameObject> questStepList = new(); // 퀘스트 단계 프리팹을 구분해줄 목록
+
+        // 연출용
+        [SerializeField] private PlayableDirector director;
+        [SerializeField] private PlayableAsset startQuestCutscene;
+        [SerializeField] private PlayableAsset finishQuestCutscene;
 
         private void Awake()
         {
@@ -87,12 +93,12 @@ namespace Jinsol
             if (director.state == PlayState.Playing)
                 LookForward();*/
             
-            if (playerNearby)
+            /*if (playerNearby)
             {
                 myEventTrigger.enabled = true;
             }
             else
-                myEventTrigger.enabled = false;
+                myEventTrigger.enabled = false;*/
         }
 
         private void OnTriggerEnter(Collider other)
@@ -120,6 +126,7 @@ namespace Jinsol
             // 지금 상태가 퀘스트를 시작할 수 있는 상태이고 이 지점이 퀘스트 수주 장소라면
             if (currentQuestState.Equals(QuestState.CAN_START) && startPoint)
             {
+                director.Play(startQuestCutscene);
                 GameEventsManager.instance.questEvents.StartQuest(questId); // 퀘스트 시작
                 GameObject newQuestTitle = Instantiate(questTitlePrefab, questList); // 리스트를 만들어서 관리해야 할 것 같다
                 questTitleList.Add(newQuestTitle);
@@ -129,6 +136,8 @@ namespace Jinsol
             else if (currentQuestState.Equals(QuestState.CAN_COMPLETE) && finishPoint)
             {
                 // 지금 상태가 퀘스트를 끝낼 수 있는 상태이고 이 지점이 퀘스트 완료 장소라면
+                director.RebuildGraph();
+                director.Play(finishQuestCutscene);
                 GameEventsManager.instance.questEvents.CompleteQuest(questId); // 퀘스트 완료
             }
             #endregion

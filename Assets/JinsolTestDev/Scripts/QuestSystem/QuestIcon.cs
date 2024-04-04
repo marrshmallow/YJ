@@ -1,3 +1,4 @@
+using System.Net;
 using UnityEngine;
 
 /// <summary>
@@ -14,6 +15,7 @@ namespace Jinsol
         [Header("Icons")]
         [SerializeField] private GameObject questIcon;
         [SerializeField] private Material material;
+        private SphereCollider sphereCollider;
 
         /*    [SerializeField] private GameObject canStartIcon;
             [SerializeField] private GameObject cannotCompleteIcon;
@@ -22,6 +24,7 @@ namespace Jinsol
         private void Awake()
         {
             material = questIcon.GetComponent<SkinnedMeshRenderer>().material;
+            sphereCollider = (SphereCollider)GetComponent("SphereCollider");
         }
 
         public void SetState(QuestState newState, bool startPoint, bool finishPoint)
@@ -92,6 +95,7 @@ namespace Jinsol
                         material.color = new Color(0f, 168f / 255f, 102f / 255f, 1f); // 퀘스트 완료 가능할 때 녹색으로 표시
 
                         questIcon.SetActive(true);
+                        sphereCollider.enabled = true;
                     }
                     break;
                 case QuestState.COMPLETED:
@@ -102,10 +106,5 @@ namespace Jinsol
             }
             #endregion
         }
-
-        /*    public void OnMouseUpAsButton()
-            {
-                Debug.Log("Clicked!");
-            }*/
     }
 }

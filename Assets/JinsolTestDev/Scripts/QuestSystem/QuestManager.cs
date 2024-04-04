@@ -107,7 +107,6 @@ namespace Jinsol
                 if (GetQuestById(prerequisiteQuestInfo.id).state != QuestState.COMPLETED)
                 {
                     meetsRequirements = false;
-                    Debug.Log("퀘스트를 클리어했기 때문에 받을 수 없습니다.");
                 }
             }
 
