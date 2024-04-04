@@ -15,7 +15,7 @@ namespace Jinsol
     public class DialogueInteract : MonoBehaviour
     {
         #region 대화 표시 기능
-        [SerializeField] DialogueSO startDialogueObject; // 불러올 대화 데이터 (스크립터블 오브젝트)
+        public DialogueSO startDialogueObject; // 불러올 대화 데이터 (스크립터블 오브젝트)
         [SerializeField] TextMeshProUGUI dialogueText; // 텍스트가 표시될 컴포넌트 (TextMeshPro)
         [SerializeField] TextMeshProUGUI speakerNameText; // 화자의 이름이 표시될 텍스트 컴포넌트 (TMP)
         private bool optionSelected = false; // 플레이어가 선택지에서 무언가를 골랐다면 true. 선택지 UI에 직접 OnClick 이벤트를 생성하여 적용.

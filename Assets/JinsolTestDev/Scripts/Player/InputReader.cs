@@ -133,11 +133,13 @@ namespace Jinsol
             toggleCam = !toggleCam;
             if (toggleCam)
             {
+                playerLookCam.gameObject.SetActive(true);
                 mainCam = playerLookCam;
                 mainCam.MoveToTopOfPrioritySubqueue();
             }
             else
             {
+                playerLookCam.gameObject.SetActive(false);
                 mainCam = defaultCam;
                 mainCam.MoveToTopOfPrioritySubqueue();
             }
@@ -148,12 +150,14 @@ namespace Jinsol
             togglePOV = !togglePOV;
             if (togglePOV)
             {
+                firstPersonCam.gameObject.SetActive(true);
                 brain.m_DefaultBlend.m_Time = 1f;
                 mainCam = firstPersonCam;
                 mainCam.MoveToTopOfPrioritySubqueue();
             }
             else
             {
+                firstPersonCam.gameObject.SetActive(false);
                 brain.m_DefaultBlend.m_Time = defaultBlendTime;
                 mainCam = defaultCam;
                 mainCam.MoveToTopOfPrioritySubqueue();
