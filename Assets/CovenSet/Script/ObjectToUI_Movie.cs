@@ -1,31 +1,28 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-
-public class ObjectToUI : MonoBehaviour
+public class ObjectToUI_Movie : MonoBehaviour
 {
     public bool isPlayerInTrigger;
-    public bool isUIActive;
-    public GameObject image_Object;
+    public bool isUIActive_Movie;
+    public GameObject move_Object;
     // public Image objectUI;
 
     public GameObject info_Text;  //안내 패널
-   
+
 
 
     // Update is called once per frame
     void Update()
     {
-        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.R))
         {
-            
-            isUIActive = !isUIActive;
-            image_Object.SetActive(isUIActive);
 
-            if (isUIActive)
+            isUIActive_Movie = !isUIActive_Movie;
+            move_Object.SetActive(isUIActive_Movie);
+
+            if (isUIActive_Movie)
             {
                 info_Text.SetActive(false);
             }
@@ -51,5 +48,4 @@ public class ObjectToUI : MonoBehaviour
             info_Text.SetActive(false);
         }
     }
-
 }
