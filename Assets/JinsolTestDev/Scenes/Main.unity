@@ -27695,11 +27695,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1145424038
-      Data2: 1338354701
-      Data3: -432230483
-      Data4: 1392245233
-    Path: event:/Music/BGM
+      Data1: 616929242
+      Data2: 1262469553
+      Data3: 1239443896
+      Data4: -1592814380
+    Path: event:/Music/NPC_BGM
   Event: 
   PlayEvent: 11
   StopEvent: 12
@@ -27707,9 +27707,7 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
-  Params:
-  - Name: Event
-    Value: 2
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
@@ -30529,7 +30527,7 @@ PlayableDirector:
   m_GameObject: {fileID: 840935073186102326}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 04a2af0f851e64e4a97459a7aca11b2a, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e05f2386e35c76242a1ebdad825eb6f1, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
