@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// 
@@ -11,6 +12,9 @@ using UnityEngine;
 
 // 20240320 현재 문제점 (해결 완료) 클릭해도 퀘스트 수락이 될 때가 있고 안 될 때가 있음
 // >> 20240320 : NPC 이벤트 박스 컬라이더가 방해가 되어서 안 눌러진 것. 박스 컬라이더를 내리거나 레이어 등으로 처리
+// >> 20240404 : 카메라에 Physics Raycaster 컴포넌트를 추가
+// UI (현재 퀘스트 아이콘의 레이어) 인식하게 설정한 뒤 Max Ray Intersections 수치를 1로 지정
+// 이것만 했을 때 멀리 있어도 클릭할 수 있게 되므로 스크립트로 제한해 줘야 합니다. (완료)
 
 // NPC의 컬라이더 범위 안에 들어오게 되면 퀘스트를 받을 수 있는 조건 중 하나를 충족
 
@@ -34,6 +38,7 @@ namespace Jinsol
         //private Quaternion forward; // NPC가 원래 보고 있던 방향
         //[SerializeField] private PlayableDirector director; // 타임라인이 재생중인지 아닌지를 읽어서 컷씬 재생중에 회전값을 초기화 시켜주려고
         [SerializeField] private bool playerNearby; // 플레이어가 근처에 있는지
+        [SerializeField] private EventTrigger myEventTrigger; // 플레이어가 근처에 없으면 클릭할 수 없게
 
         [Header("퀘스트 목록 갱신용")]
         [SerializeField] private Transform questList; // Instantiate 할 곳
@@ -49,6 +54,7 @@ namespace Jinsol
             questId = questInfoForPoint.id;
             player = GameObject.FindGameObjectWithTag("Player").transform;
             questIcon = GetComponentInChildren<QuestIcon>();
+            myEventTrigger = GetComponentInChildren<EventTrigger>();
         }
 
         private void OnEnable()
@@ -80,6 +86,13 @@ namespace Jinsol
 
             if (director.state == PlayState.Playing)
                 LookForward();*/
+            
+            if (playerNearby)
+            {
+                myEventTrigger.enabled = true;
+            }
+            else
+                myEventTrigger.enabled = false;
         }
 
         private void OnTriggerEnter(Collider other)

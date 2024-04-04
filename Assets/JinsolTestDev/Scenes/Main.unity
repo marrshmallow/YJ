@@ -1838,9 +1838,8 @@ GameObject:
   - component: {fileID: 5202267908713344405}
   - component: {fileID: 1192685418452912590}
   - component: {fileID: 4561701266165578159}
-  - component: {fileID: 5670507144517127010}
   - component: {fileID: 4631962559172348856}
-  - component: {fileID: 739387966255034358}
+  - component: {fileID: 5202267908713344406}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -3464,7 +3463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 74071088797871202}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!4 &336980382276460151
 Transform:
   m_ObjectHideFlags: 0
@@ -3797,7 +3795,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 4211667105907957264}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!33 &363024801877517446
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4122,34 +4119,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &414942617376416602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298278545228792308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6612277064136849712}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &423316754156576839
 GameObject:
   m_ObjectHideFlags: 0
@@ -5204,34 +5173,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8265060810019752475}
   m_Mesh: {fileID: -2232952877369940510, guid: 3f8925003029f5c4f878297181271142, type: 3}
---- !u!114 &608311438921954292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6922362502399470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8090672891082373680}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &608438135757954264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,7 +5862,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!33 &718297111724696772
 MeshFilter:
@@ -5939,34 +5880,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4943461045910936641}
   m_Mesh: {fileID: 5060444177187149915, guid: 91d5ba2dfe375a0448dbd23650447014, type: 3}
---- !u!114 &739387966255034358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116739968845226762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5670507144517127010}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &742287037911950399
 Transform:
   m_ObjectHideFlags: 0
@@ -6818,9 +6731,8 @@ GameObject:
   - component: {fileID: 8811973450320918985}
   - component: {fileID: 5492584967992468970}
   - component: {fileID: 233130970428515337}
-  - component: {fileID: 2830412487273072041}
   - component: {fileID: 1461784117528015667}
-  - component: {fileID: 3185542358471995632}
+  - component: {fileID: 8811973450320918986}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -8163,30 +8075,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &1075079176490709198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6184674621429231519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8277808717214148385}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &1075653731833523927
 GameObject:
   m_ObjectHideFlags: 0
@@ -10081,7 +9969,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 0.53622365, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.58621293, y: -0.88188815, z: 0.88311195}
 --- !u!1 &1466597588690638756
 GameObject:
@@ -10159,30 +10047,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1479047087254789261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4109641930234350919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 2892706549657718813}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!114 &1481359158947564032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10282,7 +10146,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!33 &1498604938416608148
 MeshFilter:
@@ -10506,7 +10370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 247429552264438988}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!23 &1532070158843590415
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10913,34 +10776,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1578009393509712639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968984328172066102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3876550474504597469}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!135 &1579592464487983110
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11115,7 +10950,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 6958609506534412385}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!1 &1620971458544446292
 GameObject:
   m_ObjectHideFlags: 0
@@ -13875,8 +13709,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 2}
-  m_Center: {x: -0.5862129, y: -0.65, z: 1.34}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
+  m_Center: {x: 0.44, y: -0.73, z: -3.85}
 --- !u!1 &2038752812811089018
 GameObject:
   m_ObjectHideFlags: 0
@@ -14046,34 +13880,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008123384371823105}
   m_CullTransparentMesh: 1
---- !u!114 &2061724544090024081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4109641930234350919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1479047087254789261}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!222 &2066202293507008694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14996,34 +14802,6 @@ RectTransform:
   m_AnchoredPosition: {x: 108.91, y: -300.08624}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2165782157955059976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4460822498923303269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4980834992804932870}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &2169752629877837314
 Transform:
   m_ObjectHideFlags: 0
@@ -15480,34 +15258,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2249765291428328706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503003393237343607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7705999853436532472}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!23 &2262439430176626750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18465,7 +18215,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!33 &2818281657170620229
 MeshFilter:
@@ -18509,30 +18259,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &2830412487273072041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889935548558238397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 4791722589544143736}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &2835167346605951580
 GameObject:
   m_ObjectHideFlags: 0
@@ -20333,34 +20059,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4641092429656416355}
   m_CullTransparentMesh: 1
---- !u!114 &3185542358471995632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889935548558238397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2830412487273072041}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &3188518065320512030
 GameObject:
   m_ObjectHideFlags: 0
@@ -20794,7 +20492,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 276857288876493062}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!4 &3279629315678583114
 Transform:
   m_ObjectHideFlags: 0
@@ -20926,7 +20623,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 510883653854155826}
   material: {fileID: 0}
-  isSubQuest: 0
 --- !u!1 &3325399522605977227
 GameObject:
   m_ObjectHideFlags: 0
@@ -20938,9 +20634,8 @@ GameObject:
   - component: {fileID: 5444101775216668017}
   - component: {fileID: 3368123510466714113}
   - component: {fileID: 4166476086250579829}
-  - component: {fileID: 7952848105946469848}
   - component: {fileID: 712695247272033532}
-  - component: {fileID: 8672553522518656779}
+  - component: {fileID: 5444101775216668018}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -24181,9 +23876,8 @@ GameObject:
   - component: {fileID: 6212847808860226152}
   - component: {fileID: 124408258837390818}
   - component: {fileID: 3394892114933306522}
-  - component: {fileID: 5664458761712904456}
   - component: {fileID: 8545530467171011156}
-  - component: {fileID: 7456301015358648701}
+  - component: {fileID: 8545530467171011157}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -24276,30 +23970,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5095529713897550411}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3876550474504597469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968984328172066102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8262424294649527725}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &3878694064095145412
 GameObject:
   m_ObjectHideFlags: 0
@@ -25747,9 +25417,8 @@ GameObject:
   - component: {fileID: 7790934783844557347}
   - component: {fileID: 6405609865844185765}
   - component: {fileID: 6132250077774865145}
-  - component: {fileID: 1479047087254789261}
   - component: {fileID: 1489904389482157012}
-  - component: {fileID: 2061724544090024081}
+  - component: {fileID: 7790934783844557348}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -26285,7 +25954,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!114 &4240533245768658757
 MonoBehaviour:
@@ -27797,9 +27466,8 @@ GameObject:
   - component: {fileID: 2914676705118773845}
   - component: {fileID: 8629496945443835923}
   - component: {fileID: 5113178985813304644}
-  - component: {fileID: 4980834992804932870}
   - component: {fileID: 7241751033803104395}
-  - component: {fileID: 2165782157955059976}
+  - component: {fileID: 8629496945443835924}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -28109,34 +27777,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &4547216667734180527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721627475835652304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6910178237871098751}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!222 &4547662017439927357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28159,7 +27799,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 8248675131607336165}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!4 &4557949916805700204
 Transform:
   m_ObjectHideFlags: 0
@@ -28630,7 +28269,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!114 &4634329749278410126
 MonoBehaviour:
@@ -28931,34 +28570,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273302101652944675}
   m_CullTransparentMesh: 1
---- !u!114 &4683792053438168791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6184674621429231519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1075079176490709198}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!23 &4688193915491718680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29149,9 +28760,8 @@ GameObject:
   - component: {fileID: 948830239320153853}
   - component: {fileID: 7117977814975524906}
   - component: {fileID: 3997916887706470889}
-  - component: {fileID: 6910178237871098751}
   - component: {fileID: 5698766978157477666}
-  - component: {fileID: 4547216667734180527}
+  - component: {fileID: 7117977814975524907}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -29588,7 +29198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 4339266672221882031}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!4 &4781974606251449709
 Transform:
   m_ObjectHideFlags: 0
@@ -31160,9 +30769,8 @@ GameObject:
   - component: {fileID: 5650679073545136171}
   - component: {fileID: 7541424724463566885}
   - component: {fileID: 9198428523997921561}
-  - component: {fileID: 3876550474504597469}
   - component: {fileID: 2816237406391108101}
-  - component: {fileID: 1578009393509712639}
+  - component: {fileID: 9198428523997921562}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -31220,30 +30828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9004396409421431070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4980834992804932870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4460822498923303269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 3660143837897659070}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!114 &4985775663771910841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32879,6 +32463,19 @@ Transform:
   - {fileID: 742287037911950399}
   m_Father: {fileID: 6235582390312003139}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5202267908713344406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116739968845226762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!95 &5212063643896851347
 Animator:
   serializedVersion: 5
@@ -33327,7 +32924,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 5180379095352619625}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!114 &5282887822386481999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34437,6 +34033,19 @@ Transform:
   - {fileID: 8352120442046960721}
   m_Father: {fileID: 5571178289864317039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5444101775216668018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325399522605977227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!4 &5447676525242123349
 Transform:
   m_ObjectHideFlags: 0
@@ -34484,7 +34093,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 7769046488546560738}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!33 &5450423708448929606
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34668,9 +34276,8 @@ GameObject:
   - component: {fileID: 5965287684851137932}
   - component: {fileID: 5144360061905297905}
   - component: {fileID: 3617195228653491589}
-  - component: {fileID: 7705999853436532472}
   - component: {fileID: 4238886601235337906}
-  - component: {fileID: 2249765291428328706}
+  - component: {fileID: 5965287684851137933}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -35866,54 +35473,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &5664458761712904456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3852519647765051861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 4108273265958277944}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
---- !u!114 &5670507144517127010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116739968845226762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 742287037911950399}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &5671093186660221467
 GameObject:
   m_ObjectHideFlags: 0
@@ -36135,7 +35694,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!4 &5700700440302423334
 Transform:
@@ -36370,7 +35929,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 7013157803411745075}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!114 &5743604904537312918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37864,7 +37422,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 4456807788623548744}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!222 &5952282600515011751
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37962,6 +37519,19 @@ Transform:
   - {fileID: 1423069835412390824}
   m_Father: {fileID: 4136338605528919524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5965287684851137933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5503003393237343607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!1 &5966845133061945775
 GameObject:
   m_ObjectHideFlags: 0
@@ -39144,9 +38714,8 @@ GameObject:
   - component: {fileID: 4646830121662647301}
   - component: {fileID: 1890426077685419192}
   - component: {fileID: 1532070158843590415}
-  - component: {fileID: 1075079176490709198}
   - component: {fileID: 7509572687232620131}
-  - component: {fileID: 4683792053438168791}
+  - component: {fileID: 7509572687232620132}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -42516,30 +42085,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onQuestAccepted: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
---- !u!114 &6612277064136849712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298278545228792308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8069694805419643667}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!4 &6613108183363671291
 Transform:
   m_ObjectHideFlags: 0
@@ -44150,30 +43695,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6910178237871098751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721627475835652304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 357575858911881430}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!33 &6910216246963821941
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -44211,9 +43732,8 @@ GameObject:
   - component: {fileID: 2080177865486294320}
   - component: {fileID: 9059515595287663253}
   - component: {fileID: 1292462395795914836}
-  - component: {fileID: 8090672891082373680}
   - component: {fileID: 9221025814465223138}
-  - component: {fileID: 608311438921954292}
+  - component: {fileID: 9221025814465223139}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -45637,6 +45157,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4721627475835652304}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7117977814975524907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721627475835652304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!1 &7118438959728879680
 GameObject:
   m_ObjectHideFlags: 0
@@ -46537,7 +46070,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
 --- !u!1 &7244123190938453463
 GameObject:
@@ -46820,9 +46353,8 @@ GameObject:
   - component: {fileID: 274151949724324384}
   - component: {fileID: 610480446105349590}
   - component: {fileID: 1820315230752832035}
-  - component: {fileID: 6612277064136849712}
   - component: {fileID: 2035021385409003866}
-  - component: {fileID: 414942617376416602}
+  - component: {fileID: 7298278545228792309}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -46830,6 +46362,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7298278545228792309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298278545228792308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!4 &7298784784789614893
 Transform:
   m_ObjectHideFlags: 0
@@ -47651,34 +47196,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &7456301015358648701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3852519647765051861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5664458761712904456}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &7458223697859173343
 Transform:
   m_ObjectHideFlags: 0
@@ -48170,8 +47687,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
+--- !u!114 &7509572687232620132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6184674621429231519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!1 &7511856823208413518
 GameObject:
   m_ObjectHideFlags: 0
@@ -49732,30 +49262,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7581577597954425675}
   m_CullTransparentMesh: 1
---- !u!114 &7705999853436532472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503003393237343607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 1423069835412390824}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!224 &7709824839311568766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50685,6 +50191,19 @@ Transform:
   - {fileID: 2892706549657718813}
   m_Father: {fileID: 5680686338519269973}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7790934783844557348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109641930234350919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!135 &7791615832927053052
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -51966,30 +51485,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8566156627870209963}
   m_LocalEulerAnglesHint: {x: -81.482, y: -90, z: 90.013}
---- !u!114 &7952848105946469848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325399522605977227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8352120442046960721}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!33 &7954728471889717084
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -52751,30 +52246,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1925718056077657484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8090672891082373680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6922362502399470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 6820605578833944713}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!23 &8091848219879889768
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -55031,8 +54502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_EventMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_MaxRayIntersections: 0
+    m_Bits: 32
+  m_MaxRayIntersections: 1
 --- !u!4 &8395205105886066539
 Transform:
   m_ObjectHideFlags: 0
@@ -55398,6 +54869,7 @@ MonoBehaviour:
   finishPoint: 1
   npc: {fileID: 1499530586059354065}
   playerNearby: 0
+  myEventTrigger: {fileID: 0}
   questList: {fileID: 4965067677240723887}
   questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
     type: 3}
@@ -55824,8 +55296,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
+--- !u!114 &8545530467171011157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852519647765051861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!33 &8546823091765719054
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56506,6 +55991,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4460822498923303269}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &8629496945443835924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4460822498923303269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!33 &8632721371615182875
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56744,34 +56242,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8672553522518656779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325399522605977227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7952848105946469848}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8676339202135501511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57824,6 +57294,19 @@ Transform:
   - {fileID: 4791722589544143736}
   m_Father: {fileID: 7424498927834711818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8811973450320918986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889935548558238397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!1 &8816935122660061820
 GameObject:
   m_ObjectHideFlags: 0
@@ -58916,7 +58399,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questIcon: {fileID: 1358700515823799791}
   material: {fileID: 0}
-  isSubQuest: 1
 --- !u!114 &8987531304099837736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59955,6 +59437,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9198428523997921562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968984328172066102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!1 &9198934675516363592
 GameObject:
   m_ObjectHideFlags: 0
@@ -60225,8 +59720,21 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.01, y: 1, z: 2.47}
+  m_Size: {x: 3.65, y: 1, z: 4.9}
   m_Center: {x: -0.5862129, y: -0.65, z: 0.88311195}
+--- !u!114 &9221025814465223139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6922362502399470160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be02ce9689959dc40adf0b7952597599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myEventTrigger: {fileID: 0}
 --- !u!1 &9221868294526808891
 GameObject:
   m_ObjectHideFlags: 3
