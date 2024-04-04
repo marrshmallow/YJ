@@ -12,14 +12,23 @@ public class ObjectToUI : MonoBehaviour
     public GameObject uiObject;
     // public Image objectUI;
 
+    public GameObject info_Text;  //안내 패널
+   
+
 
     // Update is called once per frame
     void Update()
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Space))
         {
+            
             isUIActive = !isUIActive;
             uiObject.SetActive(isUIActive);
+
+            if (isUIActive)
+            {
+                info_Text.SetActive(false);
+            }
         }
 
 
@@ -30,6 +39,7 @@ public class ObjectToUI : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isPlayerInTrigger = true;
+            info_Text.SetActive(true);
         }
     }
 
@@ -38,6 +48,8 @@ public class ObjectToUI : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isPlayerInTrigger = false;
+            info_Text.SetActive(false);
         }
     }
+
 }
