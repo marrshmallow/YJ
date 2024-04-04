@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractItem : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class InteractItem : MonoBehaviour
 
     public GameObject equalhandVR_L;
 
+    public GameObject info_Text;  //안내 패널
+
+    public bool isUIActive;
     void Update()
     {
         if (onPlayer && Input.GetKeyDown(KeyCode.F))
@@ -50,6 +54,11 @@ public class InteractItem : MonoBehaviour
 
                 equal = false;
             }
+
+            if (isUIActive)
+            {
+                info_Text.SetActive(false);
+            }
         }
        
     }
@@ -59,6 +68,7 @@ public class InteractItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             onPlayer = true;
+            info_Text.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -66,6 +76,7 @@ public class InteractItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             onPlayer = false;
+            info_Text.SetActive(false);
         }
     }
 }
