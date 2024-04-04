@@ -18,16 +18,11 @@ namespace Jinsol
         [Header("설정")]
         [SerializeField] private int tokensCollected = 1;
 
-        // 속한 퀘스트의 진행 상황에 따라 아이콘 색상을 변하지 않게 하기 위한 부분
-        private QuestIcon questIcon;
-
         private SphereCollider sphereCollider;
 
         private void Awake()
         {
-            questIcon = (QuestIcon)GetComponent("QuestIcon");
             sphereCollider = (SphereCollider)GetComponent("SphereCollider");
-            //questIcon.isSubQuest = true;
         }
 
         public void CollectToken()
