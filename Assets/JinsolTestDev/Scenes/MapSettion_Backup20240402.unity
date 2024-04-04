@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15900815, g: 0.51751715, b: 1.0386043, a: 1}
+  m_IndirectSpecularColor: {r: 0.15896621, g: 0.51753515, b: 1.0392404, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8540,21 +8540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4897240040992909917}
   m_Mesh: {fileID: 5988870659559328026, guid: 4a9457777ddbda44499df74b559568f7, type: 3}
---- !u!114 &40649083528334150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4800951016118876088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/b-0Fl4xMSF0
-  is360Video: 0
-  cli: 1
 --- !u!65 &40767627831127174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8986,9 +8971,7 @@ GameObject:
   - component: {fileID: 5202267908713344405}
   - component: {fileID: 1192685418452912590}
   - component: {fileID: 4561701266165578159}
-  - component: {fileID: 5670507144517127010}
   - component: {fileID: 4631962559172348856}
-  - component: {fileID: 739387966255034358}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -9208,42 +9191,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!328 &139021680193813896
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4800951016118876088}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr2---sn-ab02a0nfpgxapox-bh2ed.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZpawGob1s8IP8N2ciAU&ip=1.220.249.83&id=o-AEy8rms25AOzfsm1Z_EL1bxkZAnlhdNIeH4JZPiuFQ_z&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=EZ&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2ed%2Csn-un57sn7y&ms=au%2Conr&mv=m&mvi=2&pl=16&initcwndbps=935000&spc=UWF9f84J_6S3RxHGxJDwCufBbye9Du3NIFmiMJPRrLv5tFk&vprv=1&svpuc=1&mime=video%2Fmp4&ns=EMANcYkpot5BErRGwqIWWt8Q&cnr=14&ratebypass=yes&dur=176.680&lmt=1701649680578586&mt=1712024460&fvip=1&fexp=51141541&c=WEB&sefc=1&txp=6218224&n=4DWZ5w2AZwbBfg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgbMSoJp_rvCMaSGE2ewYKW4bgNc6BxxAc99IzbANy5SYCIDsTOeMZh2Z8UmtE3j0RLfgrdGzLcjrVZ2IMYVeda0kg&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIgZibs-OFbwiBlgMyLJ7Zh4hEjxqVG5qD92NWh9XH2sBkCIQDfsjsQSZS8a_Krl-fh6XAG1gWBP_hErVUUmnc9kdsEgg%3D%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &141155685084406445
 GameObject:
   m_ObjectHideFlags: 0
@@ -9992,42 +9939,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!328 &239378773449612292
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693116489673948793}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr3---sn-ab02a0nfpgxapox-bh2zk.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZuf9HsaMvcAPpt-hiA8&ip=1.220.249.83&id=o-AKXIxT6gvcJsLCYdoG7XiYNhsbvoFdE7lq7T7LJYAC49&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=dp&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2zk%2Csn-un57enel&ms=au%2Conr&mv=m&mvi=3&pl=16&initcwndbps=810000&spc=UWF9fzDfxonnBhGURCxOWOaJH2C9LmwIGQFrt70W-MO0PoM&vprv=1&svpuc=1&mime=video%2Fmp4&ns=lFc_YAysUUF1kAq9BmmW00IQ&cnr=14&ratebypass=yes&dur=230.434&lmt=1680382319791812&mt=1712024460&fvip=2&fexp=51141542&c=WEB&sefc=1&txp=6211224&n=ihYaNuSiis1qBA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgGq39tTnKaGMDtTEbl4j5UqT6lx0mzvDwgN6Ci-YTpuMCIBq8xSz7TSlFr-uJg79NTw_O_PArbnR1tMuFaZVKgPL8&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIge2UQqB4Kzves6tvYP7fMmfDCbwuphmOWdycnlAIb30wCIQDWYOWYzvXaIVVsKwSj75gH06wLBaVqrU1bwjWXdy7tbg%3D%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!4 &243886995066879256
 Transform:
   m_ObjectHideFlags: 0
@@ -11205,8 +11116,8 @@ GameObject:
   - component: {fileID: 4327280762549995171}
   - component: {fileID: 3462100464233089368}
   - component: {fileID: 959735198111985394}
-  - component: {fileID: 2431277605555807177}
-  - component: {fileID: 7740246757368713341}
+  - component: {fileID: 4327280762549995173}
+  - component: {fileID: 4327280762549995172}
   m_Layer: 0
   m_Name: graphic_Elect_1
   m_TagString: Untagged
@@ -11214,34 +11125,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &414942617376416602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298278545228792308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6612277064136849712}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &423316754156576839
 GameObject:
   m_ObjectHideFlags: 0
@@ -12163,42 +12046,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!328 &606625367086886949
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326755241419075592}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr7---sn-ab02a0nfpgxapox-bh2ed.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZouEIJa12roP6MSiiAc&ip=1.220.249.83&id=o-AK61oGNeOGGi8r3LUXSqouwmqZ7rQSlOFBE3907xLSkb&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=9O&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2ed%2Csn-un57snee&ms=au%2Conr&mv=m&mvi=7&pl=16&initcwndbps=935000&bui=AaUN6a0mGhVliwFUM5EdV6kzl64fqA8Vtmgf8rZA0G0dPSMADBK4rJ8PUiXc3MLIzuZmXnGnZo604Rtg&spc=UWF9fyCVALxQg4lQ1gFy_s7T-toP6kIFMX4M83jgXeYEHns&vprv=1&svpuc=1&mime=video%2Fmp4&ns=5nuJJI2e5N4wLNJx0Ar0xJQQ&cnr=14&ratebypass=yes&dur=220.914&lmt=1685660445375939&mt=1712024460&fvip=1&fexp=51141541&c=WEB&sefc=1&txp=6211224&n=K4FrUqRXaUIaHg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgYsJp8js-t72jOKENonBT4n9rHKRTe_Jg543vU_0bIKsCIEjY5EJgWYJYaSrDM1SC02bWHjNwvO6Zv1J5doXXnDB0&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRgIhAOsb-Fu0oEm4cG1mWINuF6uNGdurAFMApa39FtxOP22NAiEAmTSE5cXpxJPV_FhSrrLUXI8M3MZS1OnWVRJrjyyycp4%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!33 &607273986425858250
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12207,34 +12054,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8265060810019752475}
   m_Mesh: {fileID: -2232952877369940510, guid: 3f8925003029f5c4f878297181271142, type: 3}
---- !u!114 &608311438921954292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6922362502399470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8090672891082373680}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &608438135757954264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12950,34 +12769,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5060444177187149915, guid: 6915d2a3112123649a69e4c75cac6da4, type: 3}
---- !u!114 &739387966255034358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116739968845226762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5670507144517127010}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &742287037911950399
 Transform:
   m_ObjectHideFlags: 0
@@ -13310,8 +13101,8 @@ GameObject:
   - component: {fileID: 5062838960909167309}
   - component: {fileID: 2566714958758499606}
   - component: {fileID: 1913769152885831887}
-  - component: {fileID: 5239613568778364684}
   - component: {fileID: 5239613568778364685}
+  - component: {fileID: 5239613568778364684}
   m_Layer: 0
   m_Name: ' graphic_1'
   m_TagString: Untagged
@@ -13646,9 +13437,7 @@ GameObject:
   - component: {fileID: 8811973450320918985}
   - component: {fileID: 5492584967992468970}
   - component: {fileID: 233130970428515337}
-  - component: {fileID: 2830412487273072041}
   - component: {fileID: 1461784117528015667}
-  - component: {fileID: 3185542358471995632}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -14838,30 +14627,6 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!114 &1075079176490709198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6184674621429231519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8277808717214148385}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &1075653731833523927
 GameObject:
   m_ObjectHideFlags: 0
@@ -15583,21 +15348,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1245499927716251270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6524037358788786327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/Nsu3rSogMmM
-  is360Video: 0
-  cli: 1
 --- !u!33 &1246887248263573225
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -15891,8 +15641,8 @@ GameObject:
   - component: {fileID: 1598684497725564002}
   - component: {fileID: 7072169442682712361}
   - component: {fileID: 1371960487634121354}
-  - component: {fileID: 606625367086886949}
-  - component: {fileID: 5198710004240803630}
+  - component: {fileID: 7072169442682712363}
+  - component: {fileID: 7072169442682712362}
   m_Layer: 0
   m_Name: graphic_landscape_1
   m_TagString: Untagged
@@ -16720,30 +16470,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1479047087254789261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4109641930234350919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 2892706549657718813}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!114 &1481359158947564032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17336,34 +17062,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1578009393509712639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968984328172066102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3876550474504597469}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!135 &1579592464487983110
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20170,8 +19868,8 @@ GameObject:
   - component: {fileID: 3411026050162528023}
   - component: {fileID: 2719594903252455096}
   - component: {fileID: 8594644523263182358}
-  - component: {fileID: 4596725725515949064}
-  - component: {fileID: 4347930176371047401}
+  - component: {fileID: 8594644523263182360}
+  - component: {fileID: 8594644523263182359}
   m_Layer: 0
   m_Name: graphic_Wood_1
   m_TagString: Untagged
@@ -20288,70 +19986,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1423622222815254432}
   m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
---- !u!114 &2061724544090024081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4109641930234350919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1479047087254789261}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!328 &2064916091342461553
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925747686777566845}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr6---sn-ab02a0nfpgxapox-bh2e6.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZtejHorVvcAPysiViA8&ip=1.220.249.83&id=o-AO8v9OSF9MsjrzxaahglzNm9OpAeEXzDy0D8LeGCy_w2&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=PX&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2e6%2Csn-un57sne7&ms=au%2Conr&mv=m&mvi=6&pl=16&initcwndbps=711250&spc=UWF9f8WeNQPx-hsOBLkEqfCbMku5hfoAZ_6d_iYuuZZb-TE&vprv=1&svpuc=1&mime=video%2Fmp4&ns=mybsr32KWfbFYb_VOtxdeIwQ&cnr=14&ratebypass=yes&dur=210.117&lmt=1674581572812631&mt=1712024460&fvip=2&fexp=51141542&c=WEB&sefc=1&txp=6211224&n=MV8DGAu_GG8yoQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRAIgdYkmiappauohGL88MmK4fM_poztKuH1P3oDdT6Zl1CcCICcsvV3rKz4i5XcQKvsMZgmCpmXo1aDIoeo6Pm-NXU6u&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRAIgaSibdsjOi7jxi_P5M8psRjiLrKBMAJDG4IcPlzM8XQkCIDcSi0ZLv173tPmJSWzUfKwD6MoOwXFrnSlChNvaYQ4W
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!4 &2067442112107591339
 Transform:
   m_ObjectHideFlags: 0
@@ -21235,34 +20869,6 @@ RectTransform:
   m_AnchoredPosition: {x: 108.91, y: -300.08624}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2165782157955059976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4460822498923303269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4980834992804932870}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &2169752629877837314
 Transform:
   m_ObjectHideFlags: 0
@@ -21638,34 +21244,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2249765291428328706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503003393237343607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7705999853436532472}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!64 &2255934997043697387
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -22675,42 +22253,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!328 &2431277605555807177
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411124614439950448}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr4---sn-ab02a0nfpgxapox-bh2zk.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZqy9IJmds8IP54So-AI&ip=1.220.249.83&id=o-AM0aWvNAngjyzyLXH9PaMwQUtRp8bZ4IGq9y7QG2lYU7&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=yf&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2zk%2Csn-un57enel&ms=au%2Conr&mv=m&mvi=4&pcm2cms=yes&pl=16&initcwndbps=810000&spc=UWF9f6j6tRzOs_vo359Uu9b5UnEuysgb4VBZQ3SVQ3u6QUA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=IMMV8RJ6htDs3X8t-P9JeTUQ&cnr=14&ratebypass=yes&dur=209.211&lmt=1675314668932358&mt=1712024460&fvip=4&fexp=51141541&c=WEB&sefc=1&txp=6211224&n=tnoycm4d5nf7zQ&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgPITgoorvxY5T4X5u9rWRoMxKnLngLVazSqv1gsIxLMICIQDU68PtU9gAiCaGNab7GXuLpO50MeftitBmumoxQrG1_w%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIgPie5rrdxAefv7Erd8uB04lB04inLk9NLVXHcHW30PqoCIQD5fRWCaYJ-lpWQakUkZjNt0enCvBZ1qG5zANnDb6n19Q%3D%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!33 &2434265302871472394
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22971,42 +22513,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1949700081820551270}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!328 &2505077582644189928
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318888258880425765}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr1---sn-ab02a0nfpgxapox-bh2s6.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZtvEHeC9vcAP5KKr-Aw&ip=1.220.249.83&id=o-AAwW3Fz8Ndv4TIvdfj0o9IXWVHbhnVkm8pxrGtYKLEbh&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Yi&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2s6%2Csn-un57sne7&ms=au%2Conr&mv=m&mvi=1&pl=16&initcwndbps=745000&spc=UWF9f80XsxIWoF6TN6XjK0gNxIsU3anDW1vzA_V18UCEAG0&vprv=1&svpuc=1&mime=video%2Fmp4&ns=-U8OmlnkLdbAEr_aNx0tBHEQ&rqh=1&cnr=14&ratebypass=yes&dur=211.417&lmt=1689649953524112&mt=1712024460&fvip=3&fexp=51141541&c=WEB&sefc=1&txp=6211224&n=BHPHE-P2Yba1rA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAMFnQw9VdG5-J--LJLelW8ZIEKSQV2VBW-Vj1k2wapQ6AiAiC6dMfekbsU8Q8Z2c0bQEsisXunhFYdOpRtPJPKHHog%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIgfecdHP3tb-q9Lg5XTbUAA3HhyqrHdpHk-yQ0pzgRRVcCIQDwr2D8EmT32-UoB8sx37tc7ByOMXCrCrWstRJTyK1EtA%3D%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &2509047400225543275
 GameObject:
   m_ObjectHideFlags: 0
@@ -23248,42 +22754,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9075743347953889175, guid: 20970e2da1002a14aa975ce67ecc0528, type: 3}
---- !u!328 &2556600704578516652
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6524037358788786327}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr3---sn-ab02a0nfpgxapox-bh2zz.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZufyHqul2roPzPayuAc&ip=1.220.249.83&id=o-AGEUgw2q1BzuDrno1117QbWThZss8L9q5OSJ60Kjsc0w&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=ZN&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2zz%2Csn-un57sn7y&ms=au%2Conr&mv=m&mvi=3&pl=16&initcwndbps=971250&spc=UWF9fyA9e-OvXtgr6nfcjnl2KruEW0lwdxwfSX7Ia5mGj6txcCioESESPA&vprv=1&svpuc=1&mime=video%2Fmp4&ns=9sykSWgv5AzrWfMdzJU7bbwQ&cnr=14&ratebypass=yes&dur=240.140&lmt=1605843502808198&mt=1712024460&fvip=2&fexp=51141542&c=WEB&sefc=1&txp=6216222&n=2rXREgkitD_7Zw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgTLqm3spknBJnAK7dYoKxxYYUz6VVGFba5sFeT6lk2A4CIQCtIK3TzHdjaQKNaV5PTRX7IA-a0OcscHtWuWt-ZBlDqA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIhAILjRbVY5tTj8Vx8CnipgMbWKcSfaR-YQwIB0A_10jasAiBl1UNRPRfqKgOIQ44TUKd0emzKcyWANnlSeH-c6ReM4Q%3D%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &2560721666633116959
 GameObject:
   m_ObjectHideFlags: 0
@@ -24525,30 +23995,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &2830412487273072041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889935548558238397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 4791722589544143736}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &2835167346605951580
 GameObject:
   m_ObjectHideFlags: 0
@@ -25050,8 +24496,8 @@ GameObject:
   - component: {fileID: 1687818543415605053}
   - component: {fileID: 6622485324675573185}
   - component: {fileID: 7512066820008774628}
-  - component: {fileID: 2064916091342461553}
-  - component: {fileID: 7851209210698054922}
+  - component: {fileID: 7512066820008774630}
+  - component: {fileID: 7512066820008774629}
   m_Layer: 0
   m_Name: ' graphic_1'
   m_TagString: Untagged
@@ -26158,34 +25604,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3185542358471995632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889935548558238397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2830412487273072041}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &3188518065320512030
 GameObject:
   m_ObjectHideFlags: 0
@@ -26587,42 +26005,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!328 &3297246066518696568
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941602874174151958}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr6---sn-ab02a0nfpgxapox-bh2es.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZpT0HYWJ1d8PvJq52A8&ip=1.220.249.83&id=o-AOVTbUwZn2aNYWZr1j0DLz0ph9V8QcOqMoD765-wlD4V&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=EF&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2es%2Csn-un57sn7y&ms=au%2Conr&mv=m&mvi=6&pl=16&pcm2=yes&initcwndbps=860000&spc=UWF9fzO1asUn77dyKcluwJjMCInyymu9wzwacAXmb_d4368&vprv=1&svpuc=1&mime=video%2Fmp4&ns=nIxRy6LSjwytK7hd2d-hmTEQ&cnr=14&ratebypass=yes&dur=37.105&lmt=1701269235500107&mt=1712024460&fvip=1&fexp=51141541&c=WEB&sefc=1&txp=6218224&n=deQ9kyaZqv1lzg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cpcm2%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAJtu1ndUkFxoYB2ckY2WnQXMnYoI-4KVnr1CDcGl-piKAiBiLpEv06N0Xc6MKXkF9YhRpqAsGIPup9hB2Llani6Klw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRgIhAKhtpGPvDNjXigrtUgCzJF7wFBJooVHPH2-ecgpUUBOOAiEAwIIGWKj_L7NYtL1cAXyRpuvf_MIwMnilMCeuP_ONZ9E%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &3297651271493095996
 GameObject:
   m_ObjectHideFlags: 0
@@ -26755,9 +26137,7 @@ GameObject:
   - component: {fileID: 5444101775216668017}
   - component: {fileID: 3368123510466714113}
   - component: {fileID: 4166476086250579829}
-  - component: {fileID: 7952848105946469848}
   - component: {fileID: 712695247272033532}
-  - component: {fileID: 8672553522518656779}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -29895,9 +29275,7 @@ GameObject:
   - component: {fileID: 6212847808860226152}
   - component: {fileID: 124408258837390818}
   - component: {fileID: 3394892114933306522}
-  - component: {fileID: 5664458761712904456}
   - component: {fileID: 8545530467171011156}
-  - component: {fileID: 7456301015358648701}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -30006,30 +29384,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5776866752884145758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3876550474504597469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4968984328172066102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8262424294649527725}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &3878694064095145412
 GameObject:
   m_ObjectHideFlags: 0
@@ -31341,9 +30695,7 @@ GameObject:
   - component: {fileID: 7790934783844557347}
   - component: {fileID: 6405609865844185765}
   - component: {fileID: 6132250077774865145}
-  - component: {fileID: 1479047087254789261}
   - component: {fileID: 1489904389482157012}
-  - component: {fileID: 2061724544090024081}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -32461,6 +31813,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1855865887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4327280762549995172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411124614439950448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/AxNqoQwvTdY
+  is360Video: 0
+  cli: 1
+--- !u!328 &4327280762549995173
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411124614439950448}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!23 &4328057264768502472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32600,21 +32003,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4347930176371047401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038752812811089018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/SkY4kYVTYm8
-  is360Video: 0
-  cli: 1
 --- !u!4 &4350509294563044364
 Transform:
   m_ObjectHideFlags: 0
@@ -33163,9 +32551,7 @@ GameObject:
   - component: {fileID: 2914676705118773845}
   - component: {fileID: 8629496945443835923}
   - component: {fileID: 5113178985813304644}
-  - component: {fileID: 4980834992804932870}
   - component: {fileID: 7241751033803104395}
-  - component: {fileID: 2165782157955059976}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -33518,34 +32904,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &4547216667734180527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721627475835652304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6910178237871098751}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!222 &4547662017439927357
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33895,42 +33253,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074269678563370467}
   m_Mesh: {fileID: 3909233067320746374, guid: 80415d9d074549441bb781cb0c0d44d6, type: 3}
---- !u!328 &4596725725515949064
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038752812811089018}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 3
-  m_AspectRatio: 2
-  m_DataSource: 1
-  m_TimeUpdateMode: 2
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: https://rr7---sn-ab02a0nfpgxapox-bh2zs.googlevideo.com/videoplayback?expire=1712046422&ei=9mwLZrnWHrrI1d8Px-az8Ak&ip=1.220.249.83&id=o-ABk-alBS_h8WPc1rZUU-zLStF4HJ_AQ2tPHDyFXaF6qh&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Ji&mm=31%2C26&mn=sn-ab02a0nfpgxapox-bh2zs%2Csn-un57sn7y&ms=au%2Conr&mv=m&mvi=7&pl=16&initcwndbps=892500&spc=UWF9f2yYm77l28zbkeoANJ4piHAvgkYIZ4QzVJYX6C9lpkw&vprv=1&svpuc=1&mime=video%2Fmp4&ns=mvgX8CJb2SOvq7ntv0IWhhIQ&cnr=14&ratebypass=yes&dur=125.480&lmt=1675732874624656&mt=1712024460&fvip=3&fexp=51141541&c=WEB&sefc=1&txp=6211224&n=HZafV0un5pBheA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgc1Lay_sKVwRPvriyGmJ-GJI3a5hBJpGioa4fZunHfL0CIQDiq1S2UzyfEm4zQLTVAoFWYeGyeTnaTEFWzl5QXx77ng%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIhAL__Q9hsJRBOYxWXsqLFeSLGIpJIrxbiXJvOJW_jcoCbAiBDHpp6e3o8-CYYVRRmrpx7EaqO2-yKjJi8d6-UOUWtFQ%3D%3D
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!4 &4598443183662760324
 Transform:
   m_ObjectHideFlags: 0
@@ -34097,21 +33419,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4651766593471316123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318888258880425765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/khRtnlfuBWY
-  is360Video: 0
-  cli: 1
 --- !u!4 &4654213820746514658
 Transform:
   m_ObjectHideFlags: 0
@@ -34251,34 +33558,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273302101652944675}
   m_CullTransparentMesh: 1
---- !u!114 &4683792053438168791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6184674621429231519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1075079176490709198}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!23 &4688193915491718680
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -34483,9 +33762,7 @@ GameObject:
   - component: {fileID: 948830239320153853}
   - component: {fileID: 7117977814975524906}
   - component: {fileID: 3997916887706470889}
-  - component: {fileID: 6910178237871098751}
   - component: {fileID: 5698766978157477666}
-  - component: {fileID: 4547216667734180527}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -35107,8 +34384,8 @@ GameObject:
   - component: {fileID: 1647968284814902734}
   - component: {fileID: 3414882623889824490}
   - component: {fileID: 2670440869998496870}
-  - component: {fileID: 139021680193813896}
-  - component: {fileID: 40649083528334150}
+  - component: {fileID: 4800951016118876090}
+  - component: {fileID: 4800951016118876089}
   m_Layer: 0
   m_Name: Plane002
   m_TagString: Untagged
@@ -35116,6 +34393,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4800951016118876089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4800951016118876088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/b-0Fl4xMSF0
+  is360Video: 0
+  cli: 1
+--- !u!328 &4800951016118876090
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4800951016118876088}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &4808060750305527168
 GameObject:
   m_ObjectHideFlags: 0
@@ -35968,8 +35296,8 @@ GameObject:
   - component: {fileID: 134084751915030872}
   - component: {fileID: 7256745664354731448}
   - component: {fileID: 3014242135191717589}
-  - component: {fileID: 3297246066518696568}
-  - component: {fileID: 7560786608906881044}
+  - component: {fileID: 7256745664354731450}
+  - component: {fileID: 7256745664354731449}
   m_Layer: 0
   m_Name: Plane001
   m_TagString: Untagged
@@ -36156,9 +35484,7 @@ GameObject:
   - component: {fileID: 5650679073545136171}
   - component: {fileID: 7541424724463566885}
   - component: {fileID: 9198428523997921561}
-  - component: {fileID: 3876550474504597469}
   - component: {fileID: 2816237406391108101}
-  - component: {fileID: 1578009393509712639}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -36238,30 +35564,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9004396409421431070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4980834992804932870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4460822498923303269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 3660143837897659070}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!95 &4992141603637020106
 Animator:
   serializedVersion: 5
@@ -37553,21 +36855,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &5198710004240803630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326755241419075592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/SC1how943kI
-  is360Video: 0
-  cli: 1
 --- !u!23 &5201645107963316987
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37801,7 +37088,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1644804891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!328 &5239613568778364684
+--- !u!114 &5239613568778364684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827407843943160380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/SklOfbDKQOM
+  is360Video: 0
+  cli: 1
+--- !u!328 &5239613568778364685
 VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37827,31 +37129,16 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://rr2---sn-ab02a0nfpgxapox-u5xe.googlevideo.com/videoplayback?expire=1712080344&ei=ePELZuipEMTL2roP_fC4QA&ip=125.185.118.54&id=o-AGjp810-jllbMpQRZ-Zusvre5aEJTAaXMaWyNDzn6E9B&itag=22&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=3A&mm=31%2C29&mn=sn-ab02a0nfpgxapox-u5xe%2Csn-ab02a0nfpgxapox-jwwk&ms=au%2Crdu&mv=m&mvi=2&pl=25&initcwndbps=1523750&spc=UWF9f9LIevHX27zwaYgTYwZ7ywI03XN49Om23gMG9sXT8sc&vprv=1&svpuc=1&mime=video%2Fmp4&ns=uD0PbeCjjRxWURcDOX2P6NMQ&cnr=14&ratebypass=yes&dur=47.345&lmt=1636328450110775&mt=1712058065&fvip=7&fexp=51141541&c=WEB&sefc=1&txp=6211224&n=5cIw3wpz-TNLEA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIhAJBgmCfUG6Y7bQxPomSK07_fBQF36mDaSmNbS3plvnKiAiBznI7C96aC6sfyRIp7400yxsEfcQM1ewKmSY_JpkCZrw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ALClDIEwRQIhAKbhnF4xJ4VPxWzs1WVdzpPxYEXy4dxcX9iiLiEfiguPAiACZRPMP1nKzSSpVYH1GA4XXwuYUCgf-DOeQoGWOJqOgQ%3D%3D
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
---- !u!114 &5239613568778364685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827407843943160380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/SklOfbDKQOM
-  is360Video: 0
-  cli: 1
 --- !u!1 &5240669292322456451
 GameObject:
   m_ObjectHideFlags: 0
@@ -39150,9 +38437,7 @@ GameObject:
   - component: {fileID: 5965287684851137932}
   - component: {fileID: 5144360061905297905}
   - component: {fileID: 3617195228653491589}
-  - component: {fileID: 7705999853436532472}
   - component: {fileID: 4238886601235337906}
-  - component: {fileID: 2249765291428328706}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -40322,54 +39607,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3909233067320746374, guid: 80415d9d074549441bb781cb0c0d44d6, type: 3}
---- !u!114 &5664458761712904456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3852519647765051861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 4108273265958277944}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
---- !u!114 &5670507144517127010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116739968845226762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 742287037911950399}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!1 &5671093186660221467
 GameObject:
   m_ObjectHideFlags: 0
@@ -43364,9 +42601,7 @@ GameObject:
   - component: {fileID: 4646830121662647301}
   - component: {fileID: 1890426077685419192}
   - component: {fileID: 1532070158843590415}
-  - component: {fileID: 1075079176490709198}
   - component: {fileID: 7509572687232620131}
-  - component: {fileID: 4683792053438168791}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -44049,8 +43284,8 @@ GameObject:
   - component: {fileID: 5861027308778952572}
   - component: {fileID: 4519888811975995662}
   - component: {fileID: 1522606433543314466}
-  - component: {fileID: 2505077582644189928}
-  - component: {fileID: 4651766593471316123}
+  - component: {fileID: 6318888258880425767}
+  - component: {fileID: 6318888258880425766}
   m_Layer: 0
   m_Name: ' graphic_1'
   m_TagString: Untagged
@@ -44058,6 +43293,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6318888258880425766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318888258880425765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/khRtnlfuBWY
+  is360Video: 0
+  cli: 1
+--- !u!328 &6318888258880425767
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318888258880425765}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!23 &6320810113924987173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -45379,8 +44665,8 @@ GameObject:
   - component: {fileID: 3004015377982827035}
   - component: {fileID: 3197065414202309220}
   - component: {fileID: 4432347540952011189}
-  - component: {fileID: 2556600704578516652}
-  - component: {fileID: 1245499927716251270}
+  - component: {fileID: 6524037358788786329}
+  - component: {fileID: 6524037358788786328}
   m_Layer: 0
   m_Name: ' graphic_1'
   m_TagString: Untagged
@@ -45388,6 +44674,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6524037358788786328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6524037358788786327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/Nsu3rSogMmM
+  is360Video: 0
+  cli: 1
+--- !u!328 &6524037358788786329
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6524037358788786327}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!4 &6537405970540934298
 Transform:
   m_ObjectHideFlags: 0
@@ -45784,30 +45121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onQuestAccepted: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
---- !u!114 &6612277064136849712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7298278545228792308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8069694805419643667}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!4 &6613108183363671291
 Transform:
   m_ObjectHideFlags: 0
@@ -46263,8 +45576,8 @@ GameObject:
   - component: {fileID: 7571297049918612950}
   - component: {fileID: 168661694900678745}
   - component: {fileID: 2445506618825510619}
-  - component: {fileID: 239378773449612292}
-  - component: {fileID: 6953079601420322170}
+  - component: {fileID: 7571297049918612952}
+  - component: {fileID: 7571297049918612951}
   m_Layer: 0
   m_Name: graphic_boiler_1
   m_TagString: Untagged
@@ -47389,30 +46702,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6910178237871098751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721627475835652304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 357575858911881430}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!33 &6910216246963821941
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -47450,9 +46739,7 @@ GameObject:
   - component: {fileID: 2080177865486294320}
   - component: {fileID: 9059515595287663253}
   - component: {fileID: 1292462395795914836}
-  - component: {fileID: 8090672891082373680}
   - component: {fileID: 9221025814465223138}
-  - component: {fileID: 608311438921954292}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -47618,21 +46905,6 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &6953079601420322170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6693116489673948793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/oxHgpChZ69I
-  is360Video: 0
-  cli: 1
 --- !u!1 &6956842448375979883
 GameObject:
   m_ObjectHideFlags: 0
@@ -48265,6 +47537,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326755241419075592}
   m_Mesh: {fileID: -6757012260205322523, guid: 20970e2da1002a14aa975ce67ecc0528, type: 3}
+--- !u!114 &7072169442682712362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326755241419075592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/SC1how943kI
+  is360Video: 0
+  cli: 1
+--- !u!328 &7072169442682712363
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326755241419075592}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!33 &7079438285832998297
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -49241,6 +48564,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4941602874174151958}
   m_Mesh: {fileID: 7450741763379908841, guid: 6915d2a3112123649a69e4c75cac6da4, type: 3}
+--- !u!114 &7256745664354731449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941602874174151958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/oss3dVi6ErU
+  is360Video: 0
+  cli: 1
+--- !u!328 &7256745664354731450
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941602874174151958}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!64 &7256933971335258028
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -49394,9 +48768,7 @@ GameObject:
   - component: {fileID: 274151949724324384}
   - component: {fileID: 610480446105349590}
   - component: {fileID: 1820315230752832035}
-  - component: {fileID: 6612277064136849712}
   - component: {fileID: 2035021385409003866}
-  - component: {fileID: 414942617376416602}
   m_Layer: 0
   m_Name: QP_ITSW
   m_TagString: Event_Dialogue
@@ -50133,34 +49505,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &7456301015358648701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3852519647765051861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5664458761712904456}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &7458223697859173343
 Transform:
   m_ObjectHideFlags: 0
@@ -50601,6 +49945,57 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6757012260205322523, guid: 20970e2da1002a14aa975ce67ecc0528, type: 3}
+--- !u!114 &7512066820008774629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925747686777566845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/DDAQmPuidko
+  is360Video: 0
+  cli: 1
+--- !u!328 &7512066820008774630
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925747686777566845}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!4 &7512925069279877637
 Transform:
   m_ObjectHideFlags: 0
@@ -50949,21 +50344,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7560786608906881044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4941602874174151958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/oss3dVi6ErU
-  is360Video: 0
-  cli: 1
 --- !u!65 &7571006905860152239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51015,6 +50395,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 285508046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7571297049918612951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6693116489673948793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/oxHgpChZ69I
+  is360Video: 0
+  cli: 1
+--- !u!328 &7571297049918612952
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6693116489673948793}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &7572353031859049845
 GameObject:
   m_ObjectHideFlags: 0
@@ -51619,30 +51050,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -629719859055844128, guid: bb1a326c4b3f4a747ba4043107fc1b89, type: 3}
---- !u!114 &7705999853436532472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5503003393237343607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 1423069835412390824}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!33 &7710523382234457444
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -51879,21 +51286,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &7740246757368713341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411124614439950448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/xbGWWf_9x38
-  is360Video: 0
-  cli: 1
 --- !u!64 &7741044995351139473
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -52708,21 +52100,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7851209210698054922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925747686777566845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youtubeUrl: https://youtu.be/DDAQmPuidko
-  is360Video: 0
-  cli: 1
 --- !u!1 &7856667000207329580
 GameObject:
   m_ObjectHideFlags: 0
@@ -53319,30 +52696,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8566156627870209963}
   m_LocalEulerAnglesHint: {x: -81.482, y: -90, z: 90.013}
---- !u!114 &7952848105946469848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325399522605977227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 8352120442046960721}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!64 &7959406205904633517
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -53977,30 +53330,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1925718056077657484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8090672891082373680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6922362502399470160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223320c937cca7642bcd97aefe41335c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questInfoForPoint: {fileID: 11400000, guid: d04c6ce4901315d48b1a5eeac2b16ac3, type: 2}
-  startPoint: 1
-  finishPoint: 1
-  npc: {fileID: 6820605578833944713}
-  playerNearby: 0
-  questList: {fileID: 0}
-  questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
-    type: 3}
-  questStepPrefab: {fileID: 5842006090726279728, guid: 5c8413509038b2846a858788d339af68,
-    type: 3}
-  questTitleList: []
-  questStepList: []
 --- !u!23 &8091848219879889768
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56057,6 +55386,7 @@ MonoBehaviour:
   finishPoint: 1
   npc: {fileID: 1499530586059354065}
   playerNearby: 0
+  myEventTrigger: {fileID: 0}
   questList: {fileID: 4965067677240723887}
   questTitlePrefab: {fileID: 4553841826872949360, guid: b84dffd6f46ff9b4190773bafc4d4614,
     type: 3}
@@ -56715,6 +56045,57 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8594644523263182359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038752812811089018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3768fe280903842fdaa2a016022624f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youtubeUrl: https://youtu.be/SkY4kYVTYm8
+  is360Video: 0
+  cli: 1
+--- !u!328 &8594644523263182360
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038752812811089018}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 0}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 3
+  m_AspectRatio: 2
+  m_DataSource: 1
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &8595811081560120196
 GameObject:
   m_ObjectHideFlags: 0
@@ -57109,34 +56490,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8672553522518656779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3325399522605977227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef82750dfc13b3846a7c5a4870747f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 97128590d996cba4eb3d9a2a10b81ac3, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7952848105946469848}
-        m_TargetAssemblyTypeName: QuestPoint, Assembly-CSharp
-        m_MethodName: AcceptQuest
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &8676339202135501511
 MonoBehaviour:
   m_ObjectHideFlags: 0
