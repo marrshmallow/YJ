@@ -4386,6 +4386,7 @@ MonoBehaviour:
   exit: {fileID: 0}
   interact: {fileID: 0}
   mainCam: {fileID: 4819983886589044202}
+  inLobby: 1
 --- !u!328 &490935861564582613
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -13853,6 +13854,8 @@ MonoBehaviour:
   equalhandVR_R: {fileID: 0}
   handVR_L: {fileID: 6730323425076692980}
   equalhandVR_L: {fileID: 0}
+  info_Text: {fileID: 0}
+  isUIActive: 0
 --- !u!23 &2816551295344293059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15102,6 +15105,10 @@ PlayableDirector:
     value: {fileID: 222360844}
   - key: {fileID: -4093594227083784882, guid: ea742e6ea332a8b44ba1bdef66f5ba9f, type: 2}
     value: {fileID: 2021100226}
+  - key: {fileID: -7828415229563167389, guid: ea742e6ea332a8b44ba1bdef66f5ba9f, type: 2}
+    value: {fileID: 5504598087101972441}
+  - key: {fileID: 7635677190406382414, guid: ea742e6ea332a8b44ba1bdef66f5ba9f, type: 2}
+    value: {fileID: 2683918000423759557}
   m_ExposedReferences:
     m_References:
     - ff41074bf01c9ad4fbd99bb4004ddc18: {fileID: 1182489206}
@@ -25100,7 +25107,7 @@ Transform:
   m_GameObject: {fileID: 7046624708935465048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.953, z: -6}
+  m_LocalPosition: {x: 0, y: 2.953001, z: -5.999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
