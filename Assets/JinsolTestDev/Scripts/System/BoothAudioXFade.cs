@@ -26,6 +26,7 @@ namespace Jinsol
         {
             soundArea = (BoxCollider)GetComponent("BoxCollider");
             videoSound = (AudioSource)GetComponent("AudioSource");
+            director = FindAnyObjectByType<PlayableDirector>();
         }
 
         private void Update()
