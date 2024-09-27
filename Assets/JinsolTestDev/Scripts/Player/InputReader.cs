@@ -213,9 +213,9 @@ namespace Jinsol
             followTransform.transform.localEulerAngles = angles;
             #endregion
 
-            if (Quaternion.Angle(followTransform.transform.rotation, nextRotation) > 0.1f)
+            if (Quaternion.Angle(followTransform.transform.rotation, nextRotation) > 1f)
             {
-                nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationLerp);
+                nextRotation = Quaternion.Slerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationLerp);
             }
             
             if (moveComposite.x == 0 && moveComposite.y == 0)
@@ -233,7 +233,7 @@ namespace Jinsol
                 return;
             }
             float camMoveSpeed = camSpeed * 0.01f;
-            Vector3 position = (transform.forward * moveComposite.y * camMoveSpeed) + (transform.right * moveComposite.x * camMoveSpeed);
+            Vector3 position = (transform.forward * (moveComposite.y * camMoveSpeed)) + (transform.right * (moveComposite.x * camMoveSpeed));
             nextPosition = transform.position + position;
 
             // Set the player rotation based on the look transform

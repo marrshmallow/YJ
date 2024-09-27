@@ -55,6 +55,7 @@ namespace Jinsol
         private void Start()
         {
             mainCam.MoveToTopOfPrioritySubqueue();
+            if (GameEventsManager.instance == null) return;
             GameEventsManager.instance.playerEvents.PlayerLevelChange(currentLevel);
         }
 
