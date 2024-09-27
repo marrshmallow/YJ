@@ -213,8 +213,11 @@ namespace Jinsol
             followTransform.transform.localEulerAngles = angles;
             #endregion
 
-            nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationLerp);
-
+            if (Quaternion.Angle(followTransform.transform.rotation, nextRotation) > 0.1f)
+            {
+                nextRotation = Quaternion.Lerp(followTransform.transform.rotation, nextRotation, Time.deltaTime * rotationLerp);
+            }
+            
             if (moveComposite.x == 0 && moveComposite.y == 0)
             {
                 nextPosition = transform.position;
