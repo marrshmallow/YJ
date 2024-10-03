@@ -737,7 +737,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 57, y: 33}
-  m_SizeDelta: {x: 115.69, y: 69.8153}
+  m_SizeDelta: {x: 0, y: 69.8153}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &290175468
 MonoBehaviour:
@@ -2640,10 +2640,10 @@ RectTransform:
   - {fileID: 3126939501733213093}
   m_Father: {fileID: 290175466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 57.845, y: -34.90765}
-  m_SizeDelta: {x: 115.69, y: 69.8153}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731800135
 MonoBehaviour:
@@ -3078,7 +3078,7 @@ Transform:
   m_GameObject: {fileID: 1969902265}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.069996, y: 2.1443043, z: 1.7399902}
+  m_LocalPosition: {x: -6.099988, y: 2.2200432, z: 1.7399902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22580,10 +22580,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1731800134}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 57.845, y: -34.90765}
-  m_SizeDelta: {x: 67.69, y: 21.8153}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &3131775027578429172
 Transform:
@@ -33645,7 +33645,7 @@ PlayableDirector:
   m_GameObject: {fileID: 840935073186102326}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 2e4ab0c46d1ea424489ff851e8405570, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e05f2386e35c76242a1ebdad825eb6f1, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -49630,7 +49630,7 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 8631bc87c93eb554c95c7af8140d5d96, type: 2}
-    - {fileID: 11400000, guid: e75fafcda6e282044b30f48d8d6fe9e1, type: 2}
+    - {fileID: 11400000, guid: abd0a66ac621f9746b754626673e5887, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -67533,10 +67533,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_ShowDebugText: 0
   m_Loop: 0
-  m_ChildCameras:
-  - {fileID: 561915193750197016}
-  - {fileID: 58569457564415085}
-  - {fileID: 2847723920359716310}
+  m_ChildCameras: []
   m_Instructions: []
 --- !u!222 &8943523396282914110
 CanvasRenderer:
